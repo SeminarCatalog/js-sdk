@@ -109,7 +109,7 @@ import {WaitingListApi as WaitingListApiClass, WaitingListApiSingleton as Waitin
 
 
 /**
-* Rest_API_for_SeminarCatalog_Administration.<br>
+* This project is the official Javascript API client implementation for the SeminarCatalog developed by the Databay AG..<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:

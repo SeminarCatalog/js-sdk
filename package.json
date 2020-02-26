@@ -1,12 +1,30 @@
 {
-  "name": "seminar_catalog_api",
+  "name": "@seminarcatalog/sdk",
   "version": "1.0.0",
-  "description": "Rest_API_for_SeminarCatalog_Administration",
+  "description": "This project is the official Javascript API client implementation for the SeminarCatalog developed by the Databay AG.",
+  "keywords": ["SeminarCatalog","SDK","Javascript","SeminarManager","Courses","E-Learning","ILIAS"],
   "license": "Propretary",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive"
   },
+  "homepage": "https://www.databay.de/landing-pages/seminarmanagement",
+  "repository": "https://github.com/SeminarCatalog/sdk.git",
+  "bugs": "https://github.com/SeminarCatalog/sdk/issues",
+  "author": {
+     "name": "Databay AG",
+     "email": "info@databay.de"
+  },
+  "contributors": [
+    {
+       "name": "Andre Michels",
+       "email": "amichels@databay.de"
+    },
+    {
+      "name": "Thomas Joußen",
+      "email": "tjoussen@databay.de"
+    }
+  ],
   "browser": {
     "fs": false
   },
