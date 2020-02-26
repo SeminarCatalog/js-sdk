@@ -1,0 +1,206 @@
+# SeminarCatalogApi.ProductApi
+
+All URIs are relative to *https://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**productCreate**](ProductApi.md#productCreate) | **POST** /api/product | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+[**productDelete**](ProductApi.md#productDelete) | **DELETE** /api/product/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**productGet**](ProductApi.md#productGet) | **GET** /api/product/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**productList**](ProductApi.md#productList) | **GET** /api/product | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
+[**productUpdate**](ProductApi.md#productUpdate) | **PUT** /api/product/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
+
+
+<a name="productCreate"></a>
+# **productCreate**
+> BookingInterest productCreate()
+
+SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+
+### Example
+```javascript
+import {SeminarCatalogApi} from 'seminar_catalog_api';
+
+const apiInstance = new SeminarCatalogApi.ProductApi();
+apiInstance.productCreate().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BookingInterest**](BookingInterest.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="productDelete"></a>
+# **productDelete**
+> BookingInterest productDelete(id)
+
+SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+
+### Example
+```javascript
+import {SeminarCatalogApi} from 'seminar_catalog_api';
+
+const apiInstance = new SeminarCatalogApi.ProductApi();
+
+const id = 56; // Number | Numeric identifier for this resource
+
+apiInstance.productDelete(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| Numeric identifier for this resource | 
+
+### Return type
+
+[**BookingInterest**](BookingInterest.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="productGet"></a>
+# **productGet**
+> BookingInterest productGet(id)
+
+SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+
+### Example
+```javascript
+import {SeminarCatalogApi} from 'seminar_catalog_api';
+
+const apiInstance = new SeminarCatalogApi.ProductApi();
+
+const id = 56; // Number | Numeric identifier for this resource
+
+apiInstance.productGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| Numeric identifier for this resource | 
+
+### Return type
+
+[**BookingInterest**](BookingInterest.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="productList"></a>
+# **productList**
+> BookingInterest productList()
+
+SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
+
+### Example
+```javascript
+import {SeminarCatalogApi} from 'seminar_catalog_api';
+
+const apiInstance = new SeminarCatalogApi.ProductApi();
+apiInstance.productList().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BookingInterest**](BookingInterest.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="productUpdate"></a>
+# **productUpdate**
+> BookingInterest productUpdate(id)
+
+SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
+
+### Example
+```javascript
+import {SeminarCatalogApi} from 'seminar_catalog_api';
+
+const apiInstance = new SeminarCatalogApi.ProductApi();
+
+const id = 56; // Number | Numeric identifier for this resource
+
+apiInstance.productUpdate(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| Numeric identifier for this resource | 
+
+### Return type
+
+[**BookingInterest**](BookingInterest.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
