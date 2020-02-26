@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import CertificateInternalApi from "../internal/CertificateInternalApi";
+import {CertificateInternalApi} from "../internal/CertificateInternalApi";
 
 /**
 * Certificate service.

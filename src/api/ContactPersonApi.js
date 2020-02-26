@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import ContactPersonInternalApi from "../internal/ContactPersonInternalApi";
+import {ContactPersonInternalApi} from "../internal/ContactPersonInternalApi";
 
 /**
 * ContactPerson service.

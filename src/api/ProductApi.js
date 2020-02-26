@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import ProductInternalApi from "../internal/ProductInternalApi";
+import {ProductInternalApi} from "../internal/ProductInternalApi";
 
 /**
 * Product service.

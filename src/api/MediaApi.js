@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import MediaInternalApi from "../internal/MediaInternalApi";
+import {MediaInternalApi} from "../internal/MediaInternalApi";
 
 /**
 * Media service.

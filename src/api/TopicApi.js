@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import TopicInternalApi from "../internal/TopicInternalApi";
+import {TopicInternalApi} from "../internal/TopicInternalApi";
 
 /**
 * Topic service.

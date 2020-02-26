@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import LanguageInternalApi from "../internal/LanguageInternalApi";
+import {LanguageInternalApi} from "../internal/LanguageInternalApi";
 
 /**
 * Language service.

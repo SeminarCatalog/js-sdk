@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import PaymentMethodInternalApi from "../internal/PaymentMethodInternalApi";
+import {PaymentMethodInternalApi} from "../internal/PaymentMethodInternalApi";
 
 /**
 * PaymentMethod service.

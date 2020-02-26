@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import TaskInternalApi from "../internal/TaskInternalApi";
+import {TaskInternalApi} from "../internal/TaskInternalApi";
 
 /**
 * Task service.

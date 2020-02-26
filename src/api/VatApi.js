@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import VatInternalApi from "../internal/VatInternalApi";
+import {VatInternalApi} from "../internal/VatInternalApi";
 
 /**
 * Vat service.

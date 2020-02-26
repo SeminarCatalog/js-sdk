@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import CouponInternalApi from "../internal/CouponInternalApi";
+import {CouponInternalApi} from "../internal/CouponInternalApi";
 
 /**
 * Coupon service.

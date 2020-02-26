@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import SeminarInternalApi from "../internal/SeminarInternalApi";
+import {SeminarInternalApi} from "../internal/SeminarInternalApi";
 
 /**
 * Seminar service.

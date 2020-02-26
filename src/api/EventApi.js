@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import EventInternalApi from "../internal/EventInternalApi";
+import {EventInternalApi} from "../internal/EventInternalApi";
 
 /**
 * Event service.

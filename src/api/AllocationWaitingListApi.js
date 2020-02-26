@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import AllocationWaitingListInternalApi from "../internal/AllocationWaitingListInternalApi";
+import {AllocationWaitingListInternalApi} from "../internal/AllocationWaitingListInternalApi";
 
 /**
 * AllocationWaitingList service.

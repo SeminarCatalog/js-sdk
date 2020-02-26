@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import OrganizerInternalApi from "../internal/OrganizerInternalApi";
+import {OrganizerInternalApi} from "../internal/OrganizerInternalApi";
 
 /**
 * Organizer service.

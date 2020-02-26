@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import ProviderInfoInternalApi from "../internal/ProviderInfoInternalApi";
+import {ProviderInfoInternalApi} from "../internal/ProviderInfoInternalApi";
 
 /**
 * ProviderInfo service.

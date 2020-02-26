@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import BookingInterestInternalApi from "../internal/BookingInterestInternalApi";
+import {BookingInterestInternalApi} from "../internal/BookingInterestInternalApi";
 
 /**
 * BookingInterest service.

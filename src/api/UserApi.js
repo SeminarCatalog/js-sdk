@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import UserInternalApi from "../internal/UserInternalApi";
+import {UserInternalApi} from "../internal/UserInternalApi";
 
 /**
 * User service.

@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import TrainerInternalApi from "../internal/TrainerInternalApi";
+import {TrainerInternalApi} from "../internal/TrainerInternalApi";
 
 /**
 * Trainer service.

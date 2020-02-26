@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import RevenueAccountInternalApi from "../internal/RevenueAccountInternalApi";
+import {RevenueAccountInternalApi} from "../internal/RevenueAccountInternalApi";
 
 /**
 * RevenueAccount service.

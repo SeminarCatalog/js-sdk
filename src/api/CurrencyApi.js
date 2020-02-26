@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import CurrencyInternalApi from "../internal/CurrencyInternalApi";
+import {CurrencyInternalApi} from "../internal/CurrencyInternalApi";
 
 /**
 * Currency service.

@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import RegionInternalApi from "../internal/RegionInternalApi";
+import {RegionInternalApi} from "../internal/RegionInternalApi";
 
 /**
 * Region service.

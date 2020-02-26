@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import PriceInternalApi from "../internal/PriceInternalApi";
+import {PriceInternalApi} from "../internal/PriceInternalApi";
 
 /**
 * Price service.

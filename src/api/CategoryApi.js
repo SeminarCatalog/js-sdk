@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import CategoryInternalApi from "../internal/CategoryInternalApi";
+import {CategoryInternalApi} from "../internal/CategoryInternalApi";
 
 /**
 * Category service.

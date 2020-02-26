@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import OrderInternalApi from "../internal/OrderInternalApi";
+import {OrderInternalApi} from "../internal/OrderInternalApi";
 
 /**
 * Order service.

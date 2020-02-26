@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import WaitingListInternalApi from "../internal/WaitingListInternalApi";
+import {WaitingListInternalApi} from "../internal/WaitingListInternalApi";
 
 /**
 * WaitingList service.

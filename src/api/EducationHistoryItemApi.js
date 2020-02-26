@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import EducationHistoryItemInternalApi from "../internal/EducationHistoryItemInternalApi";
+import {EducationHistoryItemInternalApi} from "../internal/EducationHistoryItemInternalApi";
 
 /**
 * EducationHistoryItem service.

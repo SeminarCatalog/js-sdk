@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import ProductVariantInternalApi from "../internal/ProductVariantInternalApi";
+import {ProductVariantInternalApi} from "../internal/ProductVariantInternalApi";
 
 /**
 * ProductVariant service.

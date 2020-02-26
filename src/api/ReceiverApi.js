@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import ReceiverInternalApi from "../internal/ReceiverInternalApi";
+import {ReceiverInternalApi} from "../internal/ReceiverInternalApi";
 
 /**
 * Receiver service.

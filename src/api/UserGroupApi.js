@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import UserGroupInternalApi from "../internal/UserGroupInternalApi";
+import {UserGroupInternalApi} from "../internal/UserGroupInternalApi";
 
 /**
 * UserGroup service.

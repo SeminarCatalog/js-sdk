@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import ParticipationCodeInternalApi from "../internal/ParticipationCodeInternalApi";
+import {ParticipationCodeInternalApi} from "../internal/ParticipationCodeInternalApi";
 
 /**
 * ParticipationCode service.

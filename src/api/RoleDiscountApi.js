@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import RoleDiscountInternalApi from "../internal/RoleDiscountInternalApi";
+import {RoleDiscountInternalApi} from "../internal/RoleDiscountInternalApi";
 
 /**
 * RoleDiscount service.

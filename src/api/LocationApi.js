@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import LocationInternalApi from "../internal/LocationInternalApi";
+import {LocationInternalApi} from "../internal/LocationInternalApi";
 
 /**
 * Location service.

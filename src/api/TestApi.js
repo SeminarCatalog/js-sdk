@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import TestInternalApi from "../internal/TestInternalApi";
+import {TestInternalApi} from "../internal/TestInternalApi";
 
 /**
 * Test service.

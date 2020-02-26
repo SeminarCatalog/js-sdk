@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import HotelInternalApi from "../internal/HotelInternalApi";
+import {HotelInternalApi} from "../internal/HotelInternalApi";
 
 /**
 * Hotel service.

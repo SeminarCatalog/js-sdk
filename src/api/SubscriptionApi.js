@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import SubscriptionInternalApi from "../internal/SubscriptionInternalApi";
+import {SubscriptionInternalApi} from "../internal/SubscriptionInternalApi";
 
 /**
 * Subscription service.

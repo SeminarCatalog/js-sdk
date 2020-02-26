@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import AddressInternalApi from "../internal/AddressInternalApi";
+import {AddressInternalApi} from "../internal/AddressInternalApi";
 
 /**
 * Address service.
