@@ -1,7 +1,7 @@
 # SeminarCatalog Javascript SDK
 
 ![npm](https://img.shields.io/npm/v/@seminarcatalog/sdk)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/SeminarCatalog/sdk)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/SeminarCatalog/js-sdk)
 ![David](https://img.shields.io/david/seminarcatalog/sdk)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@seminarcatalog/sdk)
 
