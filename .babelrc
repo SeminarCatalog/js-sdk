@@ -1,8 +1,16 @@
 {
-  "plugins": [
-    ["babel-plugin-transform-builtin-extend", {
-      globals: ["Error", "Array"]
-    }]
-  ],
-  "presets": ["env", "stage-0"]
+    "plugins": [
+        ["babel-plugin-transform-builtin-extend", {
+            globals: ["Error", "Array"]
+        }],
+        ['@babel/plugin-proposal-class-properties']
+    ],
+    "presets": [
+        ["@babel/preset-env", {
+            "modules": false
+        }]
+    ],
+    "ignore": [
+        "node_modules/**"
+    ]
 }
