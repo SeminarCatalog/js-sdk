@@ -1,6 +1,6 @@
 {
   "name": "@seminarcatalog/sdk",
-  "version": "1.1.4",
+  "version": "1.1.2",
   "description": "This project is the official Javascript API client implementation for the SeminarCatalog developed by the Databay AG.",
   "keywords": ["SeminarCatalog","SDK","Javascript","SeminarManager","Courses","E-Learning","ILIAS"],
   "license": "MIT",
