@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {PaymentMethod} from '../model/PaymentMethod';
 
 /**
 * PaymentMethod internal service.
@@ -39,7 +39,7 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
     paymentmethodCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class PaymentMethodInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = PaymentMethod;
 
       return this.apiClient.callApi(
         '/api/paymentmethod', 'POST',
@@ -68,7 +68,7 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
     paymentmethodCreate() {
       return this.paymentmethodCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
     paymentmethodDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class PaymentMethodInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = PaymentMethod;
 
       return this.apiClient.callApi(
         '/api/paymentmethod/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
     paymentmethodDelete(id) {
       return this.paymentmethodDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
     paymentmethodGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class PaymentMethodInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = PaymentMethod;
 
       return this.apiClient.callApi(
         '/api/paymentmethod/{id}', 'GET',
@@ -166,7 +166,7 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
     paymentmethodGet(id) {
       return this.paymentmethodGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
     paymentmethodListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class PaymentMethodInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = PaymentMethod;
 
       return this.apiClient.callApi(
         '/api/paymentmethod', 'GET',
@@ -207,7 +207,7 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
     paymentmethodList() {
       return this.paymentmethodListWithHttpInfo()
@@ -220,7 +220,7 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
     paymentmethodUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class PaymentMethodInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = PaymentMethod;
 
       return this.apiClient.callApi(
         '/api/paymentmethod/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
     paymentmethodUpdate(id) {
       return this.paymentmethodUpdateWithHttpInfo(id)

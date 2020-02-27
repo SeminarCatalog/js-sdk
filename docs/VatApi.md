@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="vatCreate"></a>
 # **vatCreate**
-> BookingInterest vatCreate()
+> Vat vatCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Vat**](Vat.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="vatDelete"></a>
 # **vatDelete**
-> BookingInterest vatDelete(id)
+> Vat vatDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Vat**](Vat.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="vatGet"></a>
 # **vatGet**
-> BookingInterest vatGet(id)
+> Vat vatGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Vat**](Vat.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="vatList"></a>
 # **vatList**
-> BookingInterest vatList()
+> Vat vatList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Vat**](Vat.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="vatUpdate"></a>
 # **vatUpdate**
-> BookingInterest vatUpdate(id)
+> Vat vatUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Vat**](Vat.md)
 
 ### Authorization
 

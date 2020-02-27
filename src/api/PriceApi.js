@@ -18,7 +18,7 @@ import {PriceInternalApi} from "../internal/PriceInternalApi";
 
 /**
 * Price service.
-* @module internal/PriceApi
+* @module api/PriceApi
 * @version 1.0.0
 */
 export class PriceApi extends PriceInternalApi {

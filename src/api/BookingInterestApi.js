@@ -18,7 +18,7 @@ import {BookingInterestInternalApi} from "../internal/BookingInterestInternalApi
 
 /**
 * BookingInterest service.
-* @module internal/BookingInterestApi
+* @module api/BookingInterestApi
 * @version 1.0.0
 */
 export class BookingInterestApi extends BookingInterestInternalApi {

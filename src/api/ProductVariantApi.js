@@ -18,7 +18,7 @@ import {ProductVariantInternalApi} from "../internal/ProductVariantInternalApi";
 
 /**
 * ProductVariant service.
-* @module internal/ProductVariantApi
+* @module api/ProductVariantApi
 * @version 1.0.0
 */
 export class ProductVariantApi extends ProductVariantInternalApi {

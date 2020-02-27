@@ -18,7 +18,7 @@ import {WaitingListInternalApi} from "../internal/WaitingListInternalApi";
 
 /**
 * WaitingList service.
-* @module internal/WaitingListApi
+* @module api/WaitingListApi
 * @version 1.0.0
 */
 export class WaitingListApi extends WaitingListInternalApi {

@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {SubscriptionConfiguration} from '../model/SubscriptionConfiguration';
 
 /**
 * SubscriptionConfiguration internal service.
@@ -39,7 +39,7 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionConfiguration} and HTTP response
      */
     subscriptionconfigurationCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class SubscriptionConfigurationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionConfiguration;
 
       return this.apiClient.callApi(
         '/api/subscriptionconfiguration', 'POST',
@@ -68,7 +68,7 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionConfiguration}
      */
     subscriptionconfigurationCreate() {
       return this.subscriptionconfigurationCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class SubscriptionConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionConfiguration} and HTTP response
      */
     subscriptionconfigurationDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class SubscriptionConfigurationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionConfiguration;
 
       return this.apiClient.callApi(
         '/api/subscriptionconfiguration/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class SubscriptionConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionConfiguration}
      */
     subscriptionconfigurationDelete(id) {
       return this.subscriptionconfigurationDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class SubscriptionConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionConfiguration} and HTTP response
      */
     subscriptionconfigurationGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class SubscriptionConfigurationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionConfiguration;
 
       return this.apiClient.callApi(
         '/api/subscriptionconfiguration/{id}', 'GET',
@@ -166,7 +166,7 @@ export class SubscriptionConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionConfiguration}
      */
     subscriptionconfigurationGet(id) {
       return this.subscriptionconfigurationGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionConfiguration} and HTTP response
      */
     subscriptionconfigurationListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class SubscriptionConfigurationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionConfiguration;
 
       return this.apiClient.callApi(
         '/api/subscriptionconfiguration', 'GET',
@@ -207,7 +207,7 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionConfiguration}
      */
     subscriptionconfigurationList() {
       return this.subscriptionconfigurationListWithHttpInfo()
@@ -220,7 +220,7 @@ export class SubscriptionConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionConfiguration} and HTTP response
      */
     subscriptionconfigurationUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class SubscriptionConfigurationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionConfiguration;
 
       return this.apiClient.callApi(
         '/api/subscriptionconfiguration/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class SubscriptionConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionConfiguration}
      */
     subscriptionconfigurationUpdate(id) {
       return this.subscriptionconfigurationUpdateWithHttpInfo(id)

@@ -1,10 +1,10 @@
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
-import url from 'rollup-plugin-url';
-
+import filesize from 'rollup-plugin-filesize';
 import pkg from './package.json';
+
+const dependencies = Object.keys(pkg.dependencies);
 
 export default {
   input: 'src/index.js',
@@ -12,26 +12,23 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
-      sourcemap: true
     },
     {
       file: pkg.module,
       format: 'es',
-      sourcemap: true
     }
   ],
-  external: [
-      'superagent',
-      'querystring'
-  ],
+  external: dependencies,
   plugins: [
-    external(),
-    url(),
     babel({
-      runtimeHelpers: true,
-      exclude: 'node_modules/**',
+      exclude: 'node_modules/!**',
     }),
-    resolve(),
-    commonjs()
+    resolve({
+      customResolveOptions: {
+        moduleDirectory: 'node_modules'
+      }
+    }),
+    commonjs(),
+    filesize()
   ]
 };

@@ -18,7 +18,7 @@ import {ProductInternalApi} from "../internal/ProductInternalApi";
 
 /**
 * Product service.
-* @module internal/ProductApi
+* @module api/ProductApi
 * @version 1.0.0
 */
 export class ProductApi extends ProductInternalApi {

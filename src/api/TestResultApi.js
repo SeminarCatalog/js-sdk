@@ -18,7 +18,7 @@ import {TestResultInternalApi} from "../internal/TestResultInternalApi";
 
 /**
 * TestResult service.
-* @module internal/TestResultApi
+* @module api/TestResultApi
 * @version 1.0.0
 */
 export class TestResultApi extends TestResultInternalApi {

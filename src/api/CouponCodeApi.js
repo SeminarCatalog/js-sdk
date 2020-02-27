@@ -18,7 +18,7 @@ import {CouponCodeInternalApi} from "../internal/CouponCodeInternalApi";
 
 /**
 * CouponCode service.
-* @module internal/CouponCodeApi
+* @module api/CouponCodeApi
 * @version 1.0.0
 */
 export class CouponCodeApi extends CouponCodeInternalApi {

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="couponcodeCreate"></a>
 # **couponcodeCreate**
-> BookingInterest couponcodeCreate()
+> CouponCode couponcodeCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**CouponCode**](CouponCode.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="couponcodeDelete"></a>
 # **couponcodeDelete**
-> BookingInterest couponcodeDelete(id)
+> CouponCode couponcodeDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**CouponCode**](CouponCode.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="couponcodeGet"></a>
 # **couponcodeGet**
-> BookingInterest couponcodeGet(id)
+> CouponCode couponcodeGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**CouponCode**](CouponCode.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="couponcodeList"></a>
 # **couponcodeList**
-> BookingInterest couponcodeList()
+> CouponCode couponcodeList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**CouponCode**](CouponCode.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="couponcodeUpdate"></a>
 # **couponcodeUpdate**
-> BookingInterest couponcodeUpdate(id)
+> CouponCode couponcodeUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**CouponCode**](CouponCode.md)
 
 ### Authorization
 

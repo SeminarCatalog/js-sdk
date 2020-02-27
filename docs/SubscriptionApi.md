@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="subscriptionCreate"></a>
 # **subscriptionCreate**
-> BookingInterest subscriptionCreate()
+> Subscription subscriptionCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="subscriptionDelete"></a>
 # **subscriptionDelete**
-> BookingInterest subscriptionDelete(id)
+> Subscription subscriptionDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="subscriptionGet"></a>
 # **subscriptionGet**
-> BookingInterest subscriptionGet(id)
+> Subscription subscriptionGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="subscriptionList"></a>
 # **subscriptionList**
-> BookingInterest subscriptionList()
+> Subscription subscriptionList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="subscriptionUpdate"></a>
 # **subscriptionUpdate**
-> BookingInterest subscriptionUpdate(id)
+> Subscription subscriptionUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 

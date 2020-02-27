@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="seminarCreate"></a>
 # **seminarCreate**
-> BookingInterest seminarCreate()
+> Seminar seminarCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Seminar**](Seminar.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="seminarDelete"></a>
 # **seminarDelete**
-> BookingInterest seminarDelete(id)
+> Seminar seminarDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Seminar**](Seminar.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="seminarGet"></a>
 # **seminarGet**
-> BookingInterest seminarGet(id)
+> Seminar seminarGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Seminar**](Seminar.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="seminarList"></a>
 # **seminarList**
-> BookingInterest seminarList()
+> Seminar seminarList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Seminar**](Seminar.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="seminarUpdate"></a>
 # **seminarUpdate**
-> BookingInterest seminarUpdate(id)
+> Seminar seminarUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Seminar**](Seminar.md)
 
 ### Authorization
 

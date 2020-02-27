@@ -18,7 +18,7 @@ import {CategoryInternalApi} from "../internal/CategoryInternalApi";
 
 /**
 * Category service.
-* @module internal/CategoryApi
+* @module api/CategoryApi
 * @version 1.0.0
 */
 export class CategoryApi extends CategoryInternalApi {

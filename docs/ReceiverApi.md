@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="receiverCreate"></a>
 # **receiverCreate**
-> BookingInterest receiverCreate()
+> Receiver receiverCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Receiver**](Receiver.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="receiverDelete"></a>
 # **receiverDelete**
-> BookingInterest receiverDelete(id)
+> Receiver receiverDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Receiver**](Receiver.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="receiverGet"></a>
 # **receiverGet**
-> BookingInterest receiverGet(id)
+> Receiver receiverGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Receiver**](Receiver.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="receiverList"></a>
 # **receiverList**
-> BookingInterest receiverList()
+> Receiver receiverList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Receiver**](Receiver.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="receiverUpdate"></a>
 # **receiverUpdate**
-> BookingInterest receiverUpdate(id)
+> Receiver receiverUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Receiver**](Receiver.md)
 
 ### Authorization
 

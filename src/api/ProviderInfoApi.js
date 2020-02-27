@@ -18,7 +18,7 @@ import {ProviderInfoInternalApi} from "../internal/ProviderInfoInternalApi";
 
 /**
 * ProviderInfo service.
-* @module internal/ProviderInfoApi
+* @module api/ProviderInfoApi
 * @version 1.0.0
 */
 export class ProviderInfoApi extends ProviderInfoInternalApi {

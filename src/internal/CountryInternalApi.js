@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Country} from '../model/Country';
 
 /**
 * Country internal service.
@@ -39,7 +39,7 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Country} and HTTP response
      */
     countryCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class CountryInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Country;
 
       return this.apiClient.callApi(
         '/api/country', 'POST',
@@ -68,7 +68,7 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Country}
      */
     countryCreate() {
       return this.countryCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class CountryInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Country} and HTTP response
      */
     countryDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class CountryInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Country;
 
       return this.apiClient.callApi(
         '/api/country/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class CountryInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Country}
      */
     countryDelete(id) {
       return this.countryDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class CountryInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Country} and HTTP response
      */
     countryGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class CountryInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Country;
 
       return this.apiClient.callApi(
         '/api/country/{id}', 'GET',
@@ -166,7 +166,7 @@ export class CountryInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Country}
      */
     countryGet(id) {
       return this.countryGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Country} and HTTP response
      */
     countryListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class CountryInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Country;
 
       return this.apiClient.callApi(
         '/api/country', 'GET',
@@ -207,7 +207,7 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Country}
      */
     countryList() {
       return this.countryListWithHttpInfo()
@@ -220,7 +220,7 @@ export class CountryInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Country} and HTTP response
      */
     countryUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class CountryInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Country;
 
       return this.apiClient.callApi(
         '/api/country/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class CountryInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Country}
      */
     countryUpdate(id) {
       return this.countryUpdateWithHttpInfo(id)

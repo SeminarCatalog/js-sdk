@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="currencyCreate"></a>
 # **currencyCreate**
-> BookingInterest currencyCreate()
+> Currency currencyCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Currency**](Currency.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="currencyDelete"></a>
 # **currencyDelete**
-> BookingInterest currencyDelete(id)
+> Currency currencyDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Currency**](Currency.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="currencyGet"></a>
 # **currencyGet**
-> BookingInterest currencyGet(id)
+> Currency currencyGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Currency**](Currency.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="currencyList"></a>
 # **currencyList**
-> BookingInterest currencyList()
+> Currency currencyList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Currency**](Currency.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="currencyUpdate"></a>
 # **currencyUpdate**
-> BookingInterest currencyUpdate(id)
+> Currency currencyUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Currency**](Currency.md)
 
 ### Authorization
 

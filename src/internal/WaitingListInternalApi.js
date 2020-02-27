@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {WaitingList} from '../model/WaitingList';
 
 /**
 * WaitingList internal service.
@@ -39,7 +39,7 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WaitingList} and HTTP response
      */
     waitinglistCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class WaitingListInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = WaitingList;
 
       return this.apiClient.callApi(
         '/api/waitinglist', 'POST',
@@ -68,7 +68,7 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WaitingList}
      */
     waitinglistCreate() {
       return this.waitinglistCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class WaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WaitingList} and HTTP response
      */
     waitinglistDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class WaitingListInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = WaitingList;
 
       return this.apiClient.callApi(
         '/api/waitinglist/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class WaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WaitingList}
      */
     waitinglistDelete(id) {
       return this.waitinglistDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class WaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WaitingList} and HTTP response
      */
     waitinglistGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class WaitingListInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = WaitingList;
 
       return this.apiClient.callApi(
         '/api/waitinglist/{id}', 'GET',
@@ -166,7 +166,7 @@ export class WaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WaitingList}
      */
     waitinglistGet(id) {
       return this.waitinglistGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WaitingList} and HTTP response
      */
     waitinglistListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class WaitingListInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = WaitingList;
 
       return this.apiClient.callApi(
         '/api/waitinglist', 'GET',
@@ -207,7 +207,7 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WaitingList}
      */
     waitinglistList() {
       return this.waitinglistListWithHttpInfo()
@@ -220,7 +220,7 @@ export class WaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WaitingList} and HTTP response
      */
     waitinglistUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class WaitingListInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = WaitingList;
 
       return this.apiClient.callApi(
         '/api/waitinglist/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class WaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WaitingList}
      */
     waitinglistUpdate(id) {
       return this.waitinglistUpdateWithHttpInfo(id)

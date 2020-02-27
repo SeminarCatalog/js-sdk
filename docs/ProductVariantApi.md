@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="productvariantCreate"></a>
 # **productvariantCreate**
-> BookingInterest productvariantCreate()
+> ProductVariant productvariantCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProductVariant**](ProductVariant.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="productvariantDelete"></a>
 # **productvariantDelete**
-> BookingInterest productvariantDelete(id)
+> ProductVariant productvariantDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProductVariant**](ProductVariant.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="productvariantGet"></a>
 # **productvariantGet**
-> BookingInterest productvariantGet(id)
+> ProductVariant productvariantGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProductVariant**](ProductVariant.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="productvariantList"></a>
 # **productvariantList**
-> BookingInterest productvariantList()
+> ProductVariant productvariantList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProductVariant**](ProductVariant.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="productvariantUpdate"></a>
 # **productvariantUpdate**
-> BookingInterest productvariantUpdate(id)
+> ProductVariant productvariantUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProductVariant**](ProductVariant.md)
 
 ### Authorization
 

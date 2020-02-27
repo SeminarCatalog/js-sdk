@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Vat} from '../model/Vat';
 
 /**
 * Vat internal service.
@@ -39,7 +39,7 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Vat} and HTTP response
      */
     vatCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class VatInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Vat;
 
       return this.apiClient.callApi(
         '/api/vat', 'POST',
@@ -68,7 +68,7 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Vat}
      */
     vatCreate() {
       return this.vatCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class VatInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Vat} and HTTP response
      */
     vatDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class VatInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Vat;
 
       return this.apiClient.callApi(
         '/api/vat/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class VatInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Vat}
      */
     vatDelete(id) {
       return this.vatDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class VatInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Vat} and HTTP response
      */
     vatGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class VatInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Vat;
 
       return this.apiClient.callApi(
         '/api/vat/{id}', 'GET',
@@ -166,7 +166,7 @@ export class VatInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Vat}
      */
     vatGet(id) {
       return this.vatGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Vat} and HTTP response
      */
     vatListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class VatInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Vat;
 
       return this.apiClient.callApi(
         '/api/vat', 'GET',
@@ -207,7 +207,7 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Vat}
      */
     vatList() {
       return this.vatListWithHttpInfo()
@@ -220,7 +220,7 @@ export class VatInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Vat} and HTTP response
      */
     vatUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class VatInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Vat;
 
       return this.apiClient.callApi(
         '/api/vat/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class VatInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Vat}
      */
     vatUpdate(id) {
       return this.vatUpdateWithHttpInfo(id)

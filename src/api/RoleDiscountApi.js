@@ -18,7 +18,7 @@ import {RoleDiscountInternalApi} from "../internal/RoleDiscountInternalApi";
 
 /**
 * RoleDiscount service.
-* @module internal/RoleDiscountApi
+* @module api/RoleDiscountApi
 * @version 1.0.0
 */
 export class RoleDiscountApi extends RoleDiscountInternalApi {

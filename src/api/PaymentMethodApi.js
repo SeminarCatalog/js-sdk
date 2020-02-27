@@ -18,7 +18,7 @@ import {PaymentMethodInternalApi} from "../internal/PaymentMethodInternalApi";
 
 /**
 * PaymentMethod service.
-* @module internal/PaymentMethodApi
+* @module api/PaymentMethodApi
 * @version 1.0.0
 */
 export class PaymentMethodApi extends PaymentMethodInternalApi {

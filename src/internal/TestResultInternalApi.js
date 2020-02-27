@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {TestResult} from '../model/TestResult';
 
 /**
 * TestResult internal service.
@@ -39,7 +39,7 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
     testresultCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class TestResultInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = TestResult;
 
       return this.apiClient.callApi(
         '/api/testresult', 'POST',
@@ -68,7 +68,7 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
     testresultCreate() {
       return this.testresultCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
     testresultDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class TestResultInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = TestResult;
 
       return this.apiClient.callApi(
         '/api/testresult/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
     testresultDelete(id) {
       return this.testresultDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
     testresultGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class TestResultInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = TestResult;
 
       return this.apiClient.callApi(
         '/api/testresult/{id}', 'GET',
@@ -166,7 +166,7 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
     testresultGet(id) {
       return this.testresultGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
     testresultListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class TestResultInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = TestResult;
 
       return this.apiClient.callApi(
         '/api/testresult', 'GET',
@@ -207,7 +207,7 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
     testresultList() {
       return this.testresultListWithHttpInfo()
@@ -220,7 +220,7 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
     testresultUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class TestResultInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = TestResult;
 
       return this.apiClient.callApi(
         '/api/testresult/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
     testresultUpdate(id) {
       return this.testresultUpdateWithHttpInfo(id)

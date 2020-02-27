@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Participant} from '../model/Participant';
 
 /**
 * Participant internal service.
@@ -39,7 +39,7 @@ export class ParticipantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Participant} and HTTP response
      */
     participantCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class ParticipantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Participant;
 
       return this.apiClient.callApi(
         '/api/participant', 'POST',
@@ -68,7 +68,7 @@ export class ParticipantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Participant}
      */
     participantCreate() {
       return this.participantCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class ParticipantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Participant} and HTTP response
      */
     participantDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class ParticipantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Participant;
 
       return this.apiClient.callApi(
         '/api/participant/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class ParticipantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Participant}
      */
     participantDelete(id) {
       return this.participantDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class ParticipantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Participant} and HTTP response
      */
     participantGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class ParticipantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Participant;
 
       return this.apiClient.callApi(
         '/api/participant/{id}', 'GET',
@@ -166,7 +166,7 @@ export class ParticipantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Participant}
      */
     participantGet(id) {
       return this.participantGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class ParticipantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Participant} and HTTP response
      */
     participantListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class ParticipantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Participant;
 
       return this.apiClient.callApi(
         '/api/participant', 'GET',
@@ -207,7 +207,7 @@ export class ParticipantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Participant}
      */
     participantList() {
       return this.participantListWithHttpInfo()
@@ -220,7 +220,7 @@ export class ParticipantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Participant} and HTTP response
      */
     participantUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class ParticipantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Participant;
 
       return this.apiClient.callApi(
         '/api/participant/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class ParticipantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Participant}
      */
     participantUpdate(id) {
       return this.participantUpdateWithHttpInfo(id)

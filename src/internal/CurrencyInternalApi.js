@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Currency} from '../model/Currency';
 
 /**
 * Currency internal service.
@@ -39,7 +39,7 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Currency} and HTTP response
      */
     currencyCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class CurrencyInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Currency;
 
       return this.apiClient.callApi(
         '/api/currency', 'POST',
@@ -68,7 +68,7 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Currency}
      */
     currencyCreate() {
       return this.currencyCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class CurrencyInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Currency} and HTTP response
      */
     currencyDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class CurrencyInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Currency;
 
       return this.apiClient.callApi(
         '/api/currency/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class CurrencyInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Currency}
      */
     currencyDelete(id) {
       return this.currencyDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class CurrencyInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Currency} and HTTP response
      */
     currencyGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class CurrencyInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Currency;
 
       return this.apiClient.callApi(
         '/api/currency/{id}', 'GET',
@@ -166,7 +166,7 @@ export class CurrencyInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Currency}
      */
     currencyGet(id) {
       return this.currencyGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Currency} and HTTP response
      */
     currencyListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class CurrencyInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Currency;
 
       return this.apiClient.callApi(
         '/api/currency', 'GET',
@@ -207,7 +207,7 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Currency}
      */
     currencyList() {
       return this.currencyListWithHttpInfo()
@@ -220,7 +220,7 @@ export class CurrencyInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Currency} and HTTP response
      */
     currencyUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class CurrencyInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Currency;
 
       return this.apiClient.callApi(
         '/api/currency/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class CurrencyInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Currency}
      */
     currencyUpdate(id) {
       return this.currencyUpdateWithHttpInfo(id)

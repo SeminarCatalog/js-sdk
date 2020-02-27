@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="rolediscountCreate"></a>
 # **rolediscountCreate**
-> BookingInterest rolediscountCreate()
+> RoleDiscount rolediscountCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RoleDiscount**](RoleDiscount.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="rolediscountDelete"></a>
 # **rolediscountDelete**
-> BookingInterest rolediscountDelete(id)
+> RoleDiscount rolediscountDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RoleDiscount**](RoleDiscount.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="rolediscountGet"></a>
 # **rolediscountGet**
-> BookingInterest rolediscountGet(id)
+> RoleDiscount rolediscountGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RoleDiscount**](RoleDiscount.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="rolediscountList"></a>
 # **rolediscountList**
-> BookingInterest rolediscountList()
+> RoleDiscount rolediscountList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RoleDiscount**](RoleDiscount.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="rolediscountUpdate"></a>
 # **rolediscountUpdate**
-> BookingInterest rolediscountUpdate(id)
+> RoleDiscount rolediscountUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RoleDiscount**](RoleDiscount.md)
 
 ### Authorization
 

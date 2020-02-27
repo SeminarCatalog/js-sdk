@@ -18,7 +18,7 @@ import {UserGroupInternalApi} from "../internal/UserGroupInternalApi";
 
 /**
 * UserGroup service.
-* @module internal/UserGroupApi
+* @module api/UserGroupApi
 * @version 1.0.0
 */
 export class UserGroupApi extends UserGroupInternalApi {

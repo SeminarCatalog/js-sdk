@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="certificateCreate"></a>
 # **certificateCreate**
-> BookingInterest certificateCreate()
+> Certificate certificateCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Certificate**](Certificate.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="certificateDelete"></a>
 # **certificateDelete**
-> BookingInterest certificateDelete(id)
+> Certificate certificateDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Certificate**](Certificate.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="certificateGet"></a>
 # **certificateGet**
-> BookingInterest certificateGet(id)
+> Certificate certificateGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Certificate**](Certificate.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="certificateList"></a>
 # **certificateList**
-> BookingInterest certificateList()
+> Certificate certificateList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Certificate**](Certificate.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="certificateUpdate"></a>
 # **certificateUpdate**
-> BookingInterest certificateUpdate(id)
+> Certificate certificateUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Certificate**](Certificate.md)
 
 ### Authorization
 

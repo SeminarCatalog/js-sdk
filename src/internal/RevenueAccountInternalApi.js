@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {RevenueAccount} from '../model/RevenueAccount';
 
 /**
 * RevenueAccount internal service.
@@ -39,7 +39,7 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
     revenueaccountCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class RevenueAccountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RevenueAccount;
 
       return this.apiClient.callApi(
         '/api/revenueaccount', 'POST',
@@ -68,7 +68,7 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
     revenueaccountCreate() {
       return this.revenueaccountCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
     revenueaccountDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class RevenueAccountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RevenueAccount;
 
       return this.apiClient.callApi(
         '/api/revenueaccount/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
     revenueaccountDelete(id) {
       return this.revenueaccountDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
     revenueaccountGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class RevenueAccountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RevenueAccount;
 
       return this.apiClient.callApi(
         '/api/revenueaccount/{id}', 'GET',
@@ -166,7 +166,7 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
     revenueaccountGet(id) {
       return this.revenueaccountGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
     revenueaccountListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class RevenueAccountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RevenueAccount;
 
       return this.apiClient.callApi(
         '/api/revenueaccount', 'GET',
@@ -207,7 +207,7 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
     revenueaccountList() {
       return this.revenueaccountListWithHttpInfo()
@@ -220,7 +220,7 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
     revenueaccountUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class RevenueAccountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RevenueAccount;
 
       return this.apiClient.callApi(
         '/api/revenueaccount/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
     revenueaccountUpdate(id) {
       return this.revenueaccountUpdateWithHttpInfo(id)

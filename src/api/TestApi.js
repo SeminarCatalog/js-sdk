@@ -18,7 +18,7 @@ import {TestInternalApi} from "../internal/TestInternalApi";
 
 /**
 * Test service.
-* @module internal/TestApi
+* @module api/TestApi
 * @version 1.0.0
 */
 export class TestApi extends TestInternalApi {

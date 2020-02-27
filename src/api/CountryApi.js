@@ -18,7 +18,7 @@ import {CountryInternalApi} from "../internal/CountryInternalApi";
 
 /**
 * Country service.
-* @module internal/CountryApi
+* @module api/CountryApi
 * @version 1.0.0
 */
 export class CountryApi extends CountryInternalApi {

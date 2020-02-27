@@ -18,7 +18,7 @@ import {AddressInternalApi} from "../internal/AddressInternalApi";
 
 /**
 * Address service.
-* @module internal/AddressApi
+* @module api/AddressApi
 * @version 1.0.0
 */
 export class AddressApi extends AddressInternalApi {

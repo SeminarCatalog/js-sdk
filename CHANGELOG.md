@@ -1,13 +1,24 @@
 # Changelog
 
+## 1.1.2
+
+### Bugfixes
+
+* Add authorization support
+* Fix importing the same model in all services.
+
+### Others
+
+* Optimized rollup build process to reduce bundle size
+
 ## 1.1.1
 
 ### Bugfixes
 
-*  Fix package.json to only publish meta files and lib folder.
+* Fix package.json to only publish meta files and lib folder.
 
 ## 1.1.0
 
 ### Features
 
-*  Add rollup to bundle source code and translate it CommonJS and ES6 Module
+* Add rollup to bundle source code and translate it CommonJS and ES6 Module

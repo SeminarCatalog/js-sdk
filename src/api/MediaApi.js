@@ -18,7 +18,7 @@ import {MediaInternalApi} from "../internal/MediaInternalApi";
 
 /**
 * Media service.
-* @module internal/MediaApi
+* @module api/MediaApi
 * @version 1.0.0
 */
 export class MediaApi extends MediaInternalApi {

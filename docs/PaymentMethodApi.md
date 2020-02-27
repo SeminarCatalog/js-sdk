@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="paymentmethodCreate"></a>
 # **paymentmethodCreate**
-> BookingInterest paymentmethodCreate()
+> PaymentMethod paymentmethodCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**PaymentMethod**](PaymentMethod.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="paymentmethodDelete"></a>
 # **paymentmethodDelete**
-> BookingInterest paymentmethodDelete(id)
+> PaymentMethod paymentmethodDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**PaymentMethod**](PaymentMethod.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="paymentmethodGet"></a>
 # **paymentmethodGet**
-> BookingInterest paymentmethodGet(id)
+> PaymentMethod paymentmethodGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**PaymentMethod**](PaymentMethod.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="paymentmethodList"></a>
 # **paymentmethodList**
-> BookingInterest paymentmethodList()
+> PaymentMethod paymentmethodList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**PaymentMethod**](PaymentMethod.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="paymentmethodUpdate"></a>
 # **paymentmethodUpdate**
-> BookingInterest paymentmethodUpdate(id)
+> PaymentMethod paymentmethodUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**PaymentMethod**](PaymentMethod.md)
 
 ### Authorization
 

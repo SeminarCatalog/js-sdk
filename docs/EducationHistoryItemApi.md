@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="educationhistoryitemCreate"></a>
 # **educationhistoryitemCreate**
-> BookingInterest educationhistoryitemCreate()
+> EducationHistoryItem educationhistoryitemCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**EducationHistoryItem**](EducationHistoryItem.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="educationhistoryitemDelete"></a>
 # **educationhistoryitemDelete**
-> BookingInterest educationhistoryitemDelete(id)
+> EducationHistoryItem educationhistoryitemDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**EducationHistoryItem**](EducationHistoryItem.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="educationhistoryitemGet"></a>
 # **educationhistoryitemGet**
-> BookingInterest educationhistoryitemGet(id)
+> EducationHistoryItem educationhistoryitemGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**EducationHistoryItem**](EducationHistoryItem.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="educationhistoryitemList"></a>
 # **educationhistoryitemList**
-> BookingInterest educationhistoryitemList()
+> EducationHistoryItem educationhistoryitemList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**EducationHistoryItem**](EducationHistoryItem.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="educationhistoryitemUpdate"></a>
 # **educationhistoryitemUpdate**
-> BookingInterest educationhistoryitemUpdate(id)
+> EducationHistoryItem educationhistoryitemUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**EducationHistoryItem**](EducationHistoryItem.md)
 
 ### Authorization
 

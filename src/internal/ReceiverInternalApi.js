@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Receiver} from '../model/Receiver';
 
 /**
 * Receiver internal service.
@@ -39,7 +39,7 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receiver} and HTTP response
      */
     receiverCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class ReceiverInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Receiver;
 
       return this.apiClient.callApi(
         '/api/receiver', 'POST',
@@ -68,7 +68,7 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receiver}
      */
     receiverCreate() {
       return this.receiverCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class ReceiverInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receiver} and HTTP response
      */
     receiverDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class ReceiverInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Receiver;
 
       return this.apiClient.callApi(
         '/api/receiver/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class ReceiverInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receiver}
      */
     receiverDelete(id) {
       return this.receiverDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class ReceiverInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receiver} and HTTP response
      */
     receiverGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class ReceiverInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Receiver;
 
       return this.apiClient.callApi(
         '/api/receiver/{id}', 'GET',
@@ -166,7 +166,7 @@ export class ReceiverInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receiver}
      */
     receiverGet(id) {
       return this.receiverGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receiver} and HTTP response
      */
     receiverListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class ReceiverInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Receiver;
 
       return this.apiClient.callApi(
         '/api/receiver', 'GET',
@@ -207,7 +207,7 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receiver}
      */
     receiverList() {
       return this.receiverListWithHttpInfo()
@@ -220,7 +220,7 @@ export class ReceiverInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receiver} and HTTP response
      */
     receiverUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class ReceiverInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Receiver;
 
       return this.apiClient.callApi(
         '/api/receiver/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class ReceiverInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receiver}
      */
     receiverUpdate(id) {
       return this.receiverUpdateWithHttpInfo(id)

@@ -18,7 +18,7 @@ import {OrganizerInternalApi} from "../internal/OrganizerInternalApi";
 
 /**
 * Organizer service.
-* @module internal/OrganizerApi
+* @module api/OrganizerApi
 * @version 1.0.0
 */
 export class OrganizerApi extends OrganizerInternalApi {

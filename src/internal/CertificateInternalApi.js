@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Certificate} from '../model/Certificate';
 
 /**
 * Certificate internal service.
@@ -39,7 +39,7 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
     certificateCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class CertificateInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Certificate;
 
       return this.apiClient.callApi(
         '/api/certificate', 'POST',
@@ -68,7 +68,7 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
     certificateCreate() {
       return this.certificateCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
     certificateDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class CertificateInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Certificate;
 
       return this.apiClient.callApi(
         '/api/certificate/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
     certificateDelete(id) {
       return this.certificateDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
     certificateGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class CertificateInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Certificate;
 
       return this.apiClient.callApi(
         '/api/certificate/{id}', 'GET',
@@ -166,7 +166,7 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
     certificateGet(id) {
       return this.certificateGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
     certificateListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class CertificateInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Certificate;
 
       return this.apiClient.callApi(
         '/api/certificate', 'GET',
@@ -207,7 +207,7 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
     certificateList() {
       return this.certificateListWithHttpInfo()
@@ -220,7 +220,7 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
     certificateUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class CertificateInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Certificate;
 
       return this.apiClient.callApi(
         '/api/certificate/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
     certificateUpdate(id) {
       return this.certificateUpdateWithHttpInfo(id)

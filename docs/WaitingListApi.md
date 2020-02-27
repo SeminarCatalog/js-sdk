@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="waitinglistCreate"></a>
 # **waitinglistCreate**
-> BookingInterest waitinglistCreate()
+> WaitingList waitinglistCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**WaitingList**](WaitingList.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="waitinglistDelete"></a>
 # **waitinglistDelete**
-> BookingInterest waitinglistDelete(id)
+> WaitingList waitinglistDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**WaitingList**](WaitingList.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="waitinglistGet"></a>
 # **waitinglistGet**
-> BookingInterest waitinglistGet(id)
+> WaitingList waitinglistGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**WaitingList**](WaitingList.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="waitinglistList"></a>
 # **waitinglistList**
-> BookingInterest waitinglistList()
+> WaitingList waitinglistList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**WaitingList**](WaitingList.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="waitinglistUpdate"></a>
 # **waitinglistUpdate**
-> BookingInterest waitinglistUpdate(id)
+> WaitingList waitinglistUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**WaitingList**](WaitingList.md)
 
 ### Authorization
 

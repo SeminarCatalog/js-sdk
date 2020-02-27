@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Language} from '../model/Language';
 
 /**
 * Language internal service.
@@ -39,7 +39,7 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Language} and HTTP response
      */
     languageCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class LanguageInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Language;
 
       return this.apiClient.callApi(
         '/api/language', 'POST',
@@ -68,7 +68,7 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Language}
      */
     languageCreate() {
       return this.languageCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class LanguageInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Language} and HTTP response
      */
     languageDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class LanguageInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Language;
 
       return this.apiClient.callApi(
         '/api/language/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class LanguageInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Language}
      */
     languageDelete(id) {
       return this.languageDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class LanguageInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Language} and HTTP response
      */
     languageGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class LanguageInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Language;
 
       return this.apiClient.callApi(
         '/api/language/{id}', 'GET',
@@ -166,7 +166,7 @@ export class LanguageInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Language}
      */
     languageGet(id) {
       return this.languageGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Language} and HTTP response
      */
     languageListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class LanguageInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Language;
 
       return this.apiClient.callApi(
         '/api/language', 'GET',
@@ -207,7 +207,7 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Language}
      */
     languageList() {
       return this.languageListWithHttpInfo()
@@ -220,7 +220,7 @@ export class LanguageInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Language} and HTTP response
      */
     languageUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class LanguageInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Language;
 
       return this.apiClient.callApi(
         '/api/language/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class LanguageInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Language}
      */
     languageUpdate(id) {
       return this.languageUpdateWithHttpInfo(id)

@@ -18,7 +18,7 @@ import {ParticipationCodeInternalApi} from "../internal/ParticipationCodeInterna
 
 /**
 * ParticipationCode service.
-* @module internal/ParticipationCodeApi
+* @module api/ParticipationCodeApi
 * @version 1.0.0
 */
 export class ParticipationCodeApi extends ParticipationCodeInternalApi {

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="revenueaccountCreate"></a>
 # **revenueaccountCreate**
-> BookingInterest revenueaccountCreate()
+> RevenueAccount revenueaccountCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RevenueAccount**](RevenueAccount.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="revenueaccountDelete"></a>
 # **revenueaccountDelete**
-> BookingInterest revenueaccountDelete(id)
+> RevenueAccount revenueaccountDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RevenueAccount**](RevenueAccount.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="revenueaccountGet"></a>
 # **revenueaccountGet**
-> BookingInterest revenueaccountGet(id)
+> RevenueAccount revenueaccountGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RevenueAccount**](RevenueAccount.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="revenueaccountList"></a>
 # **revenueaccountList**
-> BookingInterest revenueaccountList()
+> RevenueAccount revenueaccountList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RevenueAccount**](RevenueAccount.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="revenueaccountUpdate"></a>
 # **revenueaccountUpdate**
-> BookingInterest revenueaccountUpdate(id)
+> RevenueAccount revenueaccountUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**RevenueAccount**](RevenueAccount.md)
 
 ### Authorization
 

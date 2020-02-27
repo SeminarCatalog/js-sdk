@@ -18,7 +18,7 @@ import {SeminarConfigurationInternalApi} from "../internal/SeminarConfigurationI
 
 /**
 * SeminarConfiguration service.
-* @module internal/SeminarConfigurationApi
+* @module api/SeminarConfigurationApi
 * @version 1.0.0
 */
 export class SeminarConfigurationApi extends SeminarConfigurationInternalApi {

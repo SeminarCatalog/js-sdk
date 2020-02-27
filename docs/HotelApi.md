@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="hotelCreate"></a>
 # **hotelCreate**
-> BookingInterest hotelCreate()
+> Hotel hotelCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Hotel**](Hotel.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="hotelDelete"></a>
 # **hotelDelete**
-> BookingInterest hotelDelete(id)
+> Hotel hotelDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Hotel**](Hotel.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="hotelGet"></a>
 # **hotelGet**
-> BookingInterest hotelGet(id)
+> Hotel hotelGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Hotel**](Hotel.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="hotelList"></a>
 # **hotelList**
-> BookingInterest hotelList()
+> Hotel hotelList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Hotel**](Hotel.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="hotelUpdate"></a>
 # **hotelUpdate**
-> BookingInterest hotelUpdate(id)
+> Hotel hotelUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Hotel**](Hotel.md)
 
 ### Authorization
 

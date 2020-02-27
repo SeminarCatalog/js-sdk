@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {CouponCode} from '../model/CouponCode';
 
 /**
 * CouponCode internal service.
@@ -39,7 +39,7 @@ export class CouponCodeInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CouponCode} and HTTP response
      */
     couponcodeCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class CouponCodeInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = CouponCode;
 
       return this.apiClient.callApi(
         '/api/couponcode', 'POST',
@@ -68,7 +68,7 @@ export class CouponCodeInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CouponCode}
      */
     couponcodeCreate() {
       return this.couponcodeCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class CouponCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CouponCode} and HTTP response
      */
     couponcodeDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class CouponCodeInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = CouponCode;
 
       return this.apiClient.callApi(
         '/api/couponcode/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class CouponCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CouponCode}
      */
     couponcodeDelete(id) {
       return this.couponcodeDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class CouponCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CouponCode} and HTTP response
      */
     couponcodeGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class CouponCodeInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = CouponCode;
 
       return this.apiClient.callApi(
         '/api/couponcode/{id}', 'GET',
@@ -166,7 +166,7 @@ export class CouponCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CouponCode}
      */
     couponcodeGet(id) {
       return this.couponcodeGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class CouponCodeInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CouponCode} and HTTP response
      */
     couponcodeListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class CouponCodeInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = CouponCode;
 
       return this.apiClient.callApi(
         '/api/couponcode', 'GET',
@@ -207,7 +207,7 @@ export class CouponCodeInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CouponCode}
      */
     couponcodeList() {
       return this.couponcodeListWithHttpInfo()
@@ -220,7 +220,7 @@ export class CouponCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CouponCode} and HTTP response
      */
     couponcodeUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class CouponCodeInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = CouponCode;
 
       return this.apiClient.callApi(
         '/api/couponcode/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class CouponCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CouponCode}
      */
     couponcodeUpdate(id) {
       return this.couponcodeUpdateWithHttpInfo(id)

@@ -1,12 +1,12 @@
 {
   "name": "@seminarcatalog/sdk",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "This project is the official Javascript API client implementation for the SeminarCatalog developed by the Databay AG.",
   "keywords": ["SeminarCatalog","SDK","Javascript","SeminarManager","Courses","E-Learning","ILIAS"],
   "license": "MIT",
   "homepage": "https://www.databay.de/landing-pages/seminarmanagement",
-  "repository": "https://github.com/SeminarCatalog/sdk.git",
-  "bugs": "https://github.com/SeminarCatalog/sdk/issues",
+  "repository": "https://github.com/SeminarCatalog/js-sdk.git",
+  "bugs": "https://github.com/SeminarCatalog/js-sdk/issues",
   "author": {
     "name": "Databay AG",
     "email": "info@databay.de"
@@ -51,9 +51,8 @@
     "rollup": "^1.27.13",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^4.2.4",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-url": "^2.0.1"
+    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-node-resolve": "^4.2.4"
   },
   "files": [
     "lib"

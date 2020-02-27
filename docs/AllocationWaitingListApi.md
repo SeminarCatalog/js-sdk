@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="allocationwaitinglistCreate"></a>
 # **allocationwaitinglistCreate**
-> BookingInterest allocationwaitinglistCreate()
+> AllocationWaitingList allocationwaitinglistCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**AllocationWaitingList**](AllocationWaitingList.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="allocationwaitinglistDelete"></a>
 # **allocationwaitinglistDelete**
-> BookingInterest allocationwaitinglistDelete(id)
+> AllocationWaitingList allocationwaitinglistDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**AllocationWaitingList**](AllocationWaitingList.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="allocationwaitinglistGet"></a>
 # **allocationwaitinglistGet**
-> BookingInterest allocationwaitinglistGet(id)
+> AllocationWaitingList allocationwaitinglistGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**AllocationWaitingList**](AllocationWaitingList.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="allocationwaitinglistList"></a>
 # **allocationwaitinglistList**
-> BookingInterest allocationwaitinglistList()
+> AllocationWaitingList allocationwaitinglistList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**AllocationWaitingList**](AllocationWaitingList.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="allocationwaitinglistUpdate"></a>
 # **allocationwaitinglistUpdate**
-> BookingInterest allocationwaitinglistUpdate(id)
+> AllocationWaitingList allocationwaitinglistUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**AllocationWaitingList**](AllocationWaitingList.md)
 
 ### Authorization
 

@@ -18,7 +18,7 @@ import {ReceiverInternalApi} from "../internal/ReceiverInternalApi";
 
 /**
 * Receiver service.
-* @module internal/ReceiverApi
+* @module api/ReceiverApi
 * @version 1.0.0
 */
 export class ReceiverApi extends ReceiverInternalApi {

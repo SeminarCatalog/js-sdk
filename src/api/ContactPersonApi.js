@@ -18,7 +18,7 @@ import {ContactPersonInternalApi} from "../internal/ContactPersonInternalApi";
 
 /**
 * ContactPerson service.
-* @module internal/ContactPersonApi
+* @module api/ContactPersonApi
 * @version 1.0.0
 */
 export class ContactPersonApi extends ContactPersonInternalApi {

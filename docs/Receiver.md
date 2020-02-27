@@ -7,8 +7,6 @@ Name | Type | Description | Notes
 **usrId** | **Number** |  | [optional] 
 **active** | **Number** |  | [optional] 
 **login** | **String** |  | [optional] 
-**passwd** | **String** |  | [optional] 
-**passwdEncType** | **String** |  | [optional] 
 **firstname** | **String** |  | [optional] 
 **lastname** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 

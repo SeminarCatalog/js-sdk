@@ -18,7 +18,7 @@ import {TaskInternalApi} from "../internal/TaskInternalApi";
 
 /**
 * Task service.
-* @module internal/TaskApi
+* @module api/TaskApi
 * @version 1.0.0
 */
 export class TaskApi extends TaskInternalApi {

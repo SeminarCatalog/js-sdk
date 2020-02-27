@@ -47,10 +47,6 @@ export class Receiver {
         obj.active = ApiClient.convertToType(data['active'], 'Number');
       if (data.hasOwnProperty('login'))
         obj.login = ApiClient.convertToType(data['login'], 'String');
-      if (data.hasOwnProperty('passwd'))
-        obj.passwd = ApiClient.convertToType(data['passwd'], 'String');
-      if (data.hasOwnProperty('passwdEncType'))
-        obj.passwdEncType = ApiClient.convertToType(data['passwdEncType'], 'String');
       if (data.hasOwnProperty('firstname'))
         obj.firstname = ApiClient.convertToType(data['firstname'], 'String');
       if (data.hasOwnProperty('lastname'))
@@ -193,16 +189,6 @@ Receiver.prototype.active = undefined;
  * @member {String} login
  */
 Receiver.prototype.login = undefined;
-
-/**
- * @member {String} passwd
- */
-Receiver.prototype.passwd = undefined;
-
-/**
- * @member {String} passwdEncType
- */
-Receiver.prototype.passwdEncType = undefined;
 
 /**
  * @member {String} firstname

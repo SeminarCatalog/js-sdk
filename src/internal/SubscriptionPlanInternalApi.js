@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {SubscriptionPlan} from '../model/SubscriptionPlan';
 
 /**
 * SubscriptionPlan internal service.
@@ -39,7 +39,7 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
     subscriptionplanCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class SubscriptionPlanInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionPlan;
 
       return this.apiClient.callApi(
         '/api/subscriptionplan', 'POST',
@@ -68,7 +68,7 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
     subscriptionplanCreate() {
       return this.subscriptionplanCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
     subscriptionplanDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class SubscriptionPlanInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionPlan;
 
       return this.apiClient.callApi(
         '/api/subscriptionplan/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
     subscriptionplanDelete(id) {
       return this.subscriptionplanDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
     subscriptionplanGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class SubscriptionPlanInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionPlan;
 
       return this.apiClient.callApi(
         '/api/subscriptionplan/{id}', 'GET',
@@ -166,7 +166,7 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
     subscriptionplanGet(id) {
       return this.subscriptionplanGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
     subscriptionplanListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class SubscriptionPlanInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionPlan;
 
       return this.apiClient.callApi(
         '/api/subscriptionplan', 'GET',
@@ -207,7 +207,7 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
     subscriptionplanList() {
       return this.subscriptionplanListWithHttpInfo()
@@ -220,7 +220,7 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
     subscriptionplanUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class SubscriptionPlanInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = SubscriptionPlan;
 
       return this.apiClient.callApi(
         '/api/subscriptionplan/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
     subscriptionplanUpdate(id) {
       return this.subscriptionplanUpdateWithHttpInfo(id)

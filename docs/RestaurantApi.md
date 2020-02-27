@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="restaurantCreate"></a>
 # **restaurantCreate**
-> BookingInterest restaurantCreate()
+> Restaurant restaurantCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Restaurant**](Restaurant.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="restaurantDelete"></a>
 # **restaurantDelete**
-> BookingInterest restaurantDelete(id)
+> Restaurant restaurantDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Restaurant**](Restaurant.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="restaurantGet"></a>
 # **restaurantGet**
-> BookingInterest restaurantGet(id)
+> Restaurant restaurantGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Restaurant**](Restaurant.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="restaurantList"></a>
 # **restaurantList**
-> BookingInterest restaurantList()
+> Restaurant restaurantList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Restaurant**](Restaurant.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="restaurantUpdate"></a>
 # **restaurantUpdate**
-> BookingInterest restaurantUpdate(id)
+> Restaurant restaurantUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Restaurant**](Restaurant.md)
 
 ### Authorization
 

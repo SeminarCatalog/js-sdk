@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Location} from '../model/Location';
 
 /**
 * Location internal service.
@@ -39,7 +39,7 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Location} and HTTP response
      */
     locationCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class LocationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Location;
 
       return this.apiClient.callApi(
         '/api/location', 'POST',
@@ -68,7 +68,7 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Location}
      */
     locationCreate() {
       return this.locationCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class LocationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Location} and HTTP response
      */
     locationDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class LocationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Location;
 
       return this.apiClient.callApi(
         '/api/location/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class LocationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Location}
      */
     locationDelete(id) {
       return this.locationDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class LocationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Location} and HTTP response
      */
     locationGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class LocationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Location;
 
       return this.apiClient.callApi(
         '/api/location/{id}', 'GET',
@@ -166,7 +166,7 @@ export class LocationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Location}
      */
     locationGet(id) {
       return this.locationGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Location} and HTTP response
      */
     locationListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class LocationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Location;
 
       return this.apiClient.callApi(
         '/api/location', 'GET',
@@ -207,7 +207,7 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Location}
      */
     locationList() {
       return this.locationListWithHttpInfo()
@@ -220,7 +220,7 @@ export class LocationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Location} and HTTP response
      */
     locationUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class LocationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Location;
 
       return this.apiClient.callApi(
         '/api/location/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class LocationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Location}
      */
     locationUpdate(id) {
       return this.locationUpdateWithHttpInfo(id)

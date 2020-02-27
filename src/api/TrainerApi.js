@@ -18,7 +18,7 @@ import {TrainerInternalApi} from "../internal/TrainerInternalApi";
 
 /**
 * Trainer service.
-* @module internal/TrainerApi
+* @module api/TrainerApi
 * @version 1.0.0
 */
 export class TrainerApi extends TrainerInternalApi {

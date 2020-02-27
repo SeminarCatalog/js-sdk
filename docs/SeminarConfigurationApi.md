@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="seminarconfigurationCreate"></a>
 # **seminarconfigurationCreate**
-> BookingInterest seminarconfigurationCreate()
+> SeminarConfiguration seminarconfigurationCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SeminarConfiguration**](SeminarConfiguration.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="seminarconfigurationDelete"></a>
 # **seminarconfigurationDelete**
-> BookingInterest seminarconfigurationDelete(id)
+> SeminarConfiguration seminarconfigurationDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SeminarConfiguration**](SeminarConfiguration.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="seminarconfigurationGet"></a>
 # **seminarconfigurationGet**
-> BookingInterest seminarconfigurationGet(id)
+> SeminarConfiguration seminarconfigurationGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SeminarConfiguration**](SeminarConfiguration.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="seminarconfigurationList"></a>
 # **seminarconfigurationList**
-> BookingInterest seminarconfigurationList()
+> SeminarConfiguration seminarconfigurationList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SeminarConfiguration**](SeminarConfiguration.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="seminarconfigurationUpdate"></a>
 # **seminarconfigurationUpdate**
-> BookingInterest seminarconfigurationUpdate(id)
+> SeminarConfiguration seminarconfigurationUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SeminarConfiguration**](SeminarConfiguration.md)
 
 ### Authorization
 

@@ -18,7 +18,7 @@ import {RegionInternalApi} from "../internal/RegionInternalApi";
 
 /**
 * Region service.
-* @module internal/RegionApi
+* @module api/RegionApi
 * @version 1.0.0
 */
 export class RegionApi extends RegionInternalApi {

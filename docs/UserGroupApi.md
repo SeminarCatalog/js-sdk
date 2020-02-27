@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="usergroupCreate"></a>
 # **usergroupCreate**
-> BookingInterest usergroupCreate()
+> UserGroup usergroupCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**UserGroup**](UserGroup.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="usergroupDelete"></a>
 # **usergroupDelete**
-> BookingInterest usergroupDelete(id)
+> UserGroup usergroupDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**UserGroup**](UserGroup.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="usergroupGet"></a>
 # **usergroupGet**
-> BookingInterest usergroupGet(id)
+> UserGroup usergroupGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**UserGroup**](UserGroup.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="usergroupList"></a>
 # **usergroupList**
-> BookingInterest usergroupList()
+> UserGroup usergroupList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**UserGroup**](UserGroup.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="usergroupUpdate"></a>
 # **usergroupUpdate**
-> BookingInterest usergroupUpdate(id)
+> UserGroup usergroupUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**UserGroup**](UserGroup.md)
 
 ### Authorization
 

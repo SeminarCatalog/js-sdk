@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="organizerCreate"></a>
 # **organizerCreate**
-> BookingInterest organizerCreate()
+> Organizer organizerCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Organizer**](Organizer.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="organizerDelete"></a>
 # **organizerDelete**
-> BookingInterest organizerDelete(id)
+> Organizer organizerDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Organizer**](Organizer.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="organizerGet"></a>
 # **organizerGet**
-> BookingInterest organizerGet(id)
+> Organizer organizerGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Organizer**](Organizer.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="organizerList"></a>
 # **organizerList**
-> BookingInterest organizerList()
+> Organizer organizerList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Organizer**](Organizer.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="organizerUpdate"></a>
 # **organizerUpdate**
-> BookingInterest organizerUpdate(id)
+> Organizer organizerUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**Organizer**](Organizer.md)
 
 ### Authorization
 

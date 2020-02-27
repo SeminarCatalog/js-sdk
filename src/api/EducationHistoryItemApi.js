@@ -18,7 +18,7 @@ import {EducationHistoryItemInternalApi} from "../internal/EducationHistoryItemI
 
 /**
 * EducationHistoryItem service.
-* @module internal/EducationHistoryItemApi
+* @module api/EducationHistoryItemApi
 * @version 1.0.0
 */
 export class EducationHistoryItemApi extends EducationHistoryItemInternalApi {

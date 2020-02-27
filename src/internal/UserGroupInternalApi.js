@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {UserGroup} from '../model/UserGroup';
 
 /**
 * UserGroup internal service.
@@ -39,7 +39,7 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroup} and HTTP response
      */
     usergroupCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class UserGroupInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = UserGroup;
 
       return this.apiClient.callApi(
         '/api/usergroup', 'POST',
@@ -68,7 +68,7 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroup}
      */
     usergroupCreate() {
       return this.usergroupCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class UserGroupInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroup} and HTTP response
      */
     usergroupDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class UserGroupInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = UserGroup;
 
       return this.apiClient.callApi(
         '/api/usergroup/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class UserGroupInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroup}
      */
     usergroupDelete(id) {
       return this.usergroupDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class UserGroupInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroup} and HTTP response
      */
     usergroupGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class UserGroupInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = UserGroup;
 
       return this.apiClient.callApi(
         '/api/usergroup/{id}', 'GET',
@@ -166,7 +166,7 @@ export class UserGroupInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroup}
      */
     usergroupGet(id) {
       return this.usergroupGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroup} and HTTP response
      */
     usergroupListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class UserGroupInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = UserGroup;
 
       return this.apiClient.callApi(
         '/api/usergroup', 'GET',
@@ -207,7 +207,7 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroup}
      */
     usergroupList() {
       return this.usergroupListWithHttpInfo()
@@ -220,7 +220,7 @@ export class UserGroupInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroup} and HTTP response
      */
     usergroupUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class UserGroupInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = UserGroup;
 
       return this.apiClient.callApi(
         '/api/usergroup/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class UserGroupInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroup}
      */
     usergroupUpdate(id) {
       return this.usergroupUpdateWithHttpInfo(id)

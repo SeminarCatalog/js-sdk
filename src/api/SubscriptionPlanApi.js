@@ -18,7 +18,7 @@ import {SubscriptionPlanInternalApi} from "../internal/SubscriptionPlanInternalA
 
 /**
 * SubscriptionPlan service.
-* @module internal/SubscriptionPlanApi
+* @module api/SubscriptionPlanApi
 * @version 1.0.0
 */
 export class SubscriptionPlanApi extends SubscriptionPlanInternalApi {

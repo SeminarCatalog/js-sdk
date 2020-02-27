@@ -18,7 +18,7 @@ import {UserInternalApi} from "../internal/UserInternalApi";
 
 /**
 * User service.
-* @module internal/UserApi
+* @module api/UserApi
 * @version 1.0.0
 */
 export class UserApi extends UserInternalApi {

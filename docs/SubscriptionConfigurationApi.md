@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="subscriptionconfigurationCreate"></a>
 # **subscriptionconfigurationCreate**
-> BookingInterest subscriptionconfigurationCreate()
+> SubscriptionConfiguration subscriptionconfigurationCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SubscriptionConfiguration**](SubscriptionConfiguration.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="subscriptionconfigurationDelete"></a>
 # **subscriptionconfigurationDelete**
-> BookingInterest subscriptionconfigurationDelete(id)
+> SubscriptionConfiguration subscriptionconfigurationDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SubscriptionConfiguration**](SubscriptionConfiguration.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="subscriptionconfigurationGet"></a>
 # **subscriptionconfigurationGet**
-> BookingInterest subscriptionconfigurationGet(id)
+> SubscriptionConfiguration subscriptionconfigurationGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SubscriptionConfiguration**](SubscriptionConfiguration.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="subscriptionconfigurationList"></a>
 # **subscriptionconfigurationList**
-> BookingInterest subscriptionconfigurationList()
+> SubscriptionConfiguration subscriptionconfigurationList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SubscriptionConfiguration**](SubscriptionConfiguration.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="subscriptionconfigurationUpdate"></a>
 # **subscriptionconfigurationUpdate**
-> BookingInterest subscriptionconfigurationUpdate(id)
+> SubscriptionConfiguration subscriptionconfigurationUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**SubscriptionConfiguration**](SubscriptionConfiguration.md)
 
 ### Authorization
 

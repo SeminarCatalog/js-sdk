@@ -18,7 +18,7 @@ import {ParticipationInternalApi} from "../internal/ParticipationInternalApi";
 
 /**
 * Participation service.
-* @module internal/ParticipationApi
+* @module api/ParticipationApi
 * @version 1.0.0
 */
 export class ParticipationApi extends ParticipationInternalApi {

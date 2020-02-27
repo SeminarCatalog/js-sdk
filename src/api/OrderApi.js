@@ -18,7 +18,7 @@ import {OrderInternalApi} from "../internal/OrderInternalApi";
 
 /**
 * Order service.
-* @module internal/OrderApi
+* @module api/OrderApi
 * @version 1.0.0
 */
 export class OrderApi extends OrderInternalApi {

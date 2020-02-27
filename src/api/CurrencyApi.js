@@ -18,7 +18,7 @@ import {CurrencyInternalApi} from "../internal/CurrencyInternalApi";
 
 /**
 * Currency service.
-* @module internal/CurrencyApi
+* @module api/CurrencyApi
 * @version 1.0.0
 */
 export class CurrencyApi extends CurrencyInternalApi {

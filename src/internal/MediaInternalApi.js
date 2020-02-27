@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Media} from '../model/Media';
 
 /**
 * Media internal service.
@@ -39,7 +39,7 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Media} and HTTP response
      */
     mediaCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class MediaInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Media;
 
       return this.apiClient.callApi(
         '/api/media', 'POST',
@@ -68,7 +68,7 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Media}
      */
     mediaCreate() {
       return this.mediaCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class MediaInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Media} and HTTP response
      */
     mediaDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class MediaInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Media;
 
       return this.apiClient.callApi(
         '/api/media/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class MediaInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Media}
      */
     mediaDelete(id) {
       return this.mediaDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class MediaInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Media} and HTTP response
      */
     mediaGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class MediaInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Media;
 
       return this.apiClient.callApi(
         '/api/media/{id}', 'GET',
@@ -166,7 +166,7 @@ export class MediaInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Media}
      */
     mediaGet(id) {
       return this.mediaGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Media} and HTTP response
      */
     mediaListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class MediaInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Media;
 
       return this.apiClient.callApi(
         '/api/media', 'GET',
@@ -207,7 +207,7 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Media}
      */
     mediaList() {
       return this.mediaListWithHttpInfo()
@@ -220,7 +220,7 @@ export class MediaInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Media} and HTTP response
      */
     mediaUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class MediaInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Media;
 
       return this.apiClient.callApi(
         '/api/media/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class MediaInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Media}
      */
     mediaUpdate(id) {
       return this.mediaUpdateWithHttpInfo(id)

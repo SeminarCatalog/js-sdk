@@ -18,7 +18,7 @@ import {CertificateInternalApi} from "../internal/CertificateInternalApi";
 
 /**
 * Certificate service.
-* @module internal/CertificateApi
+* @module api/CertificateApi
 * @version 1.0.0
 */
 export class CertificateApi extends CertificateInternalApi {

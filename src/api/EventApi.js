@@ -18,7 +18,7 @@ import {EventInternalApi} from "../internal/EventInternalApi";
 
 /**
 * Event service.
-* @module internal/EventApi
+* @module api/EventApi
 * @version 1.0.0
 */
 export class EventApi extends EventInternalApi {

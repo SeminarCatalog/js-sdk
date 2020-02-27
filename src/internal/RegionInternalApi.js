@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Region} from '../model/Region';
 
 /**
 * Region internal service.
@@ -39,7 +39,7 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Region} and HTTP response
      */
     regionCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class RegionInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Region;
 
       return this.apiClient.callApi(
         '/api/region', 'POST',
@@ -68,7 +68,7 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Region}
      */
     regionCreate() {
       return this.regionCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class RegionInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Region} and HTTP response
      */
     regionDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class RegionInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Region;
 
       return this.apiClient.callApi(
         '/api/region/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class RegionInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Region}
      */
     regionDelete(id) {
       return this.regionDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class RegionInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Region} and HTTP response
      */
     regionGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class RegionInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Region;
 
       return this.apiClient.callApi(
         '/api/region/{id}', 'GET',
@@ -166,7 +166,7 @@ export class RegionInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Region}
      */
     regionGet(id) {
       return this.regionGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Region} and HTTP response
      */
     regionListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class RegionInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Region;
 
       return this.apiClient.callApi(
         '/api/region', 'GET',
@@ -207,7 +207,7 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Region}
      */
     regionList() {
       return this.regionListWithHttpInfo()
@@ -220,7 +220,7 @@ export class RegionInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Region} and HTTP response
      */
     regionUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class RegionInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Region;
 
       return this.apiClient.callApi(
         '/api/region/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class RegionInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Region}
      */
     regionUpdate(id) {
       return this.regionUpdateWithHttpInfo(id)

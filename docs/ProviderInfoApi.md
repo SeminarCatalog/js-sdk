@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="providerinfoCreate"></a>
 # **providerinfoCreate**
-> BookingInterest providerinfoCreate()
+> ProviderInfo providerinfoCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProviderInfo**](ProviderInfo.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="providerinfoDelete"></a>
 # **providerinfoDelete**
-> BookingInterest providerinfoDelete(id)
+> ProviderInfo providerinfoDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProviderInfo**](ProviderInfo.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="providerinfoGet"></a>
 # **providerinfoGet**
-> BookingInterest providerinfoGet(id)
+> ProviderInfo providerinfoGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProviderInfo**](ProviderInfo.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="providerinfoList"></a>
 # **providerinfoList**
-> BookingInterest providerinfoList()
+> ProviderInfo providerinfoList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProviderInfo**](ProviderInfo.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="providerinfoUpdate"></a>
 # **providerinfoUpdate**
-> BookingInterest providerinfoUpdate(id)
+> ProviderInfo providerinfoUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**ProviderInfo**](ProviderInfo.md)
 
 ### Authorization
 

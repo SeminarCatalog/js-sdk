@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {ProductVariant} from '../model/ProductVariant';
 
 /**
 * ProductVariant internal service.
@@ -39,7 +39,7 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductVariant} and HTTP response
      */
     productvariantCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class ProductVariantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = ProductVariant;
 
       return this.apiClient.callApi(
         '/api/productvariant', 'POST',
@@ -68,7 +68,7 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductVariant}
      */
     productvariantCreate() {
       return this.productvariantCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class ProductVariantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductVariant} and HTTP response
      */
     productvariantDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class ProductVariantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = ProductVariant;
 
       return this.apiClient.callApi(
         '/api/productvariant/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class ProductVariantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductVariant}
      */
     productvariantDelete(id) {
       return this.productvariantDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class ProductVariantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductVariant} and HTTP response
      */
     productvariantGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class ProductVariantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = ProductVariant;
 
       return this.apiClient.callApi(
         '/api/productvariant/{id}', 'GET',
@@ -166,7 +166,7 @@ export class ProductVariantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductVariant}
      */
     productvariantGet(id) {
       return this.productvariantGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductVariant} and HTTP response
      */
     productvariantListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class ProductVariantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = ProductVariant;
 
       return this.apiClient.callApi(
         '/api/productvariant', 'GET',
@@ -207,7 +207,7 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductVariant}
      */
     productvariantList() {
       return this.productvariantListWithHttpInfo()
@@ -220,7 +220,7 @@ export class ProductVariantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductVariant} and HTTP response
      */
     productvariantUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class ProductVariantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = ProductVariant;
 
       return this.apiClient.callApi(
         '/api/productvariant/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class ProductVariantInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductVariant}
      */
     productvariantUpdate(id) {
       return this.productvariantUpdateWithHttpInfo(id)

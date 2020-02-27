@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {EducationHistoryItem} from '../model/EducationHistoryItem';
 
 /**
 * EducationHistoryItem internal service.
@@ -39,7 +39,7 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
     educationhistoryitemCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class EducationHistoryItemInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = EducationHistoryItem;
 
       return this.apiClient.callApi(
         '/api/educationhistoryitem', 'POST',
@@ -68,7 +68,7 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
     educationhistoryitemCreate() {
       return this.educationhistoryitemCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
     educationhistoryitemDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class EducationHistoryItemInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = EducationHistoryItem;
 
       return this.apiClient.callApi(
         '/api/educationhistoryitem/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
     educationhistoryitemDelete(id) {
       return this.educationhistoryitemDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
     educationhistoryitemGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class EducationHistoryItemInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = EducationHistoryItem;
 
       return this.apiClient.callApi(
         '/api/educationhistoryitem/{id}', 'GET',
@@ -166,7 +166,7 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
     educationhistoryitemGet(id) {
       return this.educationhistoryitemGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
     educationhistoryitemListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class EducationHistoryItemInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = EducationHistoryItem;
 
       return this.apiClient.callApi(
         '/api/educationhistoryitem', 'GET',
@@ -207,7 +207,7 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
     educationhistoryitemList() {
       return this.educationhistoryitemListWithHttpInfo()
@@ -220,7 +220,7 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
     educationhistoryitemUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class EducationHistoryItemInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = EducationHistoryItem;
 
       return this.apiClient.callApi(
         '/api/educationhistoryitem/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
     educationhistoryitemUpdate(id) {
       return this.educationhistoryitemUpdateWithHttpInfo(id)

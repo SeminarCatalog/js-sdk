@@ -18,7 +18,7 @@ import {RestaurantInternalApi} from "../internal/RestaurantInternalApi";
 
 /**
 * Restaurant service.
-* @module internal/RestaurantApi
+* @module api/RestaurantApi
 * @version 1.0.0
 */
 export class RestaurantApi extends RestaurantInternalApi {

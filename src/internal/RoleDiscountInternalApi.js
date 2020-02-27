@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {RoleDiscount} from '../model/RoleDiscount';
 
 /**
 * RoleDiscount internal service.
@@ -39,7 +39,7 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
     rolediscountCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class RoleDiscountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RoleDiscount;
 
       return this.apiClient.callApi(
         '/api/rolediscount', 'POST',
@@ -68,7 +68,7 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
     rolediscountCreate() {
       return this.rolediscountCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
     rolediscountDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class RoleDiscountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RoleDiscount;
 
       return this.apiClient.callApi(
         '/api/rolediscount/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
     rolediscountDelete(id) {
       return this.rolediscountDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
     rolediscountGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class RoleDiscountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RoleDiscount;
 
       return this.apiClient.callApi(
         '/api/rolediscount/{id}', 'GET',
@@ -166,7 +166,7 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
     rolediscountGet(id) {
       return this.rolediscountGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
     rolediscountListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class RoleDiscountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RoleDiscount;
 
       return this.apiClient.callApi(
         '/api/rolediscount', 'GET',
@@ -207,7 +207,7 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
     rolediscountList() {
       return this.rolediscountListWithHttpInfo()
@@ -220,7 +220,7 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
     rolediscountUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class RoleDiscountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = RoleDiscount;
 
       return this.apiClient.callApi(
         '/api/rolediscount/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
     rolediscountUpdate(id) {
       return this.rolediscountUpdateWithHttpInfo(id)

@@ -18,7 +18,7 @@ import {LanguageInternalApi} from "../internal/LanguageInternalApi";
 
 /**
 * Language service.
-* @module internal/LanguageApi
+* @module api/LanguageApi
 * @version 1.0.0
 */
 export class LanguageApi extends LanguageInternalApi {

@@ -18,7 +18,7 @@ import {PartnerInternalApi} from "../internal/PartnerInternalApi";
 
 /**
 * Partner service.
-* @module internal/PartnerApi
+* @module api/PartnerApi
 * @version 1.0.0
 */
 export class PartnerApi extends PartnerInternalApi {

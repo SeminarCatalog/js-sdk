@@ -18,7 +18,7 @@ import {TopicInternalApi} from "../internal/TopicInternalApi";
 
 /**
 * Topic service.
-* @module internal/TopicApi
+* @module api/TopicApi
 * @version 1.0.0
 */
 export class TopicApi extends TopicInternalApi {

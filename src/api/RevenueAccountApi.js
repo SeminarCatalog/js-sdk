@@ -18,7 +18,7 @@ import {RevenueAccountInternalApi} from "../internal/RevenueAccountInternalApi";
 
 /**
 * RevenueAccount service.
-* @module internal/RevenueAccountApi
+* @module api/RevenueAccountApi
 * @version 1.0.0
 */
 export class RevenueAccountApi extends RevenueAccountInternalApi {

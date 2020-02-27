@@ -14,7 +14,7 @@
  */
 
 import {ApiClient} from "../ApiClient";
-import {BookingInterest} from '../model/BookingInterest';
+import {Partner} from '../model/Partner';
 
 /**
 * Partner internal service.
@@ -39,7 +39,7 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Partner} and HTTP response
      */
     partnerCreateWithHttpInfo() {
       let postBody = null;
@@ -57,7 +57,7 @@ export class PartnerInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Partner;
 
       return this.apiClient.callApi(
         '/api/partner', 'POST',
@@ -68,7 +68,7 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Partner}
      */
     partnerCreate() {
       return this.partnerCreateWithHttpInfo()
@@ -81,7 +81,7 @@ export class PartnerInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Partner} and HTTP response
      */
     partnerDeleteWithHttpInfo(id) {
       let postBody = null;
@@ -105,7 +105,7 @@ export class PartnerInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Partner;
 
       return this.apiClient.callApi(
         '/api/partner/{id}', 'DELETE',
@@ -117,7 +117,7 @@ export class PartnerInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Partner}
      */
     partnerDelete(id) {
       return this.partnerDeleteWithHttpInfo(id)
@@ -130,7 +130,7 @@ export class PartnerInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Partner} and HTTP response
      */
     partnerGetWithHttpInfo(id) {
       let postBody = null;
@@ -154,7 +154,7 @@ export class PartnerInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Partner;
 
       return this.apiClient.callApi(
         '/api/partner/{id}', 'GET',
@@ -166,7 +166,7 @@ export class PartnerInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Partner}
      */
     partnerGet(id) {
       return this.partnerGetWithHttpInfo(id)
@@ -178,7 +178,7 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Partner} and HTTP response
      */
     partnerListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class PartnerInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Partner;
 
       return this.apiClient.callApi(
         '/api/partner', 'GET',
@@ -207,7 +207,7 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Partner}
      */
     partnerList() {
       return this.partnerListWithHttpInfo()
@@ -220,7 +220,7 @@ export class PartnerInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Partner} and HTTP response
      */
     partnerUpdateWithHttpInfo(id) {
       let postBody = null;
@@ -244,7 +244,7 @@ export class PartnerInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = BookingInterest;
+      let returnType = Partner;
 
       return this.apiClient.callApi(
         '/api/partner/{id}', 'PUT',
@@ -256,7 +256,7 @@ export class PartnerInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
      * @param {Number} id Numeric identifier for this resource
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Partner}
      */
     partnerUpdate(id) {
       return this.partnerUpdateWithHttpInfo(id)

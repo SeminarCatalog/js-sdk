@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="testresultCreate"></a>
 # **testresultCreate**
-> BookingInterest testresultCreate()
+> TestResult testresultCreate()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -35,7 +35,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**TestResult**](TestResult.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 
 <a name="testresultDelete"></a>
 # **testresultDelete**
-> BookingInterest testresultDelete(id)
+> TestResult testresultDelete(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**TestResult**](TestResult.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 
 <a name="testresultGet"></a>
 # **testresultGet**
-> BookingInterest testresultGet(id)
+> TestResult testresultGet(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**TestResult**](TestResult.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 
 <a name="testresultList"></a>
 # **testresultList**
-> BookingInterest testresultList()
+> TestResult testresultList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**TestResult**](TestResult.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 
 <a name="testresultUpdate"></a>
 # **testresultUpdate**
-> BookingInterest testresultUpdate(id)
+> TestResult testresultUpdate(id)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**TestResult**](TestResult.md)
 
 ### Authorization
 
