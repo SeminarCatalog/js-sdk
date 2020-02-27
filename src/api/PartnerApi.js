@@ -20,6 +20,7 @@ import {PartnerInternalApi} from "../internal/PartnerInternalApi";
 * Partner service.
 * @module api/PartnerApi
 * @version 1.0.0
+* @mixes {module:internal/PartnerInternalApi}
 */
 export class PartnerApi extends PartnerInternalApi {
  // Implement your custom stuff here

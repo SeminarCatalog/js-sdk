@@ -20,6 +20,7 @@ import {ContactPersonInternalApi} from "../internal/ContactPersonInternalApi";
 * ContactPerson service.
 * @module api/ContactPersonApi
 * @version 1.0.0
+* @mixes {module:internal/ContactPersonInternalApi}
 */
 export class ContactPersonApi extends ContactPersonInternalApi {
  // Implement your custom stuff here

@@ -178,7 +178,7 @@ export class SeminarInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Seminar} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Seminar>} and HTTP response
      */
     seminarListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class SeminarInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Seminar;
+      let returnType = [Seminar];
 
       return this.apiClient.callApi(
         '/api/seminar', 'GET',
@@ -207,7 +207,7 @@ export class SeminarInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Seminar}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Seminar>}
      */
     seminarList() {
       return this.seminarListWithHttpInfo()

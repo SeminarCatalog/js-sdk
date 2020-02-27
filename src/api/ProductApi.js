@@ -20,6 +20,7 @@ import {ProductInternalApi} from "../internal/ProductInternalApi";
 * Product service.
 * @module api/ProductApi
 * @version 1.0.0
+* @mixes {module:internal/ProductInternalApi}
 */
 export class ProductApi extends ProductInternalApi {
  // Implement your custom stuff here

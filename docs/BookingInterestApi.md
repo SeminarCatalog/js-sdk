@@ -130,7 +130,7 @@ No authorization required
 
 <a name="bookinginterestList"></a>
 # **bookinginterestList**
-> BookingInterest bookinginterestList()
+> [BookingInterest] bookinginterestList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BookingInterest**](BookingInterest.md)
+[**[BookingInterest]**](BookingInterest.md)
 
 ### Authorization
 

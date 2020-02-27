@@ -20,6 +20,7 @@ import {CertificateInternalApi} from "../internal/CertificateInternalApi";
 * Certificate service.
 * @module api/CertificateApi
 * @version 1.0.0
+* @mixes {module:internal/CertificateInternalApi}
 */
 export class CertificateApi extends CertificateInternalApi {
  // Implement your custom stuff here

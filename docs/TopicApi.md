@@ -130,7 +130,7 @@ No authorization required
 
 <a name="topicList"></a>
 # **topicList**
-> Topic topicList()
+> [Topic] topicList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Topic**](Topic.md)
+[**[Topic]**](Topic.md)
 
 ### Authorization
 

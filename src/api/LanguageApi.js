@@ -20,6 +20,7 @@ import {LanguageInternalApi} from "../internal/LanguageInternalApi";
 * Language service.
 * @module api/LanguageApi
 * @version 1.0.0
+* @mixes {module:internal/LanguageInternalApi}
 */
 export class LanguageApi extends LanguageInternalApi {
  // Implement your custom stuff here

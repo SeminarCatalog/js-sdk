@@ -130,7 +130,7 @@ No authorization required
 
 <a name="usergroupList"></a>
 # **usergroupList**
-> UserGroup usergroupList()
+> [UserGroup] usergroupList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**UserGroup**](UserGroup.md)
+[**[UserGroup]**](UserGroup.md)
 
 ### Authorization
 

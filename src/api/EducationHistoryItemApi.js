@@ -20,6 +20,7 @@ import {EducationHistoryItemInternalApi} from "../internal/EducationHistoryItemI
 * EducationHistoryItem service.
 * @module api/EducationHistoryItemApi
 * @version 1.0.0
+* @mixes {module:internal/EducationHistoryItemInternalApi}
 */
 export class EducationHistoryItemApi extends EducationHistoryItemInternalApi {
  // Implement your custom stuff here

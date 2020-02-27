@@ -20,6 +20,7 @@ import {EventInternalApi} from "../internal/EventInternalApi";
 * Event service.
 * @module api/EventApi
 * @version 1.0.0
+* @mixes {module:internal/EventInternalApi}
 */
 export class EventApi extends EventInternalApi {
  // Implement your custom stuff here

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="mediaList"></a>
 # **mediaList**
-> Media mediaList()
+> [Media] mediaList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Media**](Media.md)
+[**[Media]**](Media.md)
 
 ### Authorization
 

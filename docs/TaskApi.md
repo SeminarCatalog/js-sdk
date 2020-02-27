@@ -130,7 +130,7 @@ No authorization required
 
 <a name="taskList"></a>
 # **taskList**
-> Task taskList()
+> [Task] taskList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Task**](Task.md)
+[**[Task]**](Task.md)
 
 ### Authorization
 

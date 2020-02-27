@@ -178,7 +178,7 @@ export class OrganizerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organizer} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Organizer>} and HTTP response
      */
     organizerListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class OrganizerInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Organizer;
+      let returnType = [Organizer];
 
       return this.apiClient.callApi(
         '/api/organizer', 'GET',
@@ -207,7 +207,7 @@ export class OrganizerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organizer}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Organizer>}
      */
     organizerList() {
       return this.organizerListWithHttpInfo()

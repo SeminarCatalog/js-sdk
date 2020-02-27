@@ -130,7 +130,7 @@ No authorization required
 
 <a name="languageList"></a>
 # **languageList**
-> Language languageList()
+> [Language] languageList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Language**](Language.md)
+[**[Language]**](Language.md)
 
 ### Authorization
 

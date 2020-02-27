@@ -20,6 +20,7 @@ import {CountryInternalApi} from "../internal/CountryInternalApi";
 * Country service.
 * @module api/CountryApi
 * @version 1.0.0
+* @mixes {module:internal/CountryInternalApi}
 */
 export class CountryApi extends CountryInternalApi {
  // Implement your custom stuff here

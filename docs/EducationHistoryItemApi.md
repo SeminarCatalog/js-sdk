@@ -130,7 +130,7 @@ No authorization required
 
 <a name="educationhistoryitemList"></a>
 # **educationhistoryitemList**
-> EducationHistoryItem educationhistoryitemList()
+> [EducationHistoryItem] educationhistoryitemList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**EducationHistoryItem**](EducationHistoryItem.md)
+[**[EducationHistoryItem]**](EducationHistoryItem.md)
 
 ### Authorization
 

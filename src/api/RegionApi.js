@@ -20,6 +20,7 @@ import {RegionInternalApi} from "../internal/RegionInternalApi";
 * Region service.
 * @module api/RegionApi
 * @version 1.0.0
+* @mixes {module:internal/RegionInternalApi}
 */
 export class RegionApi extends RegionInternalApi {
  // Implement your custom stuff here

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="participationcodeList"></a>
 # **participationcodeList**
-> ParticipationCode participationcodeList()
+> [ParticipationCode] participationcodeList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ParticipationCode**](ParticipationCode.md)
+[**[ParticipationCode]**](ParticipationCode.md)
 
 ### Authorization
 

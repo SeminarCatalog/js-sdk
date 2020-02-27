@@ -130,7 +130,7 @@ No authorization required
 
 <a name="priceList"></a>
 # **priceList**
-> Price priceList()
+> [Price] priceList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Price**](Price.md)
+[**[Price]**](Price.md)
 
 ### Authorization
 

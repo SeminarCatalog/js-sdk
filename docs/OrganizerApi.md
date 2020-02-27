@@ -130,7 +130,7 @@ No authorization required
 
 <a name="organizerList"></a>
 # **organizerList**
-> Organizer organizerList()
+> [Organizer] organizerList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Organizer**](Organizer.md)
+[**[Organizer]**](Organizer.md)
 
 ### Authorization
 

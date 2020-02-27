@@ -20,6 +20,7 @@ import {UserGroupInternalApi} from "../internal/UserGroupInternalApi";
 * UserGroup service.
 * @module api/UserGroupApi
 * @version 1.0.0
+* @mixes {module:internal/UserGroupInternalApi}
 */
 export class UserGroupApi extends UserGroupInternalApi {
  // Implement your custom stuff here

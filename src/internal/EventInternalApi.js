@@ -178,7 +178,7 @@ export class EventInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Event} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Event>} and HTTP response
      */
     eventListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class EventInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Event;
+      let returnType = [Event];
 
       return this.apiClient.callApi(
         '/api/event', 'GET',
@@ -207,7 +207,7 @@ export class EventInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Event}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Event>}
      */
     eventList() {
       return this.eventListWithHttpInfo()

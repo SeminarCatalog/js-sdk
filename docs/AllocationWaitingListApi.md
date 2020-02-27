@@ -130,7 +130,7 @@ No authorization required
 
 <a name="allocationwaitinglistList"></a>
 # **allocationwaitinglistList**
-> AllocationWaitingList allocationwaitinglistList()
+> [AllocationWaitingList] allocationwaitinglistList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AllocationWaitingList**](AllocationWaitingList.md)
+[**[AllocationWaitingList]**](AllocationWaitingList.md)
 
 ### Authorization
 

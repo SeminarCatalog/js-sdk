@@ -130,7 +130,7 @@ No authorization required
 
 <a name="couponList"></a>
 # **couponList**
-> Coupon couponList()
+> [Coupon] couponList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Coupon**](Coupon.md)
+[**[Coupon]**](Coupon.md)
 
 ### Authorization
 

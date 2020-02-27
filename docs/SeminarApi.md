@@ -130,7 +130,7 @@ No authorization required
 
 <a name="seminarList"></a>
 # **seminarList**
-> Seminar seminarList()
+> [Seminar] seminarList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Seminar**](Seminar.md)
+[**[Seminar]**](Seminar.md)
 
 ### Authorization
 

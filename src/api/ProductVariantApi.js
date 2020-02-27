@@ -20,6 +20,7 @@ import {ProductVariantInternalApi} from "../internal/ProductVariantInternalApi";
 * ProductVariant service.
 * @module api/ProductVariantApi
 * @version 1.0.0
+* @mixes {module:internal/ProductVariantInternalApi}
 */
 export class ProductVariantApi extends ProductVariantInternalApi {
  // Implement your custom stuff here

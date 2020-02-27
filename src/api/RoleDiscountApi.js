@@ -20,6 +20,7 @@ import {RoleDiscountInternalApi} from "../internal/RoleDiscountInternalApi";
 * RoleDiscount service.
 * @module api/RoleDiscountApi
 * @version 1.0.0
+* @mixes {module:internal/RoleDiscountInternalApi}
 */
 export class RoleDiscountApi extends RoleDiscountInternalApi {
  // Implement your custom stuff here

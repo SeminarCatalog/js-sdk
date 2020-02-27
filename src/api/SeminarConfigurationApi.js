@@ -20,6 +20,7 @@ import {SeminarConfigurationInternalApi} from "../internal/SeminarConfigurationI
 * SeminarConfiguration service.
 * @module api/SeminarConfigurationApi
 * @version 1.0.0
+* @mixes {module:internal/SeminarConfigurationInternalApi}
 */
 export class SeminarConfigurationApi extends SeminarConfigurationInternalApi {
  // Implement your custom stuff here

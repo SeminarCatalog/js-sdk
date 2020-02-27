@@ -20,6 +20,7 @@ import {CurrencyInternalApi} from "../internal/CurrencyInternalApi";
 * Currency service.
 * @module api/CurrencyApi
 * @version 1.0.0
+* @mixes {module:internal/CurrencyInternalApi}
 */
 export class CurrencyApi extends CurrencyInternalApi {
  // Implement your custom stuff here

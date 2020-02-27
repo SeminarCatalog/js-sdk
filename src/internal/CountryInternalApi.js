@@ -178,7 +178,7 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Country} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Country>} and HTTP response
      */
     countryListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class CountryInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Country;
+      let returnType = [Country];
 
       return this.apiClient.callApi(
         '/api/country', 'GET',
@@ -207,7 +207,7 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Country}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Country>}
      */
     countryList() {
       return this.countryListWithHttpInfo()

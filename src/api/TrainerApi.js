@@ -20,6 +20,7 @@ import {TrainerInternalApi} from "../internal/TrainerInternalApi";
 * Trainer service.
 * @module api/TrainerApi
 * @version 1.0.0
+* @mixes {module:internal/TrainerInternalApi}
 */
 export class TrainerApi extends TrainerInternalApi {
  // Implement your custom stuff here

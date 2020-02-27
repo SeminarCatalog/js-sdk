@@ -130,7 +130,7 @@ No authorization required
 
 <a name="locationList"></a>
 # **locationList**
-> Location locationList()
+> [Location] locationList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Location**](Location.md)
+[**[Location]**](Location.md)
 
 ### Authorization
 

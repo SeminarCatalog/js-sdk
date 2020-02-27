@@ -178,7 +178,7 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Location} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Location>} and HTTP response
      */
     locationListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class LocationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Location;
+      let returnType = [Location];
 
       return this.apiClient.callApi(
         '/api/location', 'GET',
@@ -207,7 +207,7 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Location}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Location>}
      */
     locationList() {
       return this.locationListWithHttpInfo()

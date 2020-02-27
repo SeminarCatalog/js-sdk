@@ -20,6 +20,7 @@ import {CategoryInternalApi} from "../internal/CategoryInternalApi";
 * Category service.
 * @module api/CategoryApi
 * @version 1.0.0
+* @mixes {module:internal/CategoryInternalApi}
 */
 export class CategoryApi extends CategoryInternalApi {
  // Implement your custom stuff here

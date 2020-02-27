@@ -20,6 +20,7 @@ import {UserInternalApi} from "../internal/UserInternalApi";
 * User service.
 * @module api/UserApi
 * @version 1.0.0
+* @mixes {module:internal/UserInternalApi}
 */
 export class UserApi extends UserInternalApi {
  // Implement your custom stuff here

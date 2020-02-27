@@ -130,7 +130,7 @@ No authorization required
 
 <a name="orderList"></a>
 # **orderList**
-> Order orderList()
+> [Order] orderList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Order**](Order.md)
+[**[Order]**](Order.md)
 
 ### Authorization
 

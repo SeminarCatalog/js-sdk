@@ -20,6 +20,7 @@ import {OrganizerInternalApi} from "../internal/OrganizerInternalApi";
 * Organizer service.
 * @module api/OrganizerApi
 * @version 1.0.0
+* @mixes {module:internal/OrganizerInternalApi}
 */
 export class OrganizerApi extends OrganizerInternalApi {
  // Implement your custom stuff here

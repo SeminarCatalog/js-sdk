@@ -178,7 +178,7 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receiver} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Receiver>} and HTTP response
      */
     receiverListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class ReceiverInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Receiver;
+      let returnType = [Receiver];
 
       return this.apiClient.callApi(
         '/api/receiver', 'GET',
@@ -207,7 +207,7 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receiver}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Receiver>}
      */
     receiverList() {
       return this.receiverListWithHttpInfo()

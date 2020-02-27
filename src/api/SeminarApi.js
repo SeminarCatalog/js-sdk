@@ -20,6 +20,7 @@ import {SeminarInternalApi} from "../internal/SeminarInternalApi";
 * Seminar service.
 * @module api/SeminarApi
 * @version 1.0.0
+* @mixes {module:internal/SeminarInternalApi}
 */
 export class SeminarApi extends SeminarInternalApi {
  // Implement your custom stuff here

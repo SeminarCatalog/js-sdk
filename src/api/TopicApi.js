@@ -20,6 +20,7 @@ import {TopicInternalApi} from "../internal/TopicInternalApi";
 * Topic service.
 * @module api/TopicApi
 * @version 1.0.0
+* @mixes {module:internal/TopicInternalApi}
 */
 export class TopicApi extends TopicInternalApi {
  // Implement your custom stuff here

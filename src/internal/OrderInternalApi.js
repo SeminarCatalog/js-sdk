@@ -178,7 +178,7 @@ export class OrderInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Order} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Order>} and HTTP response
      */
     orderListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class OrderInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Order;
+      let returnType = [Order];
 
       return this.apiClient.callApi(
         '/api/order', 'GET',
@@ -207,7 +207,7 @@ export class OrderInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Order}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Order>}
      */
     orderList() {
       return this.orderListWithHttpInfo()

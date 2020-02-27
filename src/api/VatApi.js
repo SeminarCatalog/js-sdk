@@ -20,6 +20,7 @@ import {VatInternalApi} from "../internal/VatInternalApi";
 * Vat service.
 * @module api/VatApi
 * @version 1.0.0
+* @mixes {module:internal/VatInternalApi}
 */
 export class VatApi extends VatInternalApi {
  // Implement your custom stuff here

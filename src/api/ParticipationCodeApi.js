@@ -20,6 +20,7 @@ import {ParticipationCodeInternalApi} from "../internal/ParticipationCodeInterna
 * ParticipationCode service.
 * @module api/ParticipationCodeApi
 * @version 1.0.0
+* @mixes {module:internal/ParticipationCodeInternalApi}
 */
 export class ParticipationCodeApi extends ParticipationCodeInternalApi {
  // Implement your custom stuff here

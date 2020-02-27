@@ -178,7 +178,7 @@ export class PriceInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Price} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Price>} and HTTP response
      */
     priceListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class PriceInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Price;
+      let returnType = [Price];
 
       return this.apiClient.callApi(
         '/api/price', 'GET',
@@ -207,7 +207,7 @@ export class PriceInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Price}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Price>}
      */
     priceList() {
       return this.priceListWithHttpInfo()

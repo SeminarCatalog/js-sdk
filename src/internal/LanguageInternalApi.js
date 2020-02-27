@@ -178,7 +178,7 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Language} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Language>} and HTTP response
      */
     languageListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class LanguageInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Language;
+      let returnType = [Language];
 
       return this.apiClient.callApi(
         '/api/language', 'GET',
@@ -207,7 +207,7 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Language}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Language>}
      */
     languageList() {
       return this.languageListWithHttpInfo()

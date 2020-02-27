@@ -178,7 +178,7 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroup} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/UserGroup>} and HTTP response
      */
     usergroupListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class UserGroupInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = UserGroup;
+      let returnType = [UserGroup];
 
       return this.apiClient.callApi(
         '/api/usergroup', 'GET',
@@ -207,7 +207,7 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroup}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/UserGroup>}
      */
     usergroupList() {
       return this.usergroupListWithHttpInfo()

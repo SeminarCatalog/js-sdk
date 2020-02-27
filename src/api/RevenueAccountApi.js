@@ -20,6 +20,7 @@ import {RevenueAccountInternalApi} from "../internal/RevenueAccountInternalApi";
 * RevenueAccount service.
 * @module api/RevenueAccountApi
 * @version 1.0.0
+* @mixes {module:internal/RevenueAccountInternalApi}
 */
 export class RevenueAccountApi extends RevenueAccountInternalApi {
  // Implement your custom stuff here

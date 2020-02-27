@@ -20,6 +20,7 @@ import {HotelInternalApi} from "../internal/HotelInternalApi";
 * Hotel service.
 * @module api/HotelApi
 * @version 1.0.0
+* @mixes {module:internal/HotelInternalApi}
 */
 export class HotelApi extends HotelInternalApi {
  // Implement your custom stuff here

@@ -178,7 +178,7 @@ export class CategoryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Category} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Category>} and HTTP response
      */
     categoryListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class CategoryInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Category;
+      let returnType = [Category];
 
       return this.apiClient.callApi(
         '/api/category', 'GET',
@@ -207,7 +207,7 @@ export class CategoryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Category}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Category>}
      */
     categoryList() {
       return this.categoryListWithHttpInfo()

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="paymentmethodList"></a>
 # **paymentmethodList**
-> PaymentMethod paymentmethodList()
+> [PaymentMethod] paymentmethodList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PaymentMethod**](PaymentMethod.md)
+[**[PaymentMethod]**](PaymentMethod.md)
 
 ### Authorization
 

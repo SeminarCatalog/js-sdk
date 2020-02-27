@@ -20,6 +20,7 @@ import {TestInternalApi} from "../internal/TestInternalApi";
 * Test service.
 * @module api/TestApi
 * @version 1.0.0
+* @mixes {module:internal/TestInternalApi}
 */
 export class TestApi extends TestInternalApi {
  // Implement your custom stuff here

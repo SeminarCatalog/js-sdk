@@ -20,6 +20,7 @@ import {TestResultInternalApi} from "../internal/TestResultInternalApi";
 * TestResult service.
 * @module api/TestResultApi
 * @version 1.0.0
+* @mixes {module:internal/TestResultInternalApi}
 */
 export class TestResultApi extends TestResultInternalApi {
  // Implement your custom stuff here

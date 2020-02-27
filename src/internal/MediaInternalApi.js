@@ -178,7 +178,7 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Media} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Media>} and HTTP response
      */
     mediaListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class MediaInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Media;
+      let returnType = [Media];
 
       return this.apiClient.callApi(
         '/api/media', 'GET',
@@ -207,7 +207,7 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Media}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Media>}
      */
     mediaList() {
       return this.mediaListWithHttpInfo()

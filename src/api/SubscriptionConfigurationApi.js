@@ -20,6 +20,7 @@ import {SubscriptionConfigurationInternalApi} from "../internal/SubscriptionConf
 * SubscriptionConfiguration service.
 * @module api/SubscriptionConfigurationApi
 * @version 1.0.0
+* @mixes {module:internal/SubscriptionConfigurationInternalApi}
 */
 export class SubscriptionConfigurationApi extends SubscriptionConfigurationInternalApi {
  // Implement your custom stuff here

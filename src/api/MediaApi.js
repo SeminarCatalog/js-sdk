@@ -20,6 +20,7 @@ import {MediaInternalApi} from "../internal/MediaInternalApi";
 * Media service.
 * @module api/MediaApi
 * @version 1.0.0
+* @mixes {module:internal/MediaInternalApi}
 */
 export class MediaApi extends MediaInternalApi {
  // Implement your custom stuff here

@@ -178,7 +178,7 @@ export class ContactPersonInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ContactPerson} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ContactPerson>} and HTTP response
      */
     contactpersonListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class ContactPersonInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = ContactPerson;
+      let returnType = [ContactPerson];
 
       return this.apiClient.callApi(
         '/api/contactperson', 'GET',
@@ -207,7 +207,7 @@ export class ContactPersonInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ContactPerson}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ContactPerson>}
      */
     contactpersonList() {
       return this.contactpersonListWithHttpInfo()

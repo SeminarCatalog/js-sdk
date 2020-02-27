@@ -178,7 +178,7 @@ export class UserInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/User>} and HTTP response
      */
     userListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class UserInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = User;
+      let returnType = [User];
 
       return this.apiClient.callApi(
         '/api/user', 'GET',
@@ -207,7 +207,7 @@ export class UserInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/User>}
      */
     userList() {
       return this.userListWithHttpInfo()

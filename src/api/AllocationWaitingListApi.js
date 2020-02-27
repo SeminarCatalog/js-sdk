@@ -20,6 +20,7 @@ import {AllocationWaitingListInternalApi} from "../internal/AllocationWaitingLis
 * AllocationWaitingList service.
 * @module api/AllocationWaitingListApi
 * @version 1.0.0
+* @mixes {module:internal/AllocationWaitingListInternalApi}
 */
 export class AllocationWaitingListApi extends AllocationWaitingListInternalApi {
  // Implement your custom stuff here

@@ -178,7 +178,7 @@ export class RestaurantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Restaurant} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Restaurant>} and HTTP response
      */
     restaurantListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class RestaurantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Restaurant;
+      let returnType = [Restaurant];
 
       return this.apiClient.callApi(
         '/api/restaurant', 'GET',
@@ -207,7 +207,7 @@ export class RestaurantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Restaurant}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Restaurant>}
      */
     restaurantList() {
       return this.restaurantListWithHttpInfo()

@@ -178,7 +178,7 @@ export class ProviderInfoInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProviderInfo} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProviderInfo>} and HTTP response
      */
     providerinfoListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class ProviderInfoInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = ProviderInfo;
+      let returnType = [ProviderInfo];
 
       return this.apiClient.callApi(
         '/api/providerinfo', 'GET',
@@ -207,7 +207,7 @@ export class ProviderInfoInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProviderInfo}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProviderInfo>}
      */
     providerinfoList() {
       return this.providerinfoListWithHttpInfo()

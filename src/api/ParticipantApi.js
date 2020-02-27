@@ -20,6 +20,7 @@ import {ParticipantInternalApi} from "../internal/ParticipantInternalApi";
 * Participant service.
 * @module api/ParticipantApi
 * @version 1.0.0
+* @mixes {module:internal/ParticipantInternalApi}
 */
 export class ParticipantApi extends ParticipantInternalApi {
  // Implement your custom stuff here

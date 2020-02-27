@@ -20,6 +20,7 @@ import {LocationInternalApi} from "../internal/LocationInternalApi";
 * Location service.
 * @module api/LocationApi
 * @version 1.0.0
+* @mixes {module:internal/LocationInternalApi}
 */
 export class LocationApi extends LocationInternalApi {
  // Implement your custom stuff here

@@ -178,7 +178,7 @@ export class HotelInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Hotel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Hotel>} and HTTP response
      */
     hotelListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class HotelInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Hotel;
+      let returnType = [Hotel];
 
       return this.apiClient.callApi(
         '/api/hotel', 'GET',
@@ -207,7 +207,7 @@ export class HotelInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Hotel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Hotel>}
      */
     hotelList() {
       return this.hotelListWithHttpInfo()

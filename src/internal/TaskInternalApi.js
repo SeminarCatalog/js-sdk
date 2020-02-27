@@ -178,7 +178,7 @@ export class TaskInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Task} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Task>} and HTTP response
      */
     taskListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class TaskInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Task;
+      let returnType = [Task];
 
       return this.apiClient.callApi(
         '/api/task', 'GET',
@@ -207,7 +207,7 @@ export class TaskInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Task}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Task>}
      */
     taskList() {
       return this.taskListWithHttpInfo()

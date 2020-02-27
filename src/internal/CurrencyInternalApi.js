@@ -178,7 +178,7 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Currency} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Currency>} and HTTP response
      */
     currencyListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class CurrencyInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Currency;
+      let returnType = [Currency];
 
       return this.apiClient.callApi(
         '/api/currency', 'GET',
@@ -207,7 +207,7 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Currency}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Currency>}
      */
     currencyList() {
       return this.currencyListWithHttpInfo()

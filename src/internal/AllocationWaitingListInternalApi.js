@@ -178,7 +178,7 @@ export class AllocationWaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AllocationWaitingList} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AllocationWaitingList>} and HTTP response
      */
     allocationwaitinglistListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class AllocationWaitingListInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = AllocationWaitingList;
+      let returnType = [AllocationWaitingList];
 
       return this.apiClient.callApi(
         '/api/allocationwaitinglist', 'GET',
@@ -207,7 +207,7 @@ export class AllocationWaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AllocationWaitingList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AllocationWaitingList>}
      */
     allocationwaitinglistList() {
       return this.allocationwaitinglistListWithHttpInfo()

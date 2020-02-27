@@ -20,6 +20,7 @@ import {ReceiverInternalApi} from "../internal/ReceiverInternalApi";
 * Receiver service.
 * @module api/ReceiverApi
 * @version 1.0.0
+* @mixes {module:internal/ReceiverInternalApi}
 */
 export class ReceiverApi extends ReceiverInternalApi {
  // Implement your custom stuff here

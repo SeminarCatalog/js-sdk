@@ -130,7 +130,7 @@ No authorization required
 
 <a name="partnerList"></a>
 # **partnerList**
-> Partner partnerList()
+> [Partner] partnerList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Partner**](Partner.md)
+[**[Partner]**](Partner.md)
 
 ### Authorization
 

@@ -178,7 +178,7 @@ export class ProductInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Product} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Product>} and HTTP response
      */
     productListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class ProductInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Product;
+      let returnType = [Product];
 
       return this.apiClient.callApi(
         '/api/product', 'GET',
@@ -207,7 +207,7 @@ export class ProductInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Product}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Product>}
      */
     productList() {
       return this.productListWithHttpInfo()

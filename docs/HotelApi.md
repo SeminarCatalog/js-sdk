@@ -130,7 +130,7 @@ No authorization required
 
 <a name="hotelList"></a>
 # **hotelList**
-> Hotel hotelList()
+> [Hotel] hotelList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Hotel**](Hotel.md)
+[**[Hotel]**](Hotel.md)
 
 ### Authorization
 

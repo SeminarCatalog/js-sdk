@@ -20,6 +20,7 @@ import {AddressInternalApi} from "../internal/AddressInternalApi";
 * Address service.
 * @module api/AddressApi
 * @version 1.0.0
+* @mixes {module:internal/AddressInternalApi}
 */
 export class AddressApi extends AddressInternalApi {
  // Implement your custom stuff here

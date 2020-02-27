@@ -20,6 +20,7 @@ import {ProviderInfoInternalApi} from "../internal/ProviderInfoInternalApi";
 * ProviderInfo service.
 * @module api/ProviderInfoApi
 * @version 1.0.0
+* @mixes {module:internal/ProviderInfoInternalApi}
 */
 export class ProviderInfoApi extends ProviderInfoInternalApi {
  // Implement your custom stuff here

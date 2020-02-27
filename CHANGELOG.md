@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.3
+
+### Bugfixes
+
+* Fix collection endpoints read a collection of expected resource
+
+### Others
+
+* Add @mixins to api wrapper services
+
 ## 1.1.2
 
 ### Bugfixes

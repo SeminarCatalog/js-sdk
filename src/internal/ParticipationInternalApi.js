@@ -178,7 +178,7 @@ export class ParticipationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Participation} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Participation>} and HTTP response
      */
     participationListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +196,7 @@ export class ParticipationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = Participation;
+      let returnType = [Participation];
 
       return this.apiClient.callApi(
         '/api/participation', 'GET',
@@ -207,7 +207,7 @@ export class ParticipationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Participation}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Participation>}
      */
     participationList() {
       return this.participationListWithHttpInfo()

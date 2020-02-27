@@ -20,6 +20,7 @@ import {CouponCodeInternalApi} from "../internal/CouponCodeInternalApi";
 * CouponCode service.
 * @module api/CouponCodeApi
 * @version 1.0.0
+* @mixes {module:internal/CouponCodeInternalApi}
 */
 export class CouponCodeApi extends CouponCodeInternalApi {
  // Implement your custom stuff here
