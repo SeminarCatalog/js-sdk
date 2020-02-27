@@ -130,7 +130,7 @@ No authorization required
 
 <a name="couponcodeList"></a>
 # **couponcodeList**
-> [CouponCode] couponcodeList()
+> CouponCodePaginationResult couponcodeList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[CouponCode]**](CouponCode.md)
+[**CouponCodePaginationResult**](CouponCodePaginationResult.md)
 
 ### Authorization
 

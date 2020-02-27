@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {PaymentMethod} from '../model/PaymentMethod';
+import {PaymentMethodPaginationResult} from '../model/PaymentMethodPaginationResult';
 
 /**
 * PaymentMethod internal service.
@@ -178,7 +179,7 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/PaymentMethod>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethodPaginationResult} and HTTP response
      */
     paymentmethodListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class PaymentMethodInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [PaymentMethod];
+      let returnType = PaymentMethodPaginationResult;
 
       return this.apiClient.callApi(
         '/api/paymentmethod', 'GET',
@@ -207,7 +208,7 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/PaymentMethod>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethodPaginationResult}
      */
     paymentmethodList() {
       return this.paymentmethodListWithHttpInfo()

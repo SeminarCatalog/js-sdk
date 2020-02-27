@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {SeminarConfiguration} from '../model/SeminarConfiguration';
+import {SeminarConfigurationPaginationResult} from '../model/SeminarConfigurationPaginationResult';
 
 /**
 * SeminarConfiguration internal service.
@@ -178,7 +179,7 @@ export class SeminarConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SeminarConfiguration>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SeminarConfigurationPaginationResult} and HTTP response
      */
     seminarconfigurationListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class SeminarConfigurationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [SeminarConfiguration];
+      let returnType = SeminarConfigurationPaginationResult;
 
       return this.apiClient.callApi(
         '/api/seminarconfiguration', 'GET',
@@ -207,7 +208,7 @@ export class SeminarConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SeminarConfiguration>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SeminarConfigurationPaginationResult}
      */
     seminarconfigurationList() {
       return this.seminarconfigurationListWithHttpInfo()

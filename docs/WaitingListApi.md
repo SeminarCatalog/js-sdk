@@ -130,7 +130,7 @@ No authorization required
 
 <a name="waitinglistList"></a>
 # **waitinglistList**
-> [WaitingList] waitinglistList()
+> WaitingListPaginationResult waitinglistList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[WaitingList]**](WaitingList.md)
+[**WaitingListPaginationResult**](WaitingListPaginationResult.md)
 
 ### Authorization
 

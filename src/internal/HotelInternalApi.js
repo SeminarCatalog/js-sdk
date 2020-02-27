@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Hotel} from '../model/Hotel';
+import {HotelPaginationResult} from '../model/HotelPaginationResult';
 
 /**
 * Hotel internal service.
@@ -178,7 +179,7 @@ export class HotelInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Hotel>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/HotelPaginationResult} and HTTP response
      */
     hotelListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class HotelInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Hotel];
+      let returnType = HotelPaginationResult;
 
       return this.apiClient.callApi(
         '/api/hotel', 'GET',
@@ -207,7 +208,7 @@ export class HotelInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Hotel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/HotelPaginationResult}
      */
     hotelList() {
       return this.hotelListWithHttpInfo()

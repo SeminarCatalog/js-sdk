@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Language} from '../model/Language';
+import {LanguagePaginationResult} from '../model/LanguagePaginationResult';
 
 /**
 * Language internal service.
@@ -178,7 +179,7 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Language>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LanguagePaginationResult} and HTTP response
      */
     languageListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class LanguageInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Language];
+      let returnType = LanguagePaginationResult;
 
       return this.apiClient.callApi(
         '/api/language', 'GET',
@@ -207,7 +208,7 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Language>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LanguagePaginationResult}
      */
     languageList() {
       return this.languageListWithHttpInfo()

@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Event} from '../model/Event';
+import {EventPaginationResult} from '../model/EventPaginationResult';
 
 /**
 * Event internal service.
@@ -178,7 +179,7 @@ export class EventInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Event>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EventPaginationResult} and HTTP response
      */
     eventListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class EventInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Event];
+      let returnType = EventPaginationResult;
 
       return this.apiClient.callApi(
         '/api/event', 'GET',
@@ -207,7 +208,7 @@ export class EventInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Event>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EventPaginationResult}
      */
     eventList() {
       return this.eventListWithHttpInfo()

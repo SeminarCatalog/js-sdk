@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0
+
+### Features
+
+* Add `$RESOURCE$PaginationResult` for each collection endpoint 
+
 ## 1.1.3
 
 ### Bugfixes

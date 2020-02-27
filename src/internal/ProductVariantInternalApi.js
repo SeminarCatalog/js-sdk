@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {ProductVariant} from '../model/ProductVariant';
+import {ProductVariantPaginationResult} from '../model/ProductVariantPaginationResult';
 
 /**
 * ProductVariant internal service.
@@ -178,7 +179,7 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProductVariant>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductVariantPaginationResult} and HTTP response
      */
     productvariantListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class ProductVariantInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [ProductVariant];
+      let returnType = ProductVariantPaginationResult;
 
       return this.apiClient.callApi(
         '/api/productvariant', 'GET',
@@ -207,7 +208,7 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProductVariant>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductVariantPaginationResult}
      */
     productvariantList() {
       return this.productvariantListWithHttpInfo()

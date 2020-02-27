@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {User} from '../model/User';
+import {UserPaginationResult} from '../model/UserPaginationResult';
 
 /**
 * User internal service.
@@ -178,7 +179,7 @@ export class UserInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/User>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserPaginationResult} and HTTP response
      */
     userListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class UserInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [User];
+      let returnType = UserPaginationResult;
 
       return this.apiClient.callApi(
         '/api/user', 'GET',
@@ -207,7 +208,7 @@ export class UserInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/User>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserPaginationResult}
      */
     userList() {
       return this.userListWithHttpInfo()

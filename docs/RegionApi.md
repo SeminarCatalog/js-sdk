@@ -130,7 +130,7 @@ No authorization required
 
 <a name="regionList"></a>
 # **regionList**
-> [Region] regionList()
+> RegionPaginationResult regionList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Region]**](Region.md)
+[**RegionPaginationResult**](RegionPaginationResult.md)
 
 ### Authorization
 

@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {UserGroup} from '../model/UserGroup';
+import {UserGroupPaginationResult} from '../model/UserGroupPaginationResult';
 
 /**
 * UserGroup internal service.
@@ -178,7 +179,7 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/UserGroup>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroupPaginationResult} and HTTP response
      */
     usergroupListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class UserGroupInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [UserGroup];
+      let returnType = UserGroupPaginationResult;
 
       return this.apiClient.callApi(
         '/api/usergroup', 'GET',
@@ -207,7 +208,7 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/UserGroup>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroupPaginationResult}
      */
     usergroupList() {
       return this.usergroupListWithHttpInfo()

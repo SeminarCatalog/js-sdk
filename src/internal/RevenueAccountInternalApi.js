@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {RevenueAccount} from '../model/RevenueAccount';
+import {RevenueAccountPaginationResult} from '../model/RevenueAccountPaginationResult';
 
 /**
 * RevenueAccount internal service.
@@ -178,7 +179,7 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/RevenueAccount>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccountPaginationResult} and HTTP response
      */
     revenueaccountListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class RevenueAccountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [RevenueAccount];
+      let returnType = RevenueAccountPaginationResult;
 
       return this.apiClient.callApi(
         '/api/revenueaccount', 'GET',
@@ -207,7 +208,7 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/RevenueAccount>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccountPaginationResult}
      */
     revenueaccountList() {
       return this.revenueaccountListWithHttpInfo()

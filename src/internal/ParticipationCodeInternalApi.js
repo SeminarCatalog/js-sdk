@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {ParticipationCode} from '../model/ParticipationCode';
+import {ParticipationCodePaginationResult} from '../model/ParticipationCodePaginationResult';
 
 /**
 * ParticipationCode internal service.
@@ -178,7 +179,7 @@ export class ParticipationCodeInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParticipationCode>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParticipationCodePaginationResult} and HTTP response
      */
     participationcodeListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class ParticipationCodeInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [ParticipationCode];
+      let returnType = ParticipationCodePaginationResult;
 
       return this.apiClient.callApi(
         '/api/participationcode', 'GET',
@@ -207,7 +208,7 @@ export class ParticipationCodeInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParticipationCode>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParticipationCodePaginationResult}
      */
     participationcodeList() {
       return this.participationcodeListWithHttpInfo()

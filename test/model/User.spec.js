@@ -64,18 +64,6 @@
         // expect(instance.login).to.be(expectedValueLiteral);
       });
 
-      it('should have the property passwd (base name: "passwd")', function() {
-        // TODO: update the code to test the property passwd
-        expect(instance).to.have.property('passwd');
-        // expect(instance.passwd).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property passwdEncType (base name: "passwdEncType")', function() {
-        // TODO: update the code to test the property passwdEncType
-        expect(instance).to.have.property('passwdEncType');
-        // expect(instance.passwdEncType).to.be(expectedValueLiteral);
-      });
-
       it('should have the property firstname (base name: "firstname")', function() {
         // TODO: update the code to test the property firstname
         expect(instance).to.have.property('firstname');

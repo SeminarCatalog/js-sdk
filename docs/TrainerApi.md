@@ -130,7 +130,7 @@ No authorization required
 
 <a name="trainerList"></a>
 # **trainerList**
-> [Trainer] trainerList()
+> TrainerPaginationResult trainerList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Trainer]**](Trainer.md)
+[**TrainerPaginationResult**](TrainerPaginationResult.md)
 
 ### Authorization
 

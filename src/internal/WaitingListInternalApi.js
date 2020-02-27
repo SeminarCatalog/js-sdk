@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {WaitingList} from '../model/WaitingList';
+import {WaitingListPaginationResult} from '../model/WaitingListPaginationResult';
 
 /**
 * WaitingList internal service.
@@ -178,7 +179,7 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WaitingList>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WaitingListPaginationResult} and HTTP response
      */
     waitinglistListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class WaitingListInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [WaitingList];
+      let returnType = WaitingListPaginationResult;
 
       return this.apiClient.callApi(
         '/api/waitinglist', 'GET',
@@ -207,7 +208,7 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WaitingList>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WaitingListPaginationResult}
      */
     waitinglistList() {
       return this.waitinglistListWithHttpInfo()

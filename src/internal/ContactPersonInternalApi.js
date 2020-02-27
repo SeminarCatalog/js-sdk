@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {ContactPerson} from '../model/ContactPerson';
+import {ContactPersonPaginationResult} from '../model/ContactPersonPaginationResult';
 
 /**
 * ContactPerson internal service.
@@ -178,7 +179,7 @@ export class ContactPersonInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ContactPerson>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ContactPersonPaginationResult} and HTTP response
      */
     contactpersonListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class ContactPersonInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [ContactPerson];
+      let returnType = ContactPersonPaginationResult;
 
       return this.apiClient.callApi(
         '/api/contactperson', 'GET',
@@ -207,7 +208,7 @@ export class ContactPersonInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ContactPerson>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ContactPersonPaginationResult}
      */
     contactpersonList() {
       return this.contactpersonListWithHttpInfo()

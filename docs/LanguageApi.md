@@ -130,7 +130,7 @@ No authorization required
 
 <a name="languageList"></a>
 # **languageList**
-> [Language] languageList()
+> LanguagePaginationResult languageList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Language]**](Language.md)
+[**LanguagePaginationResult**](LanguagePaginationResult.md)
 
 ### Authorization
 

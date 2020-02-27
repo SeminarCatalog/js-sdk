@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Receiver} from '../model/Receiver';
+import {ReceiverPaginationResult} from '../model/ReceiverPaginationResult';
 
 /**
 * Receiver internal service.
@@ -178,7 +179,7 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Receiver>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ReceiverPaginationResult} and HTTP response
      */
     receiverListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class ReceiverInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Receiver];
+      let returnType = ReceiverPaginationResult;
 
       return this.apiClient.callApi(
         '/api/receiver', 'GET',
@@ -207,7 +208,7 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Receiver>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ReceiverPaginationResult}
      */
     receiverList() {
       return this.receiverListWithHttpInfo()

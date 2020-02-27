@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Media} from '../model/Media';
+import {MediaPaginationResult} from '../model/MediaPaginationResult';
 
 /**
 * Media internal service.
@@ -178,7 +179,7 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Media>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MediaPaginationResult} and HTTP response
      */
     mediaListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class MediaInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Media];
+      let returnType = MediaPaginationResult;
 
       return this.apiClient.callApi(
         '/api/media', 'GET',
@@ -207,7 +208,7 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Media>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MediaPaginationResult}
      */
     mediaList() {
       return this.mediaListWithHttpInfo()

@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Region} from '../model/Region';
+import {RegionPaginationResult} from '../model/RegionPaginationResult';
 
 /**
 * Region internal service.
@@ -178,7 +179,7 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Region>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegionPaginationResult} and HTTP response
      */
     regionListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class RegionInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Region];
+      let returnType = RegionPaginationResult;
 
       return this.apiClient.callApi(
         '/api/region', 'GET',
@@ -207,7 +208,7 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Region>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegionPaginationResult}
      */
     regionList() {
       return this.regionListWithHttpInfo()

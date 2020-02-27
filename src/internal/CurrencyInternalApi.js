@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Currency} from '../model/Currency';
+import {CurrencyPaginationResult} from '../model/CurrencyPaginationResult';
 
 /**
 * Currency internal service.
@@ -178,7 +179,7 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Currency>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CurrencyPaginationResult} and HTTP response
      */
     currencyListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class CurrencyInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Currency];
+      let returnType = CurrencyPaginationResult;
 
       return this.apiClient.callApi(
         '/api/currency', 'GET',
@@ -207,7 +208,7 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Currency>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CurrencyPaginationResult}
      */
     currencyList() {
       return this.currencyListWithHttpInfo()

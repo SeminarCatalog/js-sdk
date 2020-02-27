@@ -15,51 +15,97 @@
 
 import {ApiClient} from './ApiClient';
 import {Address} from './model/Address';
+import {AddressPaginationResult} from './model/AddressPaginationResult';
 import {AllocationWaitingList} from './model/AllocationWaitingList';
+import {AllocationWaitingListPaginationResult} from './model/AllocationWaitingListPaginationResult';
 import {BookingInterest} from './model/BookingInterest';
+import {BookingInterestPaginationResult} from './model/BookingInterestPaginationResult';
 import {Category} from './model/Category';
+import {CategoryPaginationResult} from './model/CategoryPaginationResult';
 import {Certificate} from './model/Certificate';
+import {CertificatePaginationResult} from './model/CertificatePaginationResult';
 import {ContactPerson} from './model/ContactPerson';
+import {ContactPersonPaginationResult} from './model/ContactPersonPaginationResult';
 import {Country} from './model/Country';
+import {CountryPaginationResult} from './model/CountryPaginationResult';
 import {Coupon} from './model/Coupon';
 import {CouponCode} from './model/CouponCode';
+import {CouponCodePaginationResult} from './model/CouponCodePaginationResult';
+import {CouponPaginationResult} from './model/CouponPaginationResult';
 import {Currency} from './model/Currency';
+import {CurrencyPaginationResult} from './model/CurrencyPaginationResult';
 import {EducationHistoryItem} from './model/EducationHistoryItem';
+import {EducationHistoryItemPaginationResult} from './model/EducationHistoryItemPaginationResult';
 import {Event} from './model/Event';
+import {EventPaginationResult} from './model/EventPaginationResult';
 import {Hotel} from './model/Hotel';
+import {HotelPaginationResult} from './model/HotelPaginationResult';
 import {Language} from './model/Language';
+import {LanguagePaginationResult} from './model/LanguagePaginationResult';
 import {Location} from './model/Location';
+import {LocationPaginationResult} from './model/LocationPaginationResult';
 import {Media} from './model/Media';
+import {MediaPaginationResult} from './model/MediaPaginationResult';
 import {Order} from './model/Order';
+import {OrderPaginationResult} from './model/OrderPaginationResult';
 import {Organizer} from './model/Organizer';
+import {OrganizerPaginationResult} from './model/OrganizerPaginationResult';
 import {Participant} from './model/Participant';
+import {ParticipantPaginationResult} from './model/ParticipantPaginationResult';
 import {Participation} from './model/Participation';
 import {ParticipationCode} from './model/ParticipationCode';
+import {ParticipationCodePaginationResult} from './model/ParticipationCodePaginationResult';
+import {ParticipationPaginationResult} from './model/ParticipationPaginationResult';
 import {Partner} from './model/Partner';
+import {PartnerPaginationResult} from './model/PartnerPaginationResult';
 import {PaymentMethod} from './model/PaymentMethod';
+import {PaymentMethodPaginationResult} from './model/PaymentMethodPaginationResult';
 import {Price} from './model/Price';
+import {PricePaginationResult} from './model/PricePaginationResult';
 import {Product} from './model/Product';
+import {ProductPaginationResult} from './model/ProductPaginationResult';
 import {ProductVariant} from './model/ProductVariant';
+import {ProductVariantPaginationResult} from './model/ProductVariantPaginationResult';
 import {ProviderInfo} from './model/ProviderInfo';
+import {ProviderInfoPaginationResult} from './model/ProviderInfoPaginationResult';
 import {Receiver} from './model/Receiver';
+import {ReceiverPaginationResult} from './model/ReceiverPaginationResult';
 import {Region} from './model/Region';
+import {RegionPaginationResult} from './model/RegionPaginationResult';
 import {Restaurant} from './model/Restaurant';
+import {RestaurantPaginationResult} from './model/RestaurantPaginationResult';
 import {RevenueAccount} from './model/RevenueAccount';
+import {RevenueAccountPaginationResult} from './model/RevenueAccountPaginationResult';
 import {RoleDiscount} from './model/RoleDiscount';
+import {RoleDiscountPaginationResult} from './model/RoleDiscountPaginationResult';
 import {Seminar} from './model/Seminar';
 import {SeminarConfiguration} from './model/SeminarConfiguration';
+import {SeminarConfigurationPaginationResult} from './model/SeminarConfigurationPaginationResult';
+import {SeminarPaginationResult} from './model/SeminarPaginationResult';
 import {Subscription} from './model/Subscription';
 import {SubscriptionConfiguration} from './model/SubscriptionConfiguration';
+import {SubscriptionConfigurationPaginationResult} from './model/SubscriptionConfigurationPaginationResult';
+import {SubscriptionPaginationResult} from './model/SubscriptionPaginationResult';
 import {SubscriptionPlan} from './model/SubscriptionPlan';
+import {SubscriptionPlanPaginationResult} from './model/SubscriptionPlanPaginationResult';
 import {Task} from './model/Task';
+import {TaskPaginationResult} from './model/TaskPaginationResult';
 import {Test} from './model/Test';
+import {TestPaginationResult} from './model/TestPaginationResult';
 import {TestResult} from './model/TestResult';
+import {TestResultPaginationResult} from './model/TestResultPaginationResult';
 import {Topic} from './model/Topic';
+import {TopicPaginationResult} from './model/TopicPaginationResult';
 import {Trainer} from './model/Trainer';
+import {TrainerPaginationResult} from './model/TrainerPaginationResult';
 import {User} from './model/User';
 import {UserGroup} from './model/UserGroup';
+import {UserGroupPaginationResult} from './model/UserGroupPaginationResult';
+import {UserPaginationResult} from './model/UserPaginationResult';
 import {Vat} from './model/Vat';
+import {VatPaginationResult} from './model/VatPaginationResult';
 import {WaitingList} from './model/WaitingList';
+import {WaitingListPaginationResult} from './model/WaitingListPaginationResult';
 import {AddressApi as AddressApiClass, AddressApiSingleton as AddressApi} from './api/AddressApi';
 import {AllocationWaitingListApi as AllocationWaitingListApiClass, AllocationWaitingListApiSingleton as AllocationWaitingListApi} from './api/AllocationWaitingListApi';
 import {BookingInterestApi as BookingInterestApiClass, BookingInterestApiSingleton as BookingInterestApi} from './api/BookingInterestApi';
@@ -153,10 +199,22 @@ export {
     Address,
 
     /**
+     * The AddressPaginationResult model constructor.
+     * @property {module:model/AddressPaginationResult}
+     */
+    AddressPaginationResult,
+
+    /**
      * The AllocationWaitingList model constructor.
      * @property {module:model/AllocationWaitingList}
      */
     AllocationWaitingList,
+
+    /**
+     * The AllocationWaitingListPaginationResult model constructor.
+     * @property {module:model/AllocationWaitingListPaginationResult}
+     */
+    AllocationWaitingListPaginationResult,
 
     /**
      * The BookingInterest model constructor.
@@ -165,10 +223,22 @@ export {
     BookingInterest,
 
     /**
+     * The BookingInterestPaginationResult model constructor.
+     * @property {module:model/BookingInterestPaginationResult}
+     */
+    BookingInterestPaginationResult,
+
+    /**
      * The Category model constructor.
      * @property {module:model/Category}
      */
     Category,
+
+    /**
+     * The CategoryPaginationResult model constructor.
+     * @property {module:model/CategoryPaginationResult}
+     */
+    CategoryPaginationResult,
 
     /**
      * The Certificate model constructor.
@@ -177,16 +247,34 @@ export {
     Certificate,
 
     /**
+     * The CertificatePaginationResult model constructor.
+     * @property {module:model/CertificatePaginationResult}
+     */
+    CertificatePaginationResult,
+
+    /**
      * The ContactPerson model constructor.
      * @property {module:model/ContactPerson}
      */
     ContactPerson,
 
     /**
+     * The ContactPersonPaginationResult model constructor.
+     * @property {module:model/ContactPersonPaginationResult}
+     */
+    ContactPersonPaginationResult,
+
+    /**
      * The Country model constructor.
      * @property {module:model/Country}
      */
     Country,
+
+    /**
+     * The CountryPaginationResult model constructor.
+     * @property {module:model/CountryPaginationResult}
+     */
+    CountryPaginationResult,
 
     /**
      * The Coupon model constructor.
@@ -201,10 +289,28 @@ export {
     CouponCode,
 
     /**
+     * The CouponCodePaginationResult model constructor.
+     * @property {module:model/CouponCodePaginationResult}
+     */
+    CouponCodePaginationResult,
+
+    /**
+     * The CouponPaginationResult model constructor.
+     * @property {module:model/CouponPaginationResult}
+     */
+    CouponPaginationResult,
+
+    /**
      * The Currency model constructor.
      * @property {module:model/Currency}
      */
     Currency,
+
+    /**
+     * The CurrencyPaginationResult model constructor.
+     * @property {module:model/CurrencyPaginationResult}
+     */
+    CurrencyPaginationResult,
 
     /**
      * The EducationHistoryItem model constructor.
@@ -213,10 +319,22 @@ export {
     EducationHistoryItem,
 
     /**
+     * The EducationHistoryItemPaginationResult model constructor.
+     * @property {module:model/EducationHistoryItemPaginationResult}
+     */
+    EducationHistoryItemPaginationResult,
+
+    /**
      * The Event model constructor.
      * @property {module:model/Event}
      */
     Event,
+
+    /**
+     * The EventPaginationResult model constructor.
+     * @property {module:model/EventPaginationResult}
+     */
+    EventPaginationResult,
 
     /**
      * The Hotel model constructor.
@@ -225,10 +343,22 @@ export {
     Hotel,
 
     /**
+     * The HotelPaginationResult model constructor.
+     * @property {module:model/HotelPaginationResult}
+     */
+    HotelPaginationResult,
+
+    /**
      * The Language model constructor.
      * @property {module:model/Language}
      */
     Language,
+
+    /**
+     * The LanguagePaginationResult model constructor.
+     * @property {module:model/LanguagePaginationResult}
+     */
+    LanguagePaginationResult,
 
     /**
      * The Location model constructor.
@@ -237,10 +367,22 @@ export {
     Location,
 
     /**
+     * The LocationPaginationResult model constructor.
+     * @property {module:model/LocationPaginationResult}
+     */
+    LocationPaginationResult,
+
+    /**
      * The Media model constructor.
      * @property {module:model/Media}
      */
     Media,
+
+    /**
+     * The MediaPaginationResult model constructor.
+     * @property {module:model/MediaPaginationResult}
+     */
+    MediaPaginationResult,
 
     /**
      * The Order model constructor.
@@ -249,16 +391,34 @@ export {
     Order,
 
     /**
+     * The OrderPaginationResult model constructor.
+     * @property {module:model/OrderPaginationResult}
+     */
+    OrderPaginationResult,
+
+    /**
      * The Organizer model constructor.
      * @property {module:model/Organizer}
      */
     Organizer,
 
     /**
+     * The OrganizerPaginationResult model constructor.
+     * @property {module:model/OrganizerPaginationResult}
+     */
+    OrganizerPaginationResult,
+
+    /**
      * The Participant model constructor.
      * @property {module:model/Participant}
      */
     Participant,
+
+    /**
+     * The ParticipantPaginationResult model constructor.
+     * @property {module:model/ParticipantPaginationResult}
+     */
+    ParticipantPaginationResult,
 
     /**
      * The Participation model constructor.
@@ -273,10 +433,28 @@ export {
     ParticipationCode,
 
     /**
+     * The ParticipationCodePaginationResult model constructor.
+     * @property {module:model/ParticipationCodePaginationResult}
+     */
+    ParticipationCodePaginationResult,
+
+    /**
+     * The ParticipationPaginationResult model constructor.
+     * @property {module:model/ParticipationPaginationResult}
+     */
+    ParticipationPaginationResult,
+
+    /**
      * The Partner model constructor.
      * @property {module:model/Partner}
      */
     Partner,
+
+    /**
+     * The PartnerPaginationResult model constructor.
+     * @property {module:model/PartnerPaginationResult}
+     */
+    PartnerPaginationResult,
 
     /**
      * The PaymentMethod model constructor.
@@ -285,10 +463,22 @@ export {
     PaymentMethod,
 
     /**
+     * The PaymentMethodPaginationResult model constructor.
+     * @property {module:model/PaymentMethodPaginationResult}
+     */
+    PaymentMethodPaginationResult,
+
+    /**
      * The Price model constructor.
      * @property {module:model/Price}
      */
     Price,
+
+    /**
+     * The PricePaginationResult model constructor.
+     * @property {module:model/PricePaginationResult}
+     */
+    PricePaginationResult,
 
     /**
      * The Product model constructor.
@@ -297,10 +487,22 @@ export {
     Product,
 
     /**
+     * The ProductPaginationResult model constructor.
+     * @property {module:model/ProductPaginationResult}
+     */
+    ProductPaginationResult,
+
+    /**
      * The ProductVariant model constructor.
      * @property {module:model/ProductVariant}
      */
     ProductVariant,
+
+    /**
+     * The ProductVariantPaginationResult model constructor.
+     * @property {module:model/ProductVariantPaginationResult}
+     */
+    ProductVariantPaginationResult,
 
     /**
      * The ProviderInfo model constructor.
@@ -309,10 +511,22 @@ export {
     ProviderInfo,
 
     /**
+     * The ProviderInfoPaginationResult model constructor.
+     * @property {module:model/ProviderInfoPaginationResult}
+     */
+    ProviderInfoPaginationResult,
+
+    /**
      * The Receiver model constructor.
      * @property {module:model/Receiver}
      */
     Receiver,
+
+    /**
+     * The ReceiverPaginationResult model constructor.
+     * @property {module:model/ReceiverPaginationResult}
+     */
+    ReceiverPaginationResult,
 
     /**
      * The Region model constructor.
@@ -321,10 +535,22 @@ export {
     Region,
 
     /**
+     * The RegionPaginationResult model constructor.
+     * @property {module:model/RegionPaginationResult}
+     */
+    RegionPaginationResult,
+
+    /**
      * The Restaurant model constructor.
      * @property {module:model/Restaurant}
      */
     Restaurant,
+
+    /**
+     * The RestaurantPaginationResult model constructor.
+     * @property {module:model/RestaurantPaginationResult}
+     */
+    RestaurantPaginationResult,
 
     /**
      * The RevenueAccount model constructor.
@@ -333,10 +559,22 @@ export {
     RevenueAccount,
 
     /**
+     * The RevenueAccountPaginationResult model constructor.
+     * @property {module:model/RevenueAccountPaginationResult}
+     */
+    RevenueAccountPaginationResult,
+
+    /**
      * The RoleDiscount model constructor.
      * @property {module:model/RoleDiscount}
      */
     RoleDiscount,
+
+    /**
+     * The RoleDiscountPaginationResult model constructor.
+     * @property {module:model/RoleDiscountPaginationResult}
+     */
+    RoleDiscountPaginationResult,
 
     /**
      * The Seminar model constructor.
@@ -351,6 +589,18 @@ export {
     SeminarConfiguration,
 
     /**
+     * The SeminarConfigurationPaginationResult model constructor.
+     * @property {module:model/SeminarConfigurationPaginationResult}
+     */
+    SeminarConfigurationPaginationResult,
+
+    /**
+     * The SeminarPaginationResult model constructor.
+     * @property {module:model/SeminarPaginationResult}
+     */
+    SeminarPaginationResult,
+
+    /**
      * The Subscription model constructor.
      * @property {module:model/Subscription}
      */
@@ -363,10 +613,28 @@ export {
     SubscriptionConfiguration,
 
     /**
+     * The SubscriptionConfigurationPaginationResult model constructor.
+     * @property {module:model/SubscriptionConfigurationPaginationResult}
+     */
+    SubscriptionConfigurationPaginationResult,
+
+    /**
+     * The SubscriptionPaginationResult model constructor.
+     * @property {module:model/SubscriptionPaginationResult}
+     */
+    SubscriptionPaginationResult,
+
+    /**
      * The SubscriptionPlan model constructor.
      * @property {module:model/SubscriptionPlan}
      */
     SubscriptionPlan,
+
+    /**
+     * The SubscriptionPlanPaginationResult model constructor.
+     * @property {module:model/SubscriptionPlanPaginationResult}
+     */
+    SubscriptionPlanPaginationResult,
 
     /**
      * The Task model constructor.
@@ -375,10 +643,22 @@ export {
     Task,
 
     /**
+     * The TaskPaginationResult model constructor.
+     * @property {module:model/TaskPaginationResult}
+     */
+    TaskPaginationResult,
+
+    /**
      * The Test model constructor.
      * @property {module:model/Test}
      */
     Test,
+
+    /**
+     * The TestPaginationResult model constructor.
+     * @property {module:model/TestPaginationResult}
+     */
+    TestPaginationResult,
 
     /**
      * The TestResult model constructor.
@@ -387,16 +667,34 @@ export {
     TestResult,
 
     /**
+     * The TestResultPaginationResult model constructor.
+     * @property {module:model/TestResultPaginationResult}
+     */
+    TestResultPaginationResult,
+
+    /**
      * The Topic model constructor.
      * @property {module:model/Topic}
      */
     Topic,
 
     /**
+     * The TopicPaginationResult model constructor.
+     * @property {module:model/TopicPaginationResult}
+     */
+    TopicPaginationResult,
+
+    /**
      * The Trainer model constructor.
      * @property {module:model/Trainer}
      */
     Trainer,
+
+    /**
+     * The TrainerPaginationResult model constructor.
+     * @property {module:model/TrainerPaginationResult}
+     */
+    TrainerPaginationResult,
 
     /**
      * The User model constructor.
@@ -411,16 +709,40 @@ export {
     UserGroup,
 
     /**
+     * The UserGroupPaginationResult model constructor.
+     * @property {module:model/UserGroupPaginationResult}
+     */
+    UserGroupPaginationResult,
+
+    /**
+     * The UserPaginationResult model constructor.
+     * @property {module:model/UserPaginationResult}
+     */
+    UserPaginationResult,
+
+    /**
      * The Vat model constructor.
      * @property {module:model/Vat}
      */
     Vat,
 
     /**
+     * The VatPaginationResult model constructor.
+     * @property {module:model/VatPaginationResult}
+     */
+    VatPaginationResult,
+
+    /**
      * The WaitingList model constructor.
      * @property {module:model/WaitingList}
      */
     WaitingList,
+
+    /**
+     * The WaitingListPaginationResult model constructor.
+     * @property {module:model/WaitingListPaginationResult}
+     */
+    WaitingListPaginationResult,
 
     /**
     * The AddressApi service singleton.

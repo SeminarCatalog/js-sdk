@@ -130,7 +130,7 @@ No authorization required
 
 <a name="vatList"></a>
 # **vatList**
-> [Vat] vatList()
+> VatPaginationResult vatList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Vat]**](Vat.md)
+[**VatPaginationResult**](VatPaginationResult.md)
 
 ### Authorization
 

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="testList"></a>
 # **testList**
-> [Test] testList()
+> TestPaginationResult testList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Test]**](Test.md)
+[**TestPaginationResult**](TestPaginationResult.md)
 
 ### Authorization
 

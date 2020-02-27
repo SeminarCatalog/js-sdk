@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Price} from '../model/Price';
+import {PricePaginationResult} from '../model/PricePaginationResult';
 
 /**
 * Price internal service.
@@ -178,7 +179,7 @@ export class PriceInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Price>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PricePaginationResult} and HTTP response
      */
     priceListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class PriceInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Price];
+      let returnType = PricePaginationResult;
 
       return this.apiClient.callApi(
         '/api/price', 'GET',
@@ -207,7 +208,7 @@ export class PriceInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Price>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PricePaginationResult}
      */
     priceList() {
       return this.priceListWithHttpInfo()

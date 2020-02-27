@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {AllocationWaitingList} from '../model/AllocationWaitingList';
+import {AllocationWaitingListPaginationResult} from '../model/AllocationWaitingListPaginationResult';
 
 /**
 * AllocationWaitingList internal service.
@@ -178,7 +179,7 @@ export class AllocationWaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AllocationWaitingList>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AllocationWaitingListPaginationResult} and HTTP response
      */
     allocationwaitinglistListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class AllocationWaitingListInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [AllocationWaitingList];
+      let returnType = AllocationWaitingListPaginationResult;
 
       return this.apiClient.callApi(
         '/api/allocationwaitinglist', 'GET',
@@ -207,7 +208,7 @@ export class AllocationWaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AllocationWaitingList>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AllocationWaitingListPaginationResult}
      */
     allocationwaitinglistList() {
       return this.allocationwaitinglistListWithHttpInfo()

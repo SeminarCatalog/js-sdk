@@ -130,7 +130,7 @@ No authorization required
 
 <a name="contactpersonList"></a>
 # **contactpersonList**
-> [ContactPerson] contactpersonList()
+> ContactPersonPaginationResult contactpersonList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[ContactPerson]**](ContactPerson.md)
+[**ContactPersonPaginationResult**](ContactPersonPaginationResult.md)
 
 ### Authorization
 

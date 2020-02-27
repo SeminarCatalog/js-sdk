@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {TestResult} from '../model/TestResult';
+import {TestResultPaginationResult} from '../model/TestResultPaginationResult';
 
 /**
 * TestResult internal service.
@@ -178,7 +179,7 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResult>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResultPaginationResult} and HTTP response
      */
     testresultListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class TestResultInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [TestResult];
+      let returnType = TestResultPaginationResult;
 
       return this.apiClient.callApi(
         '/api/testresult', 'GET',
@@ -207,7 +208,7 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResultPaginationResult}
      */
     testresultList() {
       return this.testresultListWithHttpInfo()

@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {BookingInterest} from '../model/BookingInterest';
+import {BookingInterestPaginationResult} from '../model/BookingInterestPaginationResult';
 
 /**
 * BookingInterest internal service.
@@ -178,7 +179,7 @@ export class BookingInterestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/BookingInterest>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterestPaginationResult} and HTTP response
      */
     bookinginterestListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class BookingInterestInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [BookingInterest];
+      let returnType = BookingInterestPaginationResult;
 
       return this.apiClient.callApi(
         '/api/bookinginterest', 'GET',
@@ -207,7 +208,7 @@ export class BookingInterestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/BookingInterest>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterestPaginationResult}
      */
     bookinginterestList() {
       return this.bookinginterestListWithHttpInfo()

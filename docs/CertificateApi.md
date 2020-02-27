@@ -130,7 +130,7 @@ No authorization required
 
 <a name="certificateList"></a>
 # **certificateList**
-> [Certificate] certificateList()
+> CertificatePaginationResult certificateList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Certificate]**](Certificate.md)
+[**CertificatePaginationResult**](CertificatePaginationResult.md)
 
 ### Authorization
 

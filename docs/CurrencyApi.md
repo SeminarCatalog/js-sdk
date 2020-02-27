@@ -130,7 +130,7 @@ No authorization required
 
 <a name="currencyList"></a>
 # **currencyList**
-> [Currency] currencyList()
+> CurrencyPaginationResult currencyList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Currency]**](Currency.md)
+[**CurrencyPaginationResult**](CurrencyPaginationResult.md)
 
 ### Authorization
 

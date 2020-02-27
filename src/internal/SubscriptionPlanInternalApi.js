@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {SubscriptionPlan} from '../model/SubscriptionPlan';
+import {SubscriptionPlanPaginationResult} from '../model/SubscriptionPlanPaginationResult';
 
 /**
 * SubscriptionPlan internal service.
@@ -178,7 +179,7 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SubscriptionPlan>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlanPaginationResult} and HTTP response
      */
     subscriptionplanListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class SubscriptionPlanInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [SubscriptionPlan];
+      let returnType = SubscriptionPlanPaginationResult;
 
       return this.apiClient.callApi(
         '/api/subscriptionplan', 'GET',
@@ -207,7 +208,7 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SubscriptionPlan>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlanPaginationResult}
      */
     subscriptionplanList() {
       return this.subscriptionplanListWithHttpInfo()

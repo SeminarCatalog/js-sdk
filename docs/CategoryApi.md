@@ -130,7 +130,7 @@ No authorization required
 
 <a name="categoryList"></a>
 # **categoryList**
-> [Category] categoryList()
+> CategoryPaginationResult categoryList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Category]**](Category.md)
+[**CategoryPaginationResult**](CategoryPaginationResult.md)
 
 ### Authorization
 

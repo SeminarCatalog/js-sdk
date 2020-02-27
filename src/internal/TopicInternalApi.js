@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Topic} from '../model/Topic';
+import {TopicPaginationResult} from '../model/TopicPaginationResult';
 
 /**
 * Topic internal service.
@@ -178,7 +179,7 @@ export class TopicInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Topic>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TopicPaginationResult} and HTTP response
      */
     topicListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class TopicInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Topic];
+      let returnType = TopicPaginationResult;
 
       return this.apiClient.callApi(
         '/api/topic', 'GET',
@@ -207,7 +208,7 @@ export class TopicInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Topic>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TopicPaginationResult}
      */
     topicList() {
       return this.topicListWithHttpInfo()

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="subscriptionconfigurationList"></a>
 # **subscriptionconfigurationList**
-> [SubscriptionConfiguration] subscriptionconfigurationList()
+> SubscriptionConfigurationPaginationResult subscriptionconfigurationList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[SubscriptionConfiguration]**](SubscriptionConfiguration.md)
+[**SubscriptionConfigurationPaginationResult**](SubscriptionConfigurationPaginationResult.md)
 
 ### Authorization
 

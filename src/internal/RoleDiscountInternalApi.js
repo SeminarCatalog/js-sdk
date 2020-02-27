@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {RoleDiscount} from '../model/RoleDiscount';
+import {RoleDiscountPaginationResult} from '../model/RoleDiscountPaginationResult';
 
 /**
 * RoleDiscount internal service.
@@ -178,7 +179,7 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/RoleDiscount>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscountPaginationResult} and HTTP response
      */
     rolediscountListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class RoleDiscountInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [RoleDiscount];
+      let returnType = RoleDiscountPaginationResult;
 
       return this.apiClient.callApi(
         '/api/rolediscount', 'GET',
@@ -207,7 +208,7 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/RoleDiscount>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscountPaginationResult}
      */
     rolediscountList() {
       return this.rolediscountListWithHttpInfo()

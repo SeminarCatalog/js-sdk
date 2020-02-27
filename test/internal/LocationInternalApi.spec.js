@@ -42,13 +42,7 @@
 
           instance.locationCreate().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.Location);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -59,6 +53,56 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.name).to.be.a('string');
+            // expect(data.name).to.be("");
+            expect(data.room).to.be.a('string');
+            // expect(data.room).to.be("");
+            expect(data.floor).to.be.a('string');
+            // expect(data.floor).to.be("");
+            expect(data.building).to.be.a('string');
+            // expect(data.building).to.be("");
+            expect(data.address).to.be.a('string');
+            // expect(data.address).to.be("");
+            expect(data.zip).to.be.a('string');
+            // expect(data.zip).to.be("");
+            expect(data.city).to.be.a('string');
+            // expect(data.city).to.be("");
+            expect(data.latitude).to.be.a('string');
+            // expect(data.latitude).to.be("");
+            expect(data.longitude).to.be.a('string');
+            // expect(data.longitude).to.be("");
+            expect(data.phone).to.be.a('string');
+            // expect(data.phone).to.be("");
+            expect(data.fax).to.be.a('string');
+            // expect(data.fax).to.be("");
+            expect(data.email).to.be.a('string');
+            // expect(data.email).to.be("");
+            expect(data.url).to.be.a('string');
+            // expect(data.url).to.be("");
+            expect(data.information).to.be.a('string');
+            // expect(data.information).to.be("");
+            {
+              let dataCtr = data.hotels;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                // expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.restaurants;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                // expect(data).to.be("");
+              }
+            }
+            expect(data.internal).to.be.a('number');
+            // expect(data.internal).to.be(0);
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -95,13 +139,7 @@
 
           instance.locationDelete(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.Location);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -112,6 +150,56 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.name).to.be.a('string');
+            // expect(data.name).to.be("");
+            expect(data.room).to.be.a('string');
+            // expect(data.room).to.be("");
+            expect(data.floor).to.be.a('string');
+            // expect(data.floor).to.be("");
+            expect(data.building).to.be.a('string');
+            // expect(data.building).to.be("");
+            expect(data.address).to.be.a('string');
+            // expect(data.address).to.be("");
+            expect(data.zip).to.be.a('string');
+            // expect(data.zip).to.be("");
+            expect(data.city).to.be.a('string');
+            // expect(data.city).to.be("");
+            expect(data.latitude).to.be.a('string');
+            // expect(data.latitude).to.be("");
+            expect(data.longitude).to.be.a('string');
+            // expect(data.longitude).to.be("");
+            expect(data.phone).to.be.a('string');
+            // expect(data.phone).to.be("");
+            expect(data.fax).to.be.a('string');
+            // expect(data.fax).to.be("");
+            expect(data.email).to.be.a('string');
+            // expect(data.email).to.be("");
+            expect(data.url).to.be.a('string');
+            // expect(data.url).to.be("");
+            expect(data.information).to.be.a('string');
+            // expect(data.information).to.be("");
+            {
+              let dataCtr = data.hotels;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                // expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.restaurants;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                // expect(data).to.be("");
+              }
+            }
+            expect(data.internal).to.be.a('number');
+            // expect(data.internal).to.be(0);
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -148,13 +236,7 @@
 
           instance.locationGet(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.Location);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -165,6 +247,56 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.name).to.be.a('string');
+            // expect(data.name).to.be("");
+            expect(data.room).to.be.a('string');
+            // expect(data.room).to.be("");
+            expect(data.floor).to.be.a('string');
+            // expect(data.floor).to.be("");
+            expect(data.building).to.be.a('string');
+            // expect(data.building).to.be("");
+            expect(data.address).to.be.a('string');
+            // expect(data.address).to.be("");
+            expect(data.zip).to.be.a('string');
+            // expect(data.zip).to.be("");
+            expect(data.city).to.be.a('string');
+            // expect(data.city).to.be("");
+            expect(data.latitude).to.be.a('string');
+            // expect(data.latitude).to.be("");
+            expect(data.longitude).to.be.a('string');
+            // expect(data.longitude).to.be("");
+            expect(data.phone).to.be.a('string');
+            // expect(data.phone).to.be("");
+            expect(data.fax).to.be.a('string');
+            // expect(data.fax).to.be("");
+            expect(data.email).to.be.a('string');
+            // expect(data.email).to.be("");
+            expect(data.url).to.be.a('string');
+            // expect(data.url).to.be("");
+            expect(data.information).to.be.a('string');
+            // expect(data.information).to.be("");
+            {
+              let dataCtr = data.hotels;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                // expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.restaurants;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                // expect(data).to.be("");
+              }
+            }
+            expect(data.internal).to.be.a('number');
+            // expect(data.internal).to.be(0);
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -200,41 +332,102 @@
 
           instance.locationList().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.LocationPaginationResult);
+            expect(data.limit).to.be.a('number');
+            // expect(data.limit).to.be(0);
+            expect(data.offset).to.be.a('number');
+            // expect(data.offset).to.be(0);
+            expect(data.entryCount).to.be.a('number');
+            // expect(data.entryCount).to.be(0);
+            expect(data.maxEntryCount).to.be.a('number');
+            // expect(data.maxEntryCount).to.be(0);
             {
-              let dataCtr = data.syncFields;
+              let dataCtr = data.entries;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                // expect(data).to.be("");
+                expect(data).to.be.a(SeminarCatalogApi.Location);
+                {
+                  let dataCtr = data.syncFields;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a('string');
+                    // expect(data).to.be("");
+                  }
+                }
+                expect(data.name).to.be.a('string');
+                // expect(data.name).to.be("");
+                expect(data.room).to.be.a('string');
+                // expect(data.room).to.be("");
+                expect(data.floor).to.be.a('string');
+                // expect(data.floor).to.be("");
+                expect(data.building).to.be.a('string');
+                // expect(data.building).to.be("");
+                expect(data.address).to.be.a('string');
+                // expect(data.address).to.be("");
+                expect(data.zip).to.be.a('string');
+                // expect(data.zip).to.be("");
+                expect(data.city).to.be.a('string');
+                // expect(data.city).to.be("");
+                expect(data.latitude).to.be.a('string');
+                // expect(data.latitude).to.be("");
+                expect(data.longitude).to.be.a('string');
+                // expect(data.longitude).to.be("");
+                expect(data.phone).to.be.a('string');
+                // expect(data.phone).to.be("");
+                expect(data.fax).to.be.a('string');
+                // expect(data.fax).to.be("");
+                expect(data.email).to.be.a('string');
+                // expect(data.email).to.be("");
+                expect(data.url).to.be.a('string');
+                // expect(data.url).to.be("");
+                expect(data.information).to.be.a('string');
+                // expect(data.information).to.be("");
+                {
+                  let dataCtr = data.hotels;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a('string');
+                    // expect(data).to.be("");
+                  }
+                }
+                {
+                  let dataCtr = data.restaurants;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a('string');
+                    // expect(data).to.be("");
+                  }
+                }
+                expect(data.internal).to.be.a('number');
+                // expect(data.internal).to.be(0);
+                expect(data.id).to.be.a('number');
+                // expect(data.id).to.be(0);
+                expect(data.foreignId).to.be.a('string');
+                // expect(data.foreignId).to.be("");
+                expect(data.language).to.be.a('number');
+                // expect(data.language).to.be(0);
+                expect(data.createDate).to.be.a('number');
+                // expect(data.createDate).to.be(0);
+                expect(data.changeDate).to.be.a('number');
+                // expect(data.changeDate).to.be(0);
+                expect(data.deleted).to.be.a('number');
+                // expect(data.deleted).to.be(0);
+                expect(data.hidden).to.be.a('number');
+                // expect(data.hidden).to.be(0);
+                expect(data.sorting).to.be.a('number');
+                // expect(data.sorting).to.be(0);
+                expect(data.tags).to.be.a('string');
+                // expect(data.tags).to.be("");
               }
             }
-            expect(data.id).to.be.a('number');
-            // expect(data.id).to.be(0);
-            expect(data.foreignId).to.be.a('string');
-            // expect(data.foreignId).to.be("");
-            expect(data.language).to.be.a('number');
-            // expect(data.language).to.be(0);
-            expect(data.createDate).to.be.a('number');
-            // expect(data.createDate).to.be(0);
-            expect(data.changeDate).to.be.a('number');
-            // expect(data.changeDate).to.be(0);
-            expect(data.deleted).to.be.a('number');
-            // expect(data.deleted).to.be(0);
-            expect(data.hidden).to.be.a('number');
-            // expect(data.hidden).to.be(0);
-            expect(data.sorting).to.be.a('number');
-            // expect(data.sorting).to.be(0);
-            expect(data.tags).to.be.a('string');
-            // expect(data.tags).to.be("");
 
             done();
           }, function(error) {
@@ -253,13 +446,7 @@
 
           instance.locationUpdate(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.Location);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -270,6 +457,56 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.name).to.be.a('string');
+            // expect(data.name).to.be("");
+            expect(data.room).to.be.a('string');
+            // expect(data.room).to.be("");
+            expect(data.floor).to.be.a('string');
+            // expect(data.floor).to.be("");
+            expect(data.building).to.be.a('string');
+            // expect(data.building).to.be("");
+            expect(data.address).to.be.a('string');
+            // expect(data.address).to.be("");
+            expect(data.zip).to.be.a('string');
+            // expect(data.zip).to.be("");
+            expect(data.city).to.be.a('string');
+            // expect(data.city).to.be("");
+            expect(data.latitude).to.be.a('string');
+            // expect(data.latitude).to.be("");
+            expect(data.longitude).to.be.a('string');
+            // expect(data.longitude).to.be("");
+            expect(data.phone).to.be.a('string');
+            // expect(data.phone).to.be("");
+            expect(data.fax).to.be.a('string');
+            // expect(data.fax).to.be("");
+            expect(data.email).to.be.a('string');
+            // expect(data.email).to.be("");
+            expect(data.url).to.be.a('string');
+            // expect(data.url).to.be("");
+            expect(data.information).to.be.a('string');
+            // expect(data.information).to.be("");
+            {
+              let dataCtr = data.hotels;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                // expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.restaurants;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                // expect(data).to.be("");
+              }
+            }
+            expect(data.internal).to.be.a('number');
+            // expect(data.internal).to.be(0);
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');

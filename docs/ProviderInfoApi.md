@@ -130,7 +130,7 @@ No authorization required
 
 <a name="providerinfoList"></a>
 # **providerinfoList**
-> [ProviderInfo] providerinfoList()
+> ProviderInfoPaginationResult providerinfoList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[ProviderInfo]**](ProviderInfo.md)
+[**ProviderInfoPaginationResult**](ProviderInfoPaginationResult.md)
 
 ### Authorization
 

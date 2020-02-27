@@ -130,7 +130,7 @@ No authorization required
 
 <a name="receiverList"></a>
 # **receiverList**
-> [Receiver] receiverList()
+> ReceiverPaginationResult receiverList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Receiver]**](Receiver.md)
+[**ReceiverPaginationResult**](ReceiverPaginationResult.md)
 
 ### Authorization
 

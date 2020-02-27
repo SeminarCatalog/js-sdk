@@ -130,7 +130,7 @@ No authorization required
 
 <a name="productList"></a>
 # **productList**
-> [Product] productList()
+> ProductPaginationResult productList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Product]**](Product.md)
+[**ProductPaginationResult**](ProductPaginationResult.md)
 
 ### Authorization
 

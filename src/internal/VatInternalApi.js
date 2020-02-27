@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Vat} from '../model/Vat';
+import {VatPaginationResult} from '../model/VatPaginationResult';
 
 /**
 * Vat internal service.
@@ -178,7 +179,7 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Vat>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VatPaginationResult} and HTTP response
      */
     vatListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class VatInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Vat];
+      let returnType = VatPaginationResult;
 
       return this.apiClient.callApi(
         '/api/vat', 'GET',
@@ -207,7 +208,7 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Vat>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VatPaginationResult}
      */
     vatList() {
       return this.vatListWithHttpInfo()

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="rolediscountList"></a>
 # **rolediscountList**
-> [RoleDiscount] rolediscountList()
+> RoleDiscountPaginationResult rolediscountList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[RoleDiscount]**](RoleDiscount.md)
+[**RoleDiscountPaginationResult**](RoleDiscountPaginationResult.md)
 
 ### Authorization
 

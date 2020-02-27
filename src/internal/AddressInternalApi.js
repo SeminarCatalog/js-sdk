@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Address} from '../model/Address';
+import {AddressPaginationResult} from '../model/AddressPaginationResult';
 
 /**
 * Address internal service.
@@ -178,7 +179,7 @@ export class AddressInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Address>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddressPaginationResult} and HTTP response
      */
     addressListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class AddressInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Address];
+      let returnType = AddressPaginationResult;
 
       return this.apiClient.callApi(
         '/api/address', 'GET',
@@ -207,7 +208,7 @@ export class AddressInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Address>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddressPaginationResult}
      */
     addressList() {
       return this.addressListWithHttpInfo()

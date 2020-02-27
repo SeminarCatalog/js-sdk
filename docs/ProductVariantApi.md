@@ -130,7 +130,7 @@ No authorization required
 
 <a name="productvariantList"></a>
 # **productvariantList**
-> [ProductVariant] productvariantList()
+> ProductVariantPaginationResult productvariantList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[ProductVariant]**](ProductVariant.md)
+[**ProductVariantPaginationResult**](ProductVariantPaginationResult.md)
 
 ### Authorization
 

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="userList"></a>
 # **userList**
-> [User] userList()
+> UserPaginationResult userList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[User]**](User.md)
+[**UserPaginationResult**](UserPaginationResult.md)
 
 ### Authorization
 

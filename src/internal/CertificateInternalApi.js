@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Certificate} from '../model/Certificate';
+import {CertificatePaginationResult} from '../model/CertificatePaginationResult';
 
 /**
 * Certificate internal service.
@@ -178,7 +179,7 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Certificate>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CertificatePaginationResult} and HTTP response
      */
     certificateListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class CertificateInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Certificate];
+      let returnType = CertificatePaginationResult;
 
       return this.apiClient.callApi(
         '/api/certificate', 'GET',
@@ -207,7 +208,7 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Certificate>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CertificatePaginationResult}
      */
     certificateList() {
       return this.certificateListWithHttpInfo()

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="countryList"></a>
 # **countryList**
-> [Country] countryList()
+> CountryPaginationResult countryList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Country]**](Country.md)
+[**CountryPaginationResult**](CountryPaginationResult.md)
 
 ### Authorization
 

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="restaurantList"></a>
 # **restaurantList**
-> [Restaurant] restaurantList()
+> RestaurantPaginationResult restaurantList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Restaurant]**](Restaurant.md)
+[**RestaurantPaginationResult**](RestaurantPaginationResult.md)
 
 ### Authorization
 

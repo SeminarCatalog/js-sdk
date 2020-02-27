@@ -42,13 +42,7 @@
 
           instance.subscriptionconfigurationCreate().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.SubscriptionConfiguration);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -59,6 +53,18 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.title).to.be.a('string');
+            // expect(data.title).to.be("");
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.subscriptionDuration).to.be.a('number');
+            // expect(data.subscriptionDuration).to.be(0);
+            expect(data.daysTerminationPossible).to.be.a('number');
+            // expect(data.daysTerminationPossible).to.be(0);
+            expect(data.daysInvoiceCreation).to.be.a('number');
+            // expect(data.daysInvoiceCreation).to.be(0);
+            expect(data.daysUntilSuspension).to.be.a('number');
+            // expect(data.daysUntilSuspension).to.be(0);
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -95,13 +101,7 @@
 
           instance.subscriptionconfigurationDelete(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.SubscriptionConfiguration);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -112,6 +112,18 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.title).to.be.a('string');
+            // expect(data.title).to.be("");
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.subscriptionDuration).to.be.a('number');
+            // expect(data.subscriptionDuration).to.be(0);
+            expect(data.daysTerminationPossible).to.be.a('number');
+            // expect(data.daysTerminationPossible).to.be(0);
+            expect(data.daysInvoiceCreation).to.be.a('number');
+            // expect(data.daysInvoiceCreation).to.be(0);
+            expect(data.daysUntilSuspension).to.be.a('number');
+            // expect(data.daysUntilSuspension).to.be(0);
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -148,13 +160,7 @@
 
           instance.subscriptionconfigurationGet(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.SubscriptionConfiguration);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -165,6 +171,18 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.title).to.be.a('string');
+            // expect(data.title).to.be("");
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.subscriptionDuration).to.be.a('number');
+            // expect(data.subscriptionDuration).to.be(0);
+            expect(data.daysTerminationPossible).to.be.a('number');
+            // expect(data.daysTerminationPossible).to.be(0);
+            expect(data.daysInvoiceCreation).to.be.a('number');
+            // expect(data.daysInvoiceCreation).to.be(0);
+            expect(data.daysUntilSuspension).to.be.a('number');
+            // expect(data.daysUntilSuspension).to.be(0);
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -200,41 +218,64 @@
 
           instance.subscriptionconfigurationList().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.SubscriptionConfigurationPaginationResult);
+            expect(data.limit).to.be.a('number');
+            // expect(data.limit).to.be(0);
+            expect(data.offset).to.be.a('number');
+            // expect(data.offset).to.be(0);
+            expect(data.entryCount).to.be.a('number');
+            // expect(data.entryCount).to.be(0);
+            expect(data.maxEntryCount).to.be.a('number');
+            // expect(data.maxEntryCount).to.be(0);
             {
-              let dataCtr = data.syncFields;
+              let dataCtr = data.entries;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                // expect(data).to.be("");
+                expect(data).to.be.a(SeminarCatalogApi.SubscriptionConfiguration);
+                {
+                  let dataCtr = data.syncFields;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a('string');
+                    // expect(data).to.be("");
+                  }
+                }
+                expect(data.title).to.be.a('string');
+                // expect(data.title).to.be("");
+                expect(data.description).to.be.a('string');
+                // expect(data.description).to.be("");
+                expect(data.subscriptionDuration).to.be.a('number');
+                // expect(data.subscriptionDuration).to.be(0);
+                expect(data.daysTerminationPossible).to.be.a('number');
+                // expect(data.daysTerminationPossible).to.be(0);
+                expect(data.daysInvoiceCreation).to.be.a('number');
+                // expect(data.daysInvoiceCreation).to.be(0);
+                expect(data.daysUntilSuspension).to.be.a('number');
+                // expect(data.daysUntilSuspension).to.be(0);
+                expect(data.id).to.be.a('number');
+                // expect(data.id).to.be(0);
+                expect(data.foreignId).to.be.a('string');
+                // expect(data.foreignId).to.be("");
+                expect(data.language).to.be.a('number');
+                // expect(data.language).to.be(0);
+                expect(data.createDate).to.be.a('number');
+                // expect(data.createDate).to.be(0);
+                expect(data.changeDate).to.be.a('number');
+                // expect(data.changeDate).to.be(0);
+                expect(data.deleted).to.be.a('number');
+                // expect(data.deleted).to.be(0);
+                expect(data.hidden).to.be.a('number');
+                // expect(data.hidden).to.be(0);
+                expect(data.sorting).to.be.a('number');
+                // expect(data.sorting).to.be(0);
+                expect(data.tags).to.be.a('string');
+                // expect(data.tags).to.be("");
               }
             }
-            expect(data.id).to.be.a('number');
-            // expect(data.id).to.be(0);
-            expect(data.foreignId).to.be.a('string');
-            // expect(data.foreignId).to.be("");
-            expect(data.language).to.be.a('number');
-            // expect(data.language).to.be(0);
-            expect(data.createDate).to.be.a('number');
-            // expect(data.createDate).to.be(0);
-            expect(data.changeDate).to.be.a('number');
-            // expect(data.changeDate).to.be(0);
-            expect(data.deleted).to.be.a('number');
-            // expect(data.deleted).to.be(0);
-            expect(data.hidden).to.be.a('number');
-            // expect(data.hidden).to.be(0);
-            expect(data.sorting).to.be.a('number');
-            // expect(data.sorting).to.be(0);
-            expect(data.tags).to.be.a('string');
-            // expect(data.tags).to.be("");
 
             done();
           }, function(error) {
@@ -253,13 +294,7 @@
 
           instance.subscriptionconfigurationUpdate(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.SubscriptionConfiguration);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -270,6 +305,18 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.title).to.be.a('string');
+            // expect(data.title).to.be("");
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.subscriptionDuration).to.be.a('number');
+            // expect(data.subscriptionDuration).to.be(0);
+            expect(data.daysTerminationPossible).to.be.a('number');
+            // expect(data.daysTerminationPossible).to.be(0);
+            expect(data.daysInvoiceCreation).to.be.a('number');
+            // expect(data.daysInvoiceCreation).to.be(0);
+            expect(data.daysUntilSuspension).to.be.a('number');
+            // expect(data.daysUntilSuspension).to.be(0);
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');

@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Seminar} from '../model/Seminar';
+import {SeminarPaginationResult} from '../model/SeminarPaginationResult';
 
 /**
 * Seminar internal service.
@@ -178,7 +179,7 @@ export class SeminarInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Seminar>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SeminarPaginationResult} and HTTP response
      */
     seminarListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class SeminarInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Seminar];
+      let returnType = SeminarPaginationResult;
 
       return this.apiClient.callApi(
         '/api/seminar', 'GET',
@@ -207,7 +208,7 @@ export class SeminarInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Seminar>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SeminarPaginationResult}
      */
     seminarList() {
       return this.seminarListWithHttpInfo()

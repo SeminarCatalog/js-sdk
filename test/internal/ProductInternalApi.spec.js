@@ -42,13 +42,7 @@
 
           instance.productCreate().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.Product);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -59,6 +53,28 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.title).to.be.a('string');
+            // expect(data.title).to.be("");
+            expect(data.subtitle).to.be.a('string');
+            // expect(data.subtitle).to.be("");
+            expect(data.identifier).to.be.a('string');
+            // expect(data.identifier).to.be("");
+            expect(data.teaser).to.be.a('string');
+            // expect(data.teaser).to.be("");
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.externalUrl).to.be.a('string');
+            // expect(data.externalUrl).to.be("");
+            expect(data.rolesVisibility).to.be.a('string');
+            // expect(data.rolesVisibility).to.be("");
+            expect(data.rolesBooking).to.be.a('string');
+            // expect(data.rolesBooking).to.be("");
+            expect(data.hideInCatalog).to.be.a('number');
+            // expect(data.hideInCatalog).to.be(0);
+            expect(data.costCentre).to.be.a('string');
+            // expect(data.costCentre).to.be("");
+            expect(data.payers).to.be.a('string');
+            // expect(data.payers).to.be("");
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -95,13 +111,7 @@
 
           instance.productDelete(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.Product);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -112,6 +122,28 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.title).to.be.a('string');
+            // expect(data.title).to.be("");
+            expect(data.subtitle).to.be.a('string');
+            // expect(data.subtitle).to.be("");
+            expect(data.identifier).to.be.a('string');
+            // expect(data.identifier).to.be("");
+            expect(data.teaser).to.be.a('string');
+            // expect(data.teaser).to.be("");
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.externalUrl).to.be.a('string');
+            // expect(data.externalUrl).to.be("");
+            expect(data.rolesVisibility).to.be.a('string');
+            // expect(data.rolesVisibility).to.be("");
+            expect(data.rolesBooking).to.be.a('string');
+            // expect(data.rolesBooking).to.be("");
+            expect(data.hideInCatalog).to.be.a('number');
+            // expect(data.hideInCatalog).to.be(0);
+            expect(data.costCentre).to.be.a('string');
+            // expect(data.costCentre).to.be("");
+            expect(data.payers).to.be.a('string');
+            // expect(data.payers).to.be("");
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -148,13 +180,7 @@
 
           instance.productGet(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.Product);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -165,6 +191,28 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.title).to.be.a('string');
+            // expect(data.title).to.be("");
+            expect(data.subtitle).to.be.a('string');
+            // expect(data.subtitle).to.be("");
+            expect(data.identifier).to.be.a('string');
+            // expect(data.identifier).to.be("");
+            expect(data.teaser).to.be.a('string');
+            // expect(data.teaser).to.be("");
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.externalUrl).to.be.a('string');
+            // expect(data.externalUrl).to.be("");
+            expect(data.rolesVisibility).to.be.a('string');
+            // expect(data.rolesVisibility).to.be("");
+            expect(data.rolesBooking).to.be.a('string');
+            // expect(data.rolesBooking).to.be("");
+            expect(data.hideInCatalog).to.be.a('number');
+            // expect(data.hideInCatalog).to.be(0);
+            expect(data.costCentre).to.be.a('string');
+            // expect(data.costCentre).to.be("");
+            expect(data.payers).to.be.a('string');
+            // expect(data.payers).to.be("");
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -200,41 +248,74 @@
 
           instance.productList().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.ProductPaginationResult);
+            expect(data.limit).to.be.a('number');
+            // expect(data.limit).to.be(0);
+            expect(data.offset).to.be.a('number');
+            // expect(data.offset).to.be(0);
+            expect(data.entryCount).to.be.a('number');
+            // expect(data.entryCount).to.be(0);
+            expect(data.maxEntryCount).to.be.a('number');
+            // expect(data.maxEntryCount).to.be(0);
             {
-              let dataCtr = data.syncFields;
+              let dataCtr = data.entries;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                // expect(data).to.be("");
+                expect(data).to.be.a(SeminarCatalogApi.Product);
+                {
+                  let dataCtr = data.syncFields;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a('string');
+                    // expect(data).to.be("");
+                  }
+                }
+                expect(data.title).to.be.a('string');
+                // expect(data.title).to.be("");
+                expect(data.subtitle).to.be.a('string');
+                // expect(data.subtitle).to.be("");
+                expect(data.identifier).to.be.a('string');
+                // expect(data.identifier).to.be("");
+                expect(data.teaser).to.be.a('string');
+                // expect(data.teaser).to.be("");
+                expect(data.description).to.be.a('string');
+                // expect(data.description).to.be("");
+                expect(data.externalUrl).to.be.a('string');
+                // expect(data.externalUrl).to.be("");
+                expect(data.rolesVisibility).to.be.a('string');
+                // expect(data.rolesVisibility).to.be("");
+                expect(data.rolesBooking).to.be.a('string');
+                // expect(data.rolesBooking).to.be("");
+                expect(data.hideInCatalog).to.be.a('number');
+                // expect(data.hideInCatalog).to.be(0);
+                expect(data.costCentre).to.be.a('string');
+                // expect(data.costCentre).to.be("");
+                expect(data.payers).to.be.a('string');
+                // expect(data.payers).to.be("");
+                expect(data.id).to.be.a('number');
+                // expect(data.id).to.be(0);
+                expect(data.foreignId).to.be.a('string');
+                // expect(data.foreignId).to.be("");
+                expect(data.language).to.be.a('number');
+                // expect(data.language).to.be(0);
+                expect(data.createDate).to.be.a('number');
+                // expect(data.createDate).to.be(0);
+                expect(data.changeDate).to.be.a('number');
+                // expect(data.changeDate).to.be(0);
+                expect(data.deleted).to.be.a('number');
+                // expect(data.deleted).to.be(0);
+                expect(data.hidden).to.be.a('number');
+                // expect(data.hidden).to.be(0);
+                expect(data.sorting).to.be.a('number');
+                // expect(data.sorting).to.be(0);
+                expect(data.tags).to.be.a('string');
+                // expect(data.tags).to.be("");
               }
             }
-            expect(data.id).to.be.a('number');
-            // expect(data.id).to.be(0);
-            expect(data.foreignId).to.be.a('string');
-            // expect(data.foreignId).to.be("");
-            expect(data.language).to.be.a('number');
-            // expect(data.language).to.be(0);
-            expect(data.createDate).to.be.a('number');
-            // expect(data.createDate).to.be(0);
-            expect(data.changeDate).to.be.a('number');
-            // expect(data.changeDate).to.be(0);
-            expect(data.deleted).to.be.a('number');
-            // expect(data.deleted).to.be(0);
-            expect(data.hidden).to.be.a('number');
-            // expect(data.hidden).to.be(0);
-            expect(data.sorting).to.be.a('number');
-            // expect(data.sorting).to.be(0);
-            expect(data.tags).to.be.a('string');
-            // expect(data.tags).to.be("");
 
             done();
           }, function(error) {
@@ -253,13 +334,7 @@
 
           instance.productUpdate(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.Product);
             {
               let dataCtr = data.syncFields;
               expect(dataCtr).to.be.an(Array);
@@ -270,6 +345,28 @@
                 // expect(data).to.be("");
               }
             }
+            expect(data.title).to.be.a('string');
+            // expect(data.title).to.be("");
+            expect(data.subtitle).to.be.a('string');
+            // expect(data.subtitle).to.be("");
+            expect(data.identifier).to.be.a('string');
+            // expect(data.identifier).to.be("");
+            expect(data.teaser).to.be.a('string');
+            // expect(data.teaser).to.be("");
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.externalUrl).to.be.a('string');
+            // expect(data.externalUrl).to.be("");
+            expect(data.rolesVisibility).to.be.a('string');
+            // expect(data.rolesVisibility).to.be("");
+            expect(data.rolesBooking).to.be.a('string');
+            // expect(data.rolesBooking).to.be("");
+            expect(data.hideInCatalog).to.be.a('number');
+            // expect(data.hideInCatalog).to.be(0);
+            expect(data.costCentre).to.be.a('string');
+            // expect(data.costCentre).to.be("");
+            expect(data.payers).to.be.a('string');
+            // expect(data.payers).to.be("");
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');

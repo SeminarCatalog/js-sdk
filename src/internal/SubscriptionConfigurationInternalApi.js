@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {SubscriptionConfiguration} from '../model/SubscriptionConfiguration';
+import {SubscriptionConfigurationPaginationResult} from '../model/SubscriptionConfigurationPaginationResult';
 
 /**
 * SubscriptionConfiguration internal service.
@@ -178,7 +179,7 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SubscriptionConfiguration>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionConfigurationPaginationResult} and HTTP response
      */
     subscriptionconfigurationListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class SubscriptionConfigurationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [SubscriptionConfiguration];
+      let returnType = SubscriptionConfigurationPaginationResult;
 
       return this.apiClient.callApi(
         '/api/subscriptionconfiguration', 'GET',
@@ -207,7 +208,7 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SubscriptionConfiguration>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionConfigurationPaginationResult}
      */
     subscriptionconfigurationList() {
       return this.subscriptionconfigurationListWithHttpInfo()

@@ -130,7 +130,7 @@ No authorization required
 
 <a name="addressList"></a>
 # **addressList**
-> [Address] addressList()
+> AddressPaginationResult addressList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Address]**](Address.md)
+[**AddressPaginationResult**](AddressPaginationResult.md)
 
 ### Authorization
 

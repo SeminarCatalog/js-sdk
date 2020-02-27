@@ -42,23 +42,31 @@
 
           instance.mediaCreate().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
-            {
-              let dataCtr = data.syncFields;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                // expect(data).to.be("");
-              }
-            }
+            expect(data).to.be.a(SeminarCatalogApi.Media);
+            expect(data.syncFields).to.be.a('string');
+            // expect(data.syncFields).to.be("");
+            expect(data.name).to.be.a('string');
+            // expect(data.name).to.be("");
+            expect(data.url).to.be.a('string');
+            // expect(data.url).to.be("");
+            expect(data.filepath).to.be.a('string');
+            // expect(data.filepath).to.be("");
+            expect(data.filetype).to.be.a('string');
+            // expect(data.filetype).to.be("");
+            expect(data.isDownload).to.be.a('number');
+            // expect(data.isDownload).to.be(0);
+            expect(data.isGlobal).to.be.a('number');
+            // expect(data.isGlobal).to.be(0);
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.limitedVisibility).to.be.a('number');
+            // expect(data.limitedVisibility).to.be(0);
+            expect(data.startDate).to.be.a('number');
+            // expect(data.startDate).to.be(0);
+            expect(data.endDate).to.be.a('number');
+            // expect(data.endDate).to.be(0);
+            expect(data.uploaderId).to.be.a('string');
+            // expect(data.uploaderId).to.be("");
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -77,6 +85,8 @@
             // expect(data.sorting).to.be(0);
             expect(data.tags).to.be.a('string');
             // expect(data.tags).to.be("");
+            expect(data.glyphicon).to.be.a('string');
+            // expect(data.glyphicon).to.be("");
 
             done();
           }, function(error) {
@@ -95,23 +105,31 @@
 
           instance.mediaDelete(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
-            {
-              let dataCtr = data.syncFields;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                // expect(data).to.be("");
-              }
-            }
+            expect(data).to.be.a(SeminarCatalogApi.Media);
+            expect(data.syncFields).to.be.a('string');
+            // expect(data.syncFields).to.be("");
+            expect(data.name).to.be.a('string');
+            // expect(data.name).to.be("");
+            expect(data.url).to.be.a('string');
+            // expect(data.url).to.be("");
+            expect(data.filepath).to.be.a('string');
+            // expect(data.filepath).to.be("");
+            expect(data.filetype).to.be.a('string');
+            // expect(data.filetype).to.be("");
+            expect(data.isDownload).to.be.a('number');
+            // expect(data.isDownload).to.be(0);
+            expect(data.isGlobal).to.be.a('number');
+            // expect(data.isGlobal).to.be(0);
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.limitedVisibility).to.be.a('number');
+            // expect(data.limitedVisibility).to.be(0);
+            expect(data.startDate).to.be.a('number');
+            // expect(data.startDate).to.be(0);
+            expect(data.endDate).to.be.a('number');
+            // expect(data.endDate).to.be(0);
+            expect(data.uploaderId).to.be.a('string');
+            // expect(data.uploaderId).to.be("");
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -130,6 +148,8 @@
             // expect(data.sorting).to.be(0);
             expect(data.tags).to.be.a('string');
             // expect(data.tags).to.be("");
+            expect(data.glyphicon).to.be.a('string');
+            // expect(data.glyphicon).to.be("");
 
             done();
           }, function(error) {
@@ -148,23 +168,31 @@
 
           instance.mediaGet(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
-            {
-              let dataCtr = data.syncFields;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                // expect(data).to.be("");
-              }
-            }
+            expect(data).to.be.a(SeminarCatalogApi.Media);
+            expect(data.syncFields).to.be.a('string');
+            // expect(data.syncFields).to.be("");
+            expect(data.name).to.be.a('string');
+            // expect(data.name).to.be("");
+            expect(data.url).to.be.a('string');
+            // expect(data.url).to.be("");
+            expect(data.filepath).to.be.a('string');
+            // expect(data.filepath).to.be("");
+            expect(data.filetype).to.be.a('string');
+            // expect(data.filetype).to.be("");
+            expect(data.isDownload).to.be.a('number');
+            // expect(data.isDownload).to.be(0);
+            expect(data.isGlobal).to.be.a('number');
+            // expect(data.isGlobal).to.be(0);
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.limitedVisibility).to.be.a('number');
+            // expect(data.limitedVisibility).to.be(0);
+            expect(data.startDate).to.be.a('number');
+            // expect(data.startDate).to.be(0);
+            expect(data.endDate).to.be.a('number');
+            // expect(data.endDate).to.be(0);
+            expect(data.uploaderId).to.be.a('string');
+            // expect(data.uploaderId).to.be("");
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -183,6 +211,8 @@
             // expect(data.sorting).to.be(0);
             expect(data.tags).to.be.a('string');
             // expect(data.tags).to.be("");
+            expect(data.glyphicon).to.be.a('string');
+            // expect(data.glyphicon).to.be("");
 
             done();
           }, function(error) {
@@ -200,41 +230,68 @@
 
           instance.mediaList().then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
+            expect(data).to.be.a(SeminarCatalogApi.MediaPaginationResult);
+            expect(data.limit).to.be.a('number');
+            // expect(data.limit).to.be(0);
+            expect(data.offset).to.be.a('number');
+            // expect(data.offset).to.be(0);
+            expect(data.entryCount).to.be.a('number');
+            // expect(data.entryCount).to.be(0);
+            expect(data.maxEntryCount).to.be.a('number');
+            // expect(data.maxEntryCount).to.be(0);
             {
-              let dataCtr = data.syncFields;
+              let dataCtr = data.entries;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                // expect(data).to.be("");
+                expect(data).to.be.a(SeminarCatalogApi.Media);
+                expect(data.syncFields).to.be.a('string');
+                // expect(data.syncFields).to.be("");
+                expect(data.name).to.be.a('string');
+                // expect(data.name).to.be("");
+                expect(data.url).to.be.a('string');
+                // expect(data.url).to.be("");
+                expect(data.filepath).to.be.a('string');
+                // expect(data.filepath).to.be("");
+                expect(data.filetype).to.be.a('string');
+                // expect(data.filetype).to.be("");
+                expect(data.isDownload).to.be.a('number');
+                // expect(data.isDownload).to.be(0);
+                expect(data.isGlobal).to.be.a('number');
+                // expect(data.isGlobal).to.be(0);
+                expect(data.description).to.be.a('string');
+                // expect(data.description).to.be("");
+                expect(data.limitedVisibility).to.be.a('number');
+                // expect(data.limitedVisibility).to.be(0);
+                expect(data.startDate).to.be.a('number');
+                // expect(data.startDate).to.be(0);
+                expect(data.endDate).to.be.a('number');
+                // expect(data.endDate).to.be(0);
+                expect(data.uploaderId).to.be.a('string');
+                // expect(data.uploaderId).to.be("");
+                expect(data.id).to.be.a('number');
+                // expect(data.id).to.be(0);
+                expect(data.foreignId).to.be.a('string');
+                // expect(data.foreignId).to.be("");
+                expect(data.language).to.be.a('number');
+                // expect(data.language).to.be(0);
+                expect(data.createDate).to.be.a('number');
+                // expect(data.createDate).to.be(0);
+                expect(data.changeDate).to.be.a('number');
+                // expect(data.changeDate).to.be(0);
+                expect(data.deleted).to.be.a('number');
+                // expect(data.deleted).to.be(0);
+                expect(data.hidden).to.be.a('number');
+                // expect(data.hidden).to.be(0);
+                expect(data.sorting).to.be.a('number');
+                // expect(data.sorting).to.be(0);
+                expect(data.tags).to.be.a('string');
+                // expect(data.tags).to.be("");
+                expect(data.glyphicon).to.be.a('string');
+                // expect(data.glyphicon).to.be("");
               }
             }
-            expect(data.id).to.be.a('number');
-            // expect(data.id).to.be(0);
-            expect(data.foreignId).to.be.a('string');
-            // expect(data.foreignId).to.be("");
-            expect(data.language).to.be.a('number');
-            // expect(data.language).to.be(0);
-            expect(data.createDate).to.be.a('number');
-            // expect(data.createDate).to.be(0);
-            expect(data.changeDate).to.be.a('number');
-            // expect(data.changeDate).to.be(0);
-            expect(data.deleted).to.be.a('number');
-            // expect(data.deleted).to.be(0);
-            expect(data.hidden).to.be.a('number');
-            // expect(data.hidden).to.be(0);
-            expect(data.sorting).to.be.a('number');
-            // expect(data.sorting).to.be(0);
-            expect(data.tags).to.be.a('string');
-            // expect(data.tags).to.be("");
 
             done();
           }, function(error) {
@@ -253,23 +310,31 @@
 
           instance.mediaUpdate(id).then(function(data) {
             // TODO: update response assertions
-            expect(data).to.be.a(SeminarCatalogApi.BookingInterest);
-            expect(data.status).to.be.a('number');
-            // expect(data.status).to.be(0);
-            expect(data.numberLicenses).to.be.a('number');
-            // expect(data.numberLicenses).to.be(0);
-            expect(data.note).to.be.a('string');
-            // expect(data.note).to.be("");
-            {
-              let dataCtr = data.syncFields;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                // expect(data).to.be("");
-              }
-            }
+            expect(data).to.be.a(SeminarCatalogApi.Media);
+            expect(data.syncFields).to.be.a('string');
+            // expect(data.syncFields).to.be("");
+            expect(data.name).to.be.a('string');
+            // expect(data.name).to.be("");
+            expect(data.url).to.be.a('string');
+            // expect(data.url).to.be("");
+            expect(data.filepath).to.be.a('string');
+            // expect(data.filepath).to.be("");
+            expect(data.filetype).to.be.a('string');
+            // expect(data.filetype).to.be("");
+            expect(data.isDownload).to.be.a('number');
+            // expect(data.isDownload).to.be(0);
+            expect(data.isGlobal).to.be.a('number');
+            // expect(data.isGlobal).to.be(0);
+            expect(data.description).to.be.a('string');
+            // expect(data.description).to.be("");
+            expect(data.limitedVisibility).to.be.a('number');
+            // expect(data.limitedVisibility).to.be(0);
+            expect(data.startDate).to.be.a('number');
+            // expect(data.startDate).to.be(0);
+            expect(data.endDate).to.be.a('number');
+            // expect(data.endDate).to.be(0);
+            expect(data.uploaderId).to.be.a('string');
+            // expect(data.uploaderId).to.be("");
             expect(data.id).to.be.a('number');
             // expect(data.id).to.be(0);
             expect(data.foreignId).to.be.a('string');
@@ -288,6 +353,8 @@
             // expect(data.sorting).to.be(0);
             expect(data.tags).to.be.a('string');
             // expect(data.tags).to.be("");
+            expect(data.glyphicon).to.be.a('string');
+            // expect(data.glyphicon).to.be("");
 
             done();
           }, function(error) {

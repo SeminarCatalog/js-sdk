@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Coupon} from '../model/Coupon';
+import {CouponPaginationResult} from '../model/CouponPaginationResult';
 
 /**
 * Coupon internal service.
@@ -178,7 +179,7 @@ export class CouponInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Coupon>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CouponPaginationResult} and HTTP response
      */
     couponListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class CouponInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Coupon];
+      let returnType = CouponPaginationResult;
 
       return this.apiClient.callApi(
         '/api/coupon', 'GET',
@@ -207,7 +208,7 @@ export class CouponInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Coupon>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CouponPaginationResult}
      */
     couponList() {
       return this.couponListWithHttpInfo()

@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Partner} from '../model/Partner';
+import {PartnerPaginationResult} from '../model/PartnerPaginationResult';
 
 /**
 * Partner internal service.
@@ -178,7 +179,7 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Partner>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PartnerPaginationResult} and HTTP response
      */
     partnerListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class PartnerInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Partner];
+      let returnType = PartnerPaginationResult;
 
       return this.apiClient.callApi(
         '/api/partner', 'GET',
@@ -207,7 +208,7 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Partner>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PartnerPaginationResult}
      */
     partnerList() {
       return this.partnerListWithHttpInfo()

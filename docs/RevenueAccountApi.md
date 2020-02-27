@@ -130,7 +130,7 @@ No authorization required
 
 <a name="revenueaccountList"></a>
 # **revenueaccountList**
-> [RevenueAccount] revenueaccountList()
+> RevenueAccountPaginationResult revenueaccountList()
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 
@@ -152,7 +152,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[RevenueAccount]**](RevenueAccount.md)
+[**RevenueAccountPaginationResult**](RevenueAccountPaginationResult.md)
 
 ### Authorization
 

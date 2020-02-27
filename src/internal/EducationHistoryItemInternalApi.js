@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {EducationHistoryItem} from '../model/EducationHistoryItem';
+import {EducationHistoryItemPaginationResult} from '../model/EducationHistoryItemPaginationResult';
 
 /**
 * EducationHistoryItem internal service.
@@ -178,7 +179,7 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/EducationHistoryItem>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItemPaginationResult} and HTTP response
      */
     educationhistoryitemListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class EducationHistoryItemInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [EducationHistoryItem];
+      let returnType = EducationHistoryItemPaginationResult;
 
       return this.apiClient.callApi(
         '/api/educationhistoryitem', 'GET',
@@ -207,7 +208,7 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/EducationHistoryItem>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItemPaginationResult}
      */
     educationhistoryitemList() {
       return this.educationhistoryitemListWithHttpInfo()

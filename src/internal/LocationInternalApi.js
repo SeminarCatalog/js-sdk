@@ -15,6 +15,7 @@
 
 import {ApiClient} from "../ApiClient";
 import {Location} from '../model/Location';
+import {LocationPaginationResult} from '../model/LocationPaginationResult';
 
 /**
 * Location internal service.
@@ -178,7 +179,7 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Location>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LocationPaginationResult} and HTTP response
      */
     locationListWithHttpInfo() {
       let postBody = null;
@@ -196,7 +197,7 @@ export class LocationInternalApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = [];
-      let returnType = [Location];
+      let returnType = LocationPaginationResult;
 
       return this.apiClient.callApi(
         '/api/location', 'GET',
@@ -207,7 +208,7 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Location>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LocationPaginationResult}
      */
     locationList() {
       return this.locationListWithHttpInfo()
