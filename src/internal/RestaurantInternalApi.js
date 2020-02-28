@@ -40,10 +40,16 @@ export class RestaurantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Restaurant} restaurantPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Restaurant} and HTTP response
      */
-    restaurantCreateWithHttpInfo() {
-      let postBody = null;
+    restaurantCreateWithHttpInfo(restaurantPost) {
+      let postBody = restaurantPost;
+
+      // verify the required parameter 'restaurantPost' is set
+      if (restaurantPost === undefined || restaurantPost === null) {
+        throw new Error("Missing the required parameter 'restaurantPost' when calling restaurantCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class RestaurantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Restaurant} restaurantPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Restaurant}
      */
-    restaurantCreate() {
-      return this.restaurantCreateWithHttpInfo()
+    restaurantCreate(restaurantPost) {
+      return this.restaurantCreateWithHttpInfo(restaurantPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class RestaurantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Restaurant} restaurantPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Restaurant} and HTTP response
      */
-    restaurantUpdateWithHttpInfo(id) {
-      let postBody = null;
+    restaurantUpdateWithHttpInfo(id, restaurantPut) {
+      let postBody = restaurantPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling restaurantUpdate");
+      }
+
+      // verify the required parameter 'restaurantPut' is set
+      if (restaurantPut === undefined || restaurantPut === null) {
+        throw new Error("Missing the required parameter 'restaurantPut' when calling restaurantUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class RestaurantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Restaurant} restaurantPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Restaurant}
      */
-    restaurantUpdate(id) {
-      return this.restaurantUpdateWithHttpInfo(id)
+    restaurantUpdate(id, restaurantPut) {
+      return this.restaurantUpdateWithHttpInfo(id, restaurantPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

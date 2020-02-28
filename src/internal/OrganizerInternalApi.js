@@ -40,10 +40,16 @@ export class OrganizerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Organizer} organizerPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organizer} and HTTP response
      */
-    organizerCreateWithHttpInfo() {
-      let postBody = null;
+    organizerCreateWithHttpInfo(organizerPost) {
+      let postBody = organizerPost;
+
+      // verify the required parameter 'organizerPost' is set
+      if (organizerPost === undefined || organizerPost === null) {
+        throw new Error("Missing the required parameter 'organizerPost' when calling organizerCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class OrganizerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Organizer} organizerPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organizer}
      */
-    organizerCreate() {
-      return this.organizerCreateWithHttpInfo()
+    organizerCreate(organizerPost) {
+      return this.organizerCreateWithHttpInfo(organizerPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class OrganizerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Organizer} organizerPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organizer} and HTTP response
      */
-    organizerUpdateWithHttpInfo(id) {
-      let postBody = null;
+    organizerUpdateWithHttpInfo(id, organizerPut) {
+      let postBody = organizerPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling organizerUpdate");
+      }
+
+      // verify the required parameter 'organizerPut' is set
+      if (organizerPut === undefined || organizerPut === null) {
+        throw new Error("Missing the required parameter 'organizerPut' when calling organizerUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class OrganizerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Organizer} organizerPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organizer}
      */
-    organizerUpdate(id) {
-      return this.organizerUpdateWithHttpInfo(id)
+    organizerUpdate(id, organizerPut) {
+      return this.organizerUpdateWithHttpInfo(id, organizerPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

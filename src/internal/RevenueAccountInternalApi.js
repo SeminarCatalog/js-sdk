@@ -40,10 +40,16 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/RevenueAccount} revenueAccountPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
-    revenueaccountCreateWithHttpInfo() {
-      let postBody = null;
+    revenueaccountCreateWithHttpInfo(revenueAccountPost) {
+      let postBody = revenueAccountPost;
+
+      // verify the required parameter 'revenueAccountPost' is set
+      if (revenueAccountPost === undefined || revenueAccountPost === null) {
+        throw new Error("Missing the required parameter 'revenueAccountPost' when calling revenueaccountCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/RevenueAccount} revenueAccountPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
-    revenueaccountCreate() {
-      return this.revenueaccountCreateWithHttpInfo()
+    revenueaccountCreate(revenueAccountPost) {
+      return this.revenueaccountCreateWithHttpInfo(revenueAccountPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/RevenueAccount} revenueAccountPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
-    revenueaccountUpdateWithHttpInfo(id) {
-      let postBody = null;
+    revenueaccountUpdateWithHttpInfo(id, revenueAccountPut) {
+      let postBody = revenueAccountPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling revenueaccountUpdate");
+      }
+
+      // verify the required parameter 'revenueAccountPut' is set
+      if (revenueAccountPut === undefined || revenueAccountPut === null) {
+        throw new Error("Missing the required parameter 'revenueAccountPut' when calling revenueaccountUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class RevenueAccountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/RevenueAccount} revenueAccountPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
-    revenueaccountUpdate(id) {
-      return this.revenueaccountUpdateWithHttpInfo(id)
+    revenueaccountUpdate(id, revenueAccountPut) {
+      return this.revenueaccountUpdateWithHttpInfo(id, revenueAccountPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

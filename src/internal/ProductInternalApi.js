@@ -40,10 +40,16 @@ export class ProductInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Product} productPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Product} and HTTP response
      */
-    productCreateWithHttpInfo() {
-      let postBody = null;
+    productCreateWithHttpInfo(productPost) {
+      let postBody = productPost;
+
+      // verify the required parameter 'productPost' is set
+      if (productPost === undefined || productPost === null) {
+        throw new Error("Missing the required parameter 'productPost' when calling productCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class ProductInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Product} productPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Product}
      */
-    productCreate() {
-      return this.productCreateWithHttpInfo()
+    productCreate(productPost) {
+      return this.productCreateWithHttpInfo(productPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class ProductInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Product} productPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Product} and HTTP response
      */
-    productUpdateWithHttpInfo(id) {
-      let postBody = null;
+    productUpdateWithHttpInfo(id, productPut) {
+      let postBody = productPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling productUpdate");
+      }
+
+      // verify the required parameter 'productPut' is set
+      if (productPut === undefined || productPut === null) {
+        throw new Error("Missing the required parameter 'productPut' when calling productUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class ProductInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Product} productPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Product}
      */
-    productUpdate(id) {
-      return this.productUpdateWithHttpInfo(id)
+    productUpdate(id, productPut) {
+      return this.productUpdateWithHttpInfo(id, productPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -40,10 +40,16 @@ export class ContactPersonInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/ContactPerson} contactPersonPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ContactPerson} and HTTP response
      */
-    contactpersonCreateWithHttpInfo() {
-      let postBody = null;
+    contactpersonCreateWithHttpInfo(contactPersonPost) {
+      let postBody = contactPersonPost;
+
+      // verify the required parameter 'contactPersonPost' is set
+      if (contactPersonPost === undefined || contactPersonPost === null) {
+        throw new Error("Missing the required parameter 'contactPersonPost' when calling contactpersonCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class ContactPersonInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/ContactPerson} contactPersonPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ContactPerson}
      */
-    contactpersonCreate() {
-      return this.contactpersonCreateWithHttpInfo()
+    contactpersonCreate(contactPersonPost) {
+      return this.contactpersonCreateWithHttpInfo(contactPersonPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class ContactPersonInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/ContactPerson} contactPersonPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ContactPerson} and HTTP response
      */
-    contactpersonUpdateWithHttpInfo(id) {
-      let postBody = null;
+    contactpersonUpdateWithHttpInfo(id, contactPersonPut) {
+      let postBody = contactPersonPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling contactpersonUpdate");
+      }
+
+      // verify the required parameter 'contactPersonPut' is set
+      if (contactPersonPut === undefined || contactPersonPut === null) {
+        throw new Error("Missing the required parameter 'contactPersonPut' when calling contactpersonUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class ContactPersonInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/ContactPerson} contactPersonPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ContactPerson}
      */
-    contactpersonUpdate(id) {
-      return this.contactpersonUpdateWithHttpInfo(id)
+    contactpersonUpdate(id, contactPersonPut) {
+      return this.contactpersonUpdateWithHttpInfo(id, contactPersonPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

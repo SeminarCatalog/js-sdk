@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="regionCreate"></a>
 # **regionCreate**
-> Region regionCreate()
+> Region regionCreate(regionPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.RegionApi();
-apiInstance.regionCreate().then((data) => {
+
+const regionPost = new SeminarCatalogApi.Region(); // Region | 
+
+apiInstance.regionCreate(regionPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.regionCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionPost** | [**Region**](Region.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="regionUpdate"></a>
 # **regionUpdate**
-> Region regionUpdate(id)
+> Region regionUpdate(id, regionPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.RegionApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.regionUpdate(id).then((data) => {
+const regionPut = new SeminarCatalogApi.Region(); // Region | 
+
+apiInstance.regionUpdate(id, regionPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.regionUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **regionPut** | [**Region**](Region.md)|  | 
 
 ### Return type
 

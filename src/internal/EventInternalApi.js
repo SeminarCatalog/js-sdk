@@ -40,10 +40,16 @@ export class EventInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Event} eventPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Event} and HTTP response
      */
-    eventCreateWithHttpInfo() {
-      let postBody = null;
+    eventCreateWithHttpInfo(eventPost) {
+      let postBody = eventPost;
+
+      // verify the required parameter 'eventPost' is set
+      if (eventPost === undefined || eventPost === null) {
+        throw new Error("Missing the required parameter 'eventPost' when calling eventCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class EventInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Event} eventPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Event}
      */
-    eventCreate() {
-      return this.eventCreateWithHttpInfo()
+    eventCreate(eventPost) {
+      return this.eventCreateWithHttpInfo(eventPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class EventInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Event} eventPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Event} and HTTP response
      */
-    eventUpdateWithHttpInfo(id) {
-      let postBody = null;
+    eventUpdateWithHttpInfo(id, eventPut) {
+      let postBody = eventPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling eventUpdate");
+      }
+
+      // verify the required parameter 'eventPut' is set
+      if (eventPut === undefined || eventPut === null) {
+        throw new Error("Missing the required parameter 'eventPut' when calling eventUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class EventInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Event} eventPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Event}
      */
-    eventUpdate(id) {
-      return this.eventUpdateWithHttpInfo(id)
+    eventUpdate(id, eventPut) {
+      return this.eventUpdateWithHttpInfo(id, eventPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

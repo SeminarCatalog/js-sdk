@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="restaurantCreate"></a>
 # **restaurantCreate**
-> Restaurant restaurantCreate()
+> Restaurant restaurantCreate(restaurantPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.RestaurantApi();
-apiInstance.restaurantCreate().then((data) => {
+
+const restaurantPost = new SeminarCatalogApi.Restaurant(); // Restaurant | 
+
+apiInstance.restaurantCreate(restaurantPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.restaurantCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **restaurantPost** | [**Restaurant**](Restaurant.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="restaurantUpdate"></a>
 # **restaurantUpdate**
-> Restaurant restaurantUpdate(id)
+> Restaurant restaurantUpdate(id, restaurantPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.RestaurantApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.restaurantUpdate(id).then((data) => {
+const restaurantPut = new SeminarCatalogApi.Restaurant(); // Restaurant | 
+
+apiInstance.restaurantUpdate(id, restaurantPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.restaurantUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **restaurantPut** | [**Restaurant**](Restaurant.md)|  | 
 
 ### Return type
 

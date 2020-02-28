@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="locationCreate"></a>
 # **locationCreate**
-> Location locationCreate()
+> Location locationCreate(locationPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.LocationApi();
-apiInstance.locationCreate().then((data) => {
+
+const locationPost = new SeminarCatalogApi.Location(); // Location | 
+
+apiInstance.locationCreate(locationPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.locationCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **locationPost** | [**Location**](Location.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="locationUpdate"></a>
 # **locationUpdate**
-> Location locationUpdate(id)
+> Location locationUpdate(id, locationPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.LocationApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.locationUpdate(id).then((data) => {
+const locationPut = new SeminarCatalogApi.Location(); // Location | 
+
+apiInstance.locationUpdate(id, locationPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.locationUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **locationPut** | [**Location**](Location.md)|  | 
 
 ### Return type
 

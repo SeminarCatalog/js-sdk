@@ -40,10 +40,16 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/ProductVariant} productVariantPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductVariant} and HTTP response
      */
-    productvariantCreateWithHttpInfo() {
-      let postBody = null;
+    productvariantCreateWithHttpInfo(productVariantPost) {
+      let postBody = productVariantPost;
+
+      // verify the required parameter 'productVariantPost' is set
+      if (productVariantPost === undefined || productVariantPost === null) {
+        throw new Error("Missing the required parameter 'productVariantPost' when calling productvariantCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/ProductVariant} productVariantPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductVariant}
      */
-    productvariantCreate() {
-      return this.productvariantCreateWithHttpInfo()
+    productvariantCreate(productVariantPost) {
+      return this.productvariantCreateWithHttpInfo(productVariantPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/ProductVariant} productVariantPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductVariant} and HTTP response
      */
-    productvariantUpdateWithHttpInfo(id) {
-      let postBody = null;
+    productvariantUpdateWithHttpInfo(id, productVariantPut) {
+      let postBody = productVariantPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling productvariantUpdate");
+      }
+
+      // verify the required parameter 'productVariantPut' is set
+      if (productVariantPut === undefined || productVariantPut === null) {
+        throw new Error("Missing the required parameter 'productVariantPut' when calling productvariantUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class ProductVariantInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/ProductVariant} productVariantPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductVariant}
      */
-    productvariantUpdate(id) {
-      return this.productvariantUpdateWithHttpInfo(id)
+    productvariantUpdate(id, productVariantPut) {
+      return this.productvariantUpdateWithHttpInfo(id, productVariantPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

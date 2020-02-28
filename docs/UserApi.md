@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="userCreate"></a>
 # **userCreate**
-> User userCreate()
+> User userCreate(userPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.UserApi();
-apiInstance.userCreate().then((data) => {
+
+const userPost = new SeminarCatalogApi.User(); // User | 
+
+apiInstance.userCreate(userPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.userCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userPost** | [**User**](User.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="userUpdate"></a>
 # **userUpdate**
-> User userUpdate(id)
+> User userUpdate(id, userPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.UserApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.userUpdate(id).then((data) => {
+const userPut = new SeminarCatalogApi.User(); // User | 
+
+apiInstance.userUpdate(id, userPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.userUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **userPut** | [**User**](User.md)|  | 
 
 ### Return type
 

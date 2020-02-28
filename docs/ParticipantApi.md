@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="participantCreate"></a>
 # **participantCreate**
-> Participant participantCreate()
+> Participant participantCreate(participantPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ParticipantApi();
-apiInstance.participantCreate().then((data) => {
+
+const participantPost = new SeminarCatalogApi.Participant(); // Participant | 
+
+apiInstance.participantCreate(participantPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.participantCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **participantPost** | [**Participant**](Participant.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="participantUpdate"></a>
 # **participantUpdate**
-> Participant participantUpdate(id)
+> Participant participantUpdate(id, participantPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ParticipantApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.participantUpdate(id).then((data) => {
+const participantPut = new SeminarCatalogApi.Participant(); // Participant | 
+
+apiInstance.participantUpdate(id, participantPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.participantUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **participantPut** | [**Participant**](Participant.md)|  | 
 
 ### Return type
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="hotelCreate"></a>
 # **hotelCreate**
-> Hotel hotelCreate()
+> Hotel hotelCreate(hotelPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.HotelApi();
-apiInstance.hotelCreate().then((data) => {
+
+const hotelPost = new SeminarCatalogApi.Hotel(); // Hotel | 
+
+apiInstance.hotelCreate(hotelPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.hotelCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hotelPost** | [**Hotel**](Hotel.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="hotelUpdate"></a>
 # **hotelUpdate**
-> Hotel hotelUpdate(id)
+> Hotel hotelUpdate(id, hotelPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.HotelApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.hotelUpdate(id).then((data) => {
+const hotelPut = new SeminarCatalogApi.Hotel(); // Hotel | 
+
+apiInstance.hotelUpdate(id, hotelPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.hotelUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **hotelPut** | [**Hotel**](Hotel.md)|  | 
 
 ### Return type
 

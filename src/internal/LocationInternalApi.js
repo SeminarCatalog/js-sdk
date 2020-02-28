@@ -40,10 +40,16 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Location} locationPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Location} and HTTP response
      */
-    locationCreateWithHttpInfo() {
-      let postBody = null;
+    locationCreateWithHttpInfo(locationPost) {
+      let postBody = locationPost;
+
+      // verify the required parameter 'locationPost' is set
+      if (locationPost === undefined || locationPost === null) {
+        throw new Error("Missing the required parameter 'locationPost' when calling locationCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Location} locationPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Location}
      */
-    locationCreate() {
-      return this.locationCreateWithHttpInfo()
+    locationCreate(locationPost) {
+      return this.locationCreateWithHttpInfo(locationPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Location} locationPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Location} and HTTP response
      */
-    locationUpdateWithHttpInfo(id) {
-      let postBody = null;
+    locationUpdateWithHttpInfo(id, locationPut) {
+      let postBody = locationPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling locationUpdate");
+      }
+
+      // verify the required parameter 'locationPut' is set
+      if (locationPut === undefined || locationPut === null) {
+        throw new Error("Missing the required parameter 'locationPut' when calling locationUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class LocationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Location} locationPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Location}
      */
-    locationUpdate(id) {
-      return this.locationUpdateWithHttpInfo(id)
+    locationUpdate(id, locationPut) {
+      return this.locationUpdateWithHttpInfo(id, locationPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

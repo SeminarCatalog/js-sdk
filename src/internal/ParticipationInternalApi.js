@@ -40,10 +40,16 @@ export class ParticipationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Participation} participationPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Participation} and HTTP response
      */
-    participationCreateWithHttpInfo() {
-      let postBody = null;
+    participationCreateWithHttpInfo(participationPost) {
+      let postBody = participationPost;
+
+      // verify the required parameter 'participationPost' is set
+      if (participationPost === undefined || participationPost === null) {
+        throw new Error("Missing the required parameter 'participationPost' when calling participationCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class ParticipationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Participation} participationPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Participation}
      */
-    participationCreate() {
-      return this.participationCreateWithHttpInfo()
+    participationCreate(participationPost) {
+      return this.participationCreateWithHttpInfo(participationPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class ParticipationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Participation} participationPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Participation} and HTTP response
      */
-    participationUpdateWithHttpInfo(id) {
-      let postBody = null;
+    participationUpdateWithHttpInfo(id, participationPut) {
+      let postBody = participationPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling participationUpdate");
+      }
+
+      // verify the required parameter 'participationPut' is set
+      if (participationPut === undefined || participationPut === null) {
+        throw new Error("Missing the required parameter 'participationPut' when calling participationUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class ParticipationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Participation} participationPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Participation}
      */
-    participationUpdate(id) {
-      return this.participationUpdateWithHttpInfo(id)
+    participationUpdate(id, participationPut) {
+      return this.participationUpdateWithHttpInfo(id, participationPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

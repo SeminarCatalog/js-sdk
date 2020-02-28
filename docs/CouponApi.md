@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="couponCreate"></a>
 # **couponCreate**
-> Coupon couponCreate()
+> Coupon couponCreate(couponPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CouponApi();
-apiInstance.couponCreate().then((data) => {
+
+const couponPost = new SeminarCatalogApi.Coupon(); // Coupon | 
+
+apiInstance.couponCreate(couponPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.couponCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **couponPost** | [**Coupon**](Coupon.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="couponUpdate"></a>
 # **couponUpdate**
-> Coupon couponUpdate(id)
+> Coupon couponUpdate(id, couponPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CouponApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.couponUpdate(id).then((data) => {
+const couponPut = new SeminarCatalogApi.Coupon(); // Coupon | 
+
+apiInstance.couponUpdate(id, couponPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.couponUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **couponPut** | [**Coupon**](Coupon.md)|  | 
 
 ### Return type
 

@@ -40,10 +40,16 @@ export class CouponInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Coupon} couponPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Coupon} and HTTP response
      */
-    couponCreateWithHttpInfo() {
-      let postBody = null;
+    couponCreateWithHttpInfo(couponPost) {
+      let postBody = couponPost;
+
+      // verify the required parameter 'couponPost' is set
+      if (couponPost === undefined || couponPost === null) {
+        throw new Error("Missing the required parameter 'couponPost' when calling couponCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class CouponInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Coupon} couponPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Coupon}
      */
-    couponCreate() {
-      return this.couponCreateWithHttpInfo()
+    couponCreate(couponPost) {
+      return this.couponCreateWithHttpInfo(couponPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class CouponInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Coupon} couponPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Coupon} and HTTP response
      */
-    couponUpdateWithHttpInfo(id) {
-      let postBody = null;
+    couponUpdateWithHttpInfo(id, couponPut) {
+      let postBody = couponPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling couponUpdate");
+      }
+
+      // verify the required parameter 'couponPut' is set
+      if (couponPut === undefined || couponPut === null) {
+        throw new Error("Missing the required parameter 'couponPut' when calling couponUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class CouponInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Coupon} couponPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Coupon}
      */
-    couponUpdate(id) {
-      return this.couponUpdateWithHttpInfo(id)
+    couponUpdate(id, couponPut) {
+      return this.couponUpdateWithHttpInfo(id, couponPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

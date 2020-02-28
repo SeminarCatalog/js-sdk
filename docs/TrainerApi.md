@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="trainerCreate"></a>
 # **trainerCreate**
-> Trainer trainerCreate()
+> Trainer trainerCreate(trainerPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.TrainerApi();
-apiInstance.trainerCreate().then((data) => {
+
+const trainerPost = new SeminarCatalogApi.Trainer(); // Trainer | 
+
+apiInstance.trainerCreate(trainerPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.trainerCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **trainerPost** | [**Trainer**](Trainer.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="trainerUpdate"></a>
 # **trainerUpdate**
-> Trainer trainerUpdate(id)
+> Trainer trainerUpdate(id, trainerPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.TrainerApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.trainerUpdate(id).then((data) => {
+const trainerPut = new SeminarCatalogApi.Trainer(); // Trainer | 
+
+apiInstance.trainerUpdate(id, trainerPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.trainerUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **trainerPut** | [**Trainer**](Trainer.md)|  | 
 
 ### Return type
 

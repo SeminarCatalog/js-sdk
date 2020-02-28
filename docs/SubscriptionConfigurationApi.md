@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="subscriptionconfigurationCreate"></a>
 # **subscriptionconfigurationCreate**
-> SubscriptionConfiguration subscriptionconfigurationCreate()
+> SubscriptionConfiguration subscriptionconfigurationCreate(subscriptionConfigurationPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SubscriptionConfigurationApi();
-apiInstance.subscriptionconfigurationCreate().then((data) => {
+
+const subscriptionConfigurationPost = new SeminarCatalogApi.SubscriptionConfiguration(); // SubscriptionConfiguration | 
+
+apiInstance.subscriptionconfigurationCreate(subscriptionConfigurationPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.subscriptionconfigurationCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriptionConfigurationPost** | [**SubscriptionConfiguration**](SubscriptionConfiguration.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="subscriptionconfigurationUpdate"></a>
 # **subscriptionconfigurationUpdate**
-> SubscriptionConfiguration subscriptionconfigurationUpdate(id)
+> SubscriptionConfiguration subscriptionconfigurationUpdate(id, subscriptionConfigurationPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SubscriptionConfigurationApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.subscriptionconfigurationUpdate(id).then((data) => {
+const subscriptionConfigurationPut = new SeminarCatalogApi.SubscriptionConfiguration(); // SubscriptionConfiguration | 
+
+apiInstance.subscriptionconfigurationUpdate(id, subscriptionConfigurationPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.subscriptionconfigurationUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **subscriptionConfigurationPut** | [**SubscriptionConfiguration**](SubscriptionConfiguration.md)|  | 
 
 ### Return type
 

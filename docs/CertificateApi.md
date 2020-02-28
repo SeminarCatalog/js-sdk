@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="certificateCreate"></a>
 # **certificateCreate**
-> Certificate certificateCreate()
+> Certificate certificateCreate(certificatePost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CertificateApi();
-apiInstance.certificateCreate().then((data) => {
+
+const certificatePost = new SeminarCatalogApi.Certificate(); // Certificate | 
+
+apiInstance.certificateCreate(certificatePost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.certificateCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **certificatePost** | [**Certificate**](Certificate.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="certificateUpdate"></a>
 # **certificateUpdate**
-> Certificate certificateUpdate(id)
+> Certificate certificateUpdate(id, certificatePut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CertificateApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.certificateUpdate(id).then((data) => {
+const certificatePut = new SeminarCatalogApi.Certificate(); // Certificate | 
+
+apiInstance.certificateUpdate(id, certificatePut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.certificateUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **certificatePut** | [**Certificate**](Certificate.md)|  | 
 
 ### Return type
 

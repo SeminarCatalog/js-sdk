@@ -40,10 +40,16 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Currency} currencyPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Currency} and HTTP response
      */
-    currencyCreateWithHttpInfo() {
-      let postBody = null;
+    currencyCreateWithHttpInfo(currencyPost) {
+      let postBody = currencyPost;
+
+      // verify the required parameter 'currencyPost' is set
+      if (currencyPost === undefined || currencyPost === null) {
+        throw new Error("Missing the required parameter 'currencyPost' when calling currencyCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Currency} currencyPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Currency}
      */
-    currencyCreate() {
-      return this.currencyCreateWithHttpInfo()
+    currencyCreate(currencyPost) {
+      return this.currencyCreateWithHttpInfo(currencyPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Currency} currencyPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Currency} and HTTP response
      */
-    currencyUpdateWithHttpInfo(id) {
-      let postBody = null;
+    currencyUpdateWithHttpInfo(id, currencyPut) {
+      let postBody = currencyPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling currencyUpdate");
+      }
+
+      // verify the required parameter 'currencyPut' is set
+      if (currencyPut === undefined || currencyPut === null) {
+        throw new Error("Missing the required parameter 'currencyPut' when calling currencyUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class CurrencyInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Currency} currencyPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Currency}
      */
-    currencyUpdate(id) {
-      return this.currencyUpdateWithHttpInfo(id)
+    currencyUpdate(id, currencyPut) {
+      return this.currencyUpdateWithHttpInfo(id, currencyPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

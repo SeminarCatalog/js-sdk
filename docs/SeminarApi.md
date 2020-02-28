@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="seminarCreate"></a>
 # **seminarCreate**
-> Seminar seminarCreate()
+> Seminar seminarCreate(seminarPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SeminarApi();
-apiInstance.seminarCreate().then((data) => {
+
+const seminarPost = new SeminarCatalogApi.Seminar(); // Seminar | 
+
+apiInstance.seminarCreate(seminarPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.seminarCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **seminarPost** | [**Seminar**](Seminar.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="seminarUpdate"></a>
 # **seminarUpdate**
-> Seminar seminarUpdate(id)
+> Seminar seminarUpdate(id, seminarPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SeminarApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.seminarUpdate(id).then((data) => {
+const seminarPut = new SeminarCatalogApi.Seminar(); // Seminar | 
+
+apiInstance.seminarUpdate(id, seminarPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.seminarUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **seminarPut** | [**Seminar**](Seminar.md)|  | 
 
 ### Return type
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="categoryCreate"></a>
 # **categoryCreate**
-> Category categoryCreate()
+> Category categoryCreate(categoryPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CategoryApi();
-apiInstance.categoryCreate().then((data) => {
+
+const categoryPost = new SeminarCatalogApi.Category(); // Category | 
+
+apiInstance.categoryCreate(categoryPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.categoryCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **categoryPost** | [**Category**](Category.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="categoryUpdate"></a>
 # **categoryUpdate**
-> Category categoryUpdate(id)
+> Category categoryUpdate(id, categoryPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CategoryApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.categoryUpdate(id).then((data) => {
+const categoryPut = new SeminarCatalogApi.Category(); // Category | 
+
+apiInstance.categoryUpdate(id, categoryPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.categoryUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **categoryPut** | [**Category**](Category.md)|  | 
 
 ### Return type
 

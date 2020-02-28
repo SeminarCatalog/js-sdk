@@ -51,7 +51,11 @@ const api = SeminarCatalogApi.AddressApi
 
 // Constructor
 // const api = new SeminarCatalogApi.AddressApiClass()
-api.addressCreate().then(function(data) {
+
+
+const addressPost = new SeminarCatalogApi.Address(); // {Address} 
+
+api.addressCreate(addressPost).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

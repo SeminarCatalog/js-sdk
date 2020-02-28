@@ -40,10 +40,16 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/SubscriptionPlan} subscriptionPlanPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
-    subscriptionplanCreateWithHttpInfo() {
-      let postBody = null;
+    subscriptionplanCreateWithHttpInfo(subscriptionPlanPost) {
+      let postBody = subscriptionPlanPost;
+
+      // verify the required parameter 'subscriptionPlanPost' is set
+      if (subscriptionPlanPost === undefined || subscriptionPlanPost === null) {
+        throw new Error("Missing the required parameter 'subscriptionPlanPost' when calling subscriptionplanCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/SubscriptionPlan} subscriptionPlanPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
-    subscriptionplanCreate() {
-      return this.subscriptionplanCreateWithHttpInfo()
+    subscriptionplanCreate(subscriptionPlanPost) {
+      return this.subscriptionplanCreateWithHttpInfo(subscriptionPlanPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/SubscriptionPlan} subscriptionPlanPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
-    subscriptionplanUpdateWithHttpInfo(id) {
-      let postBody = null;
+    subscriptionplanUpdateWithHttpInfo(id, subscriptionPlanPut) {
+      let postBody = subscriptionPlanPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling subscriptionplanUpdate");
+      }
+
+      // verify the required parameter 'subscriptionPlanPut' is set
+      if (subscriptionPlanPut === undefined || subscriptionPlanPut === null) {
+        throw new Error("Missing the required parameter 'subscriptionPlanPut' when calling subscriptionplanUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class SubscriptionPlanInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/SubscriptionPlan} subscriptionPlanPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
-    subscriptionplanUpdate(id) {
-      return this.subscriptionplanUpdateWithHttpInfo(id)
+    subscriptionplanUpdate(id, subscriptionPlanPut) {
+      return this.subscriptionplanUpdateWithHttpInfo(id, subscriptionPlanPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

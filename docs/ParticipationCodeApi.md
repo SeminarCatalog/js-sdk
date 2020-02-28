@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="participationcodeCreate"></a>
 # **participationcodeCreate**
-> ParticipationCode participationcodeCreate()
+> ParticipationCode participationcodeCreate(participationCodePost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ParticipationCodeApi();
-apiInstance.participationcodeCreate().then((data) => {
+
+const participationCodePost = new SeminarCatalogApi.ParticipationCode(); // ParticipationCode | 
+
+apiInstance.participationcodeCreate(participationCodePost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.participationcodeCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **participationCodePost** | [**ParticipationCode**](ParticipationCode.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="participationcodeUpdate"></a>
 # **participationcodeUpdate**
-> ParticipationCode participationcodeUpdate(id)
+> ParticipationCode participationcodeUpdate(id, participationCodePut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ParticipationCodeApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.participationcodeUpdate(id).then((data) => {
+const participationCodePut = new SeminarCatalogApi.ParticipationCode(); // ParticipationCode | 
+
+apiInstance.participationcodeUpdate(id, participationCodePut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.participationcodeUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **participationCodePut** | [**ParticipationCode**](ParticipationCode.md)|  | 
 
 ### Return type
 

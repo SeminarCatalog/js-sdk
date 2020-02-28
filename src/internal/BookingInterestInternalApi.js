@@ -40,10 +40,16 @@ export class BookingInterestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/BookingInterest} bookingInterestPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
      */
-    bookinginterestCreateWithHttpInfo() {
-      let postBody = null;
+    bookinginterestCreateWithHttpInfo(bookingInterestPost) {
+      let postBody = bookingInterestPost;
+
+      // verify the required parameter 'bookingInterestPost' is set
+      if (bookingInterestPost === undefined || bookingInterestPost === null) {
+        throw new Error("Missing the required parameter 'bookingInterestPost' when calling bookinginterestCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class BookingInterestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/BookingInterest} bookingInterestPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
      */
-    bookinginterestCreate() {
-      return this.bookinginterestCreateWithHttpInfo()
+    bookinginterestCreate(bookingInterestPost) {
+      return this.bookinginterestCreateWithHttpInfo(bookingInterestPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class BookingInterestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/BookingInterest} bookingInterestPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BookingInterest} and HTTP response
      */
-    bookinginterestUpdateWithHttpInfo(id) {
-      let postBody = null;
+    bookinginterestUpdateWithHttpInfo(id, bookingInterestPut) {
+      let postBody = bookingInterestPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling bookinginterestUpdate");
+      }
+
+      // verify the required parameter 'bookingInterestPut' is set
+      if (bookingInterestPut === undefined || bookingInterestPut === null) {
+        throw new Error("Missing the required parameter 'bookingInterestPut' when calling bookinginterestUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class BookingInterestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/BookingInterest} bookingInterestPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BookingInterest}
      */
-    bookinginterestUpdate(id) {
-      return this.bookinginterestUpdateWithHttpInfo(id)
+    bookinginterestUpdate(id, bookingInterestPut) {
+      return this.bookinginterestUpdateWithHttpInfo(id, bookingInterestPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

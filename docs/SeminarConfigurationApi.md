@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="seminarconfigurationCreate"></a>
 # **seminarconfigurationCreate**
-> SeminarConfiguration seminarconfigurationCreate()
+> SeminarConfiguration seminarconfigurationCreate(seminarConfigurationPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SeminarConfigurationApi();
-apiInstance.seminarconfigurationCreate().then((data) => {
+
+const seminarConfigurationPost = new SeminarCatalogApi.SeminarConfiguration(); // SeminarConfiguration | 
+
+apiInstance.seminarconfigurationCreate(seminarConfigurationPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.seminarconfigurationCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **seminarConfigurationPost** | [**SeminarConfiguration**](SeminarConfiguration.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="seminarconfigurationUpdate"></a>
 # **seminarconfigurationUpdate**
-> SeminarConfiguration seminarconfigurationUpdate(id)
+> SeminarConfiguration seminarconfigurationUpdate(id, seminarConfigurationPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SeminarConfigurationApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.seminarconfigurationUpdate(id).then((data) => {
+const seminarConfigurationPut = new SeminarCatalogApi.SeminarConfiguration(); // SeminarConfiguration | 
+
+apiInstance.seminarconfigurationUpdate(id, seminarConfigurationPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.seminarconfigurationUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **seminarConfigurationPut** | [**SeminarConfiguration**](SeminarConfiguration.md)|  | 
 
 ### Return type
 

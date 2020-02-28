@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="subscriptionCreate"></a>
 # **subscriptionCreate**
-> Subscription subscriptionCreate()
+> Subscription subscriptionCreate(subscriptionPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SubscriptionApi();
-apiInstance.subscriptionCreate().then((data) => {
+
+const subscriptionPost = new SeminarCatalogApi.Subscription(); // Subscription | 
+
+apiInstance.subscriptionCreate(subscriptionPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.subscriptionCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriptionPost** | [**Subscription**](Subscription.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="subscriptionUpdate"></a>
 # **subscriptionUpdate**
-> Subscription subscriptionUpdate(id)
+> Subscription subscriptionUpdate(id, subscriptionPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SubscriptionApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.subscriptionUpdate(id).then((data) => {
+const subscriptionPut = new SeminarCatalogApi.Subscription(); // Subscription | 
+
+apiInstance.subscriptionUpdate(id, subscriptionPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.subscriptionUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **subscriptionPut** | [**Subscription**](Subscription.md)|  | 
 
 ### Return type
 

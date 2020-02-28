@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="vatCreate"></a>
 # **vatCreate**
-> Vat vatCreate()
+> Vat vatCreate(vatPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.VatApi();
-apiInstance.vatCreate().then((data) => {
+
+const vatPost = new SeminarCatalogApi.Vat(); // Vat | 
+
+apiInstance.vatCreate(vatPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.vatCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **vatPost** | [**Vat**](Vat.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="vatUpdate"></a>
 # **vatUpdate**
-> Vat vatUpdate(id)
+> Vat vatUpdate(id, vatPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.VatApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.vatUpdate(id).then((data) => {
+const vatPut = new SeminarCatalogApi.Vat(); // Vat | 
+
+apiInstance.vatUpdate(id, vatPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.vatUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **vatPut** | [**Vat**](Vat.md)|  | 
 
 ### Return type
 

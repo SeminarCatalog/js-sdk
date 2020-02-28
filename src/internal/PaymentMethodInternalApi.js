@@ -40,10 +40,16 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/PaymentMethod} paymentMethodPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
-    paymentmethodCreateWithHttpInfo() {
-      let postBody = null;
+    paymentmethodCreateWithHttpInfo(paymentMethodPost) {
+      let postBody = paymentMethodPost;
+
+      // verify the required parameter 'paymentMethodPost' is set
+      if (paymentMethodPost === undefined || paymentMethodPost === null) {
+        throw new Error("Missing the required parameter 'paymentMethodPost' when calling paymentmethodCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/PaymentMethod} paymentMethodPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
-    paymentmethodCreate() {
-      return this.paymentmethodCreateWithHttpInfo()
+    paymentmethodCreate(paymentMethodPost) {
+      return this.paymentmethodCreateWithHttpInfo(paymentMethodPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/PaymentMethod} paymentMethodPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
-    paymentmethodUpdateWithHttpInfo(id) {
-      let postBody = null;
+    paymentmethodUpdateWithHttpInfo(id, paymentMethodPut) {
+      let postBody = paymentMethodPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling paymentmethodUpdate");
+      }
+
+      // verify the required parameter 'paymentMethodPut' is set
+      if (paymentMethodPut === undefined || paymentMethodPut === null) {
+        throw new Error("Missing the required parameter 'paymentMethodPut' when calling paymentmethodUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class PaymentMethodInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/PaymentMethod} paymentMethodPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
-    paymentmethodUpdate(id) {
-      return this.paymentmethodUpdateWithHttpInfo(id)
+    paymentmethodUpdate(id, paymentMethodPut) {
+      return this.paymentmethodUpdateWithHttpInfo(id, paymentMethodPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

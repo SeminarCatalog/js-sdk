@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="couponcodeCreate"></a>
 # **couponcodeCreate**
-> CouponCode couponcodeCreate()
+> CouponCode couponcodeCreate(couponCodePost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CouponCodeApi();
-apiInstance.couponcodeCreate().then((data) => {
+
+const couponCodePost = new SeminarCatalogApi.CouponCode(); // CouponCode | 
+
+apiInstance.couponcodeCreate(couponCodePost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.couponcodeCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **couponCodePost** | [**CouponCode**](CouponCode.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="couponcodeUpdate"></a>
 # **couponcodeUpdate**
-> CouponCode couponcodeUpdate(id)
+> CouponCode couponcodeUpdate(id, couponCodePut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CouponCodeApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.couponcodeUpdate(id).then((data) => {
+const couponCodePut = new SeminarCatalogApi.CouponCode(); // CouponCode | 
+
+apiInstance.couponcodeUpdate(id, couponCodePut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.couponcodeUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **couponCodePut** | [**CouponCode**](CouponCode.md)|  | 
 
 ### Return type
 

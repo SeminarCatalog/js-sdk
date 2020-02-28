@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="priceCreate"></a>
 # **priceCreate**
-> Price priceCreate()
+> Price priceCreate(pricePost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.PriceApi();
-apiInstance.priceCreate().then((data) => {
+
+const pricePost = new SeminarCatalogApi.Price(); // Price | 
+
+apiInstance.priceCreate(pricePost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.priceCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pricePost** | [**Price**](Price.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="priceUpdate"></a>
 # **priceUpdate**
-> Price priceUpdate(id)
+> Price priceUpdate(id, pricePut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.PriceApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.priceUpdate(id).then((data) => {
+const pricePut = new SeminarCatalogApi.Price(); // Price | 
+
+apiInstance.priceUpdate(id, pricePut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.priceUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **pricePut** | [**Price**](Price.md)|  | 
 
 ### Return type
 

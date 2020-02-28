@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="eventCreate"></a>
 # **eventCreate**
-> Event eventCreate()
+> Event eventCreate(eventPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.EventApi();
-apiInstance.eventCreate().then((data) => {
+
+const eventPost = new SeminarCatalogApi.Event(); // Event | 
+
+apiInstance.eventCreate(eventPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.eventCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventPost** | [**Event**](Event.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="eventUpdate"></a>
 # **eventUpdate**
-> Event eventUpdate(id)
+> Event eventUpdate(id, eventPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.EventApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.eventUpdate(id).then((data) => {
+const eventPut = new SeminarCatalogApi.Event(); // Event | 
+
+apiInstance.eventUpdate(id, eventPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.eventUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **eventPut** | [**Event**](Event.md)|  | 
 
 ### Return type
 

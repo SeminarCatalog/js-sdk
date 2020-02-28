@@ -40,10 +40,16 @@ export class TrainerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Trainer} trainerPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Trainer} and HTTP response
      */
-    trainerCreateWithHttpInfo() {
-      let postBody = null;
+    trainerCreateWithHttpInfo(trainerPost) {
+      let postBody = trainerPost;
+
+      // verify the required parameter 'trainerPost' is set
+      if (trainerPost === undefined || trainerPost === null) {
+        throw new Error("Missing the required parameter 'trainerPost' when calling trainerCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class TrainerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Trainer} trainerPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Trainer}
      */
-    trainerCreate() {
-      return this.trainerCreateWithHttpInfo()
+    trainerCreate(trainerPost) {
+      return this.trainerCreateWithHttpInfo(trainerPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class TrainerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Trainer} trainerPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Trainer} and HTTP response
      */
-    trainerUpdateWithHttpInfo(id) {
-      let postBody = null;
+    trainerUpdateWithHttpInfo(id, trainerPut) {
+      let postBody = trainerPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling trainerUpdate");
+      }
+
+      // verify the required parameter 'trainerPut' is set
+      if (trainerPut === undefined || trainerPut === null) {
+        throw new Error("Missing the required parameter 'trainerPut' when calling trainerUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class TrainerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Trainer} trainerPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Trainer}
      */
-    trainerUpdate(id) {
-      return this.trainerUpdateWithHttpInfo(id)
+    trainerUpdate(id, trainerPut) {
+      return this.trainerUpdateWithHttpInfo(id, trainerPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

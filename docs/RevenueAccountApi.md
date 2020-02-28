@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="revenueaccountCreate"></a>
 # **revenueaccountCreate**
-> RevenueAccount revenueaccountCreate()
+> RevenueAccount revenueaccountCreate(revenueAccountPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.RevenueAccountApi();
-apiInstance.revenueaccountCreate().then((data) => {
+
+const revenueAccountPost = new SeminarCatalogApi.RevenueAccount(); // RevenueAccount | 
+
+apiInstance.revenueaccountCreate(revenueAccountPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.revenueaccountCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **revenueAccountPost** | [**RevenueAccount**](RevenueAccount.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="revenueaccountUpdate"></a>
 # **revenueaccountUpdate**
-> RevenueAccount revenueaccountUpdate(id)
+> RevenueAccount revenueaccountUpdate(id, revenueAccountPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.RevenueAccountApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.revenueaccountUpdate(id).then((data) => {
+const revenueAccountPut = new SeminarCatalogApi.RevenueAccount(); // RevenueAccount | 
+
+apiInstance.revenueaccountUpdate(id, revenueAccountPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.revenueaccountUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **revenueAccountPut** | [**RevenueAccount**](RevenueAccount.md)|  | 
 
 ### Return type
 

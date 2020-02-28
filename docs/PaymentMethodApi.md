@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="paymentmethodCreate"></a>
 # **paymentmethodCreate**
-> PaymentMethod paymentmethodCreate()
+> PaymentMethod paymentmethodCreate(paymentMethodPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.PaymentMethodApi();
-apiInstance.paymentmethodCreate().then((data) => {
+
+const paymentMethodPost = new SeminarCatalogApi.PaymentMethod(); // PaymentMethod | 
+
+apiInstance.paymentmethodCreate(paymentMethodPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.paymentmethodCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **paymentMethodPost** | [**PaymentMethod**](PaymentMethod.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="paymentmethodUpdate"></a>
 # **paymentmethodUpdate**
-> PaymentMethod paymentmethodUpdate(id)
+> PaymentMethod paymentmethodUpdate(id, paymentMethodPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.PaymentMethodApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.paymentmethodUpdate(id).then((data) => {
+const paymentMethodPut = new SeminarCatalogApi.PaymentMethod(); // PaymentMethod | 
+
+apiInstance.paymentmethodUpdate(id, paymentMethodPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.paymentmethodUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **paymentMethodPut** | [**PaymentMethod**](PaymentMethod.md)|  | 
 
 ### Return type
 

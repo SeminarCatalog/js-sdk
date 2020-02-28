@@ -40,10 +40,16 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Receiver} receiverPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receiver} and HTTP response
      */
-    receiverCreateWithHttpInfo() {
-      let postBody = null;
+    receiverCreateWithHttpInfo(receiverPost) {
+      let postBody = receiverPost;
+
+      // verify the required parameter 'receiverPost' is set
+      if (receiverPost === undefined || receiverPost === null) {
+        throw new Error("Missing the required parameter 'receiverPost' when calling receiverCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Receiver} receiverPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receiver}
      */
-    receiverCreate() {
-      return this.receiverCreateWithHttpInfo()
+    receiverCreate(receiverPost) {
+      return this.receiverCreateWithHttpInfo(receiverPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Receiver} receiverPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Receiver} and HTTP response
      */
-    receiverUpdateWithHttpInfo(id) {
-      let postBody = null;
+    receiverUpdateWithHttpInfo(id, receiverPut) {
+      let postBody = receiverPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling receiverUpdate");
+      }
+
+      // verify the required parameter 'receiverPut' is set
+      if (receiverPut === undefined || receiverPut === null) {
+        throw new Error("Missing the required parameter 'receiverPut' when calling receiverUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class ReceiverInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Receiver} receiverPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Receiver}
      */
-    receiverUpdate(id) {
-      return this.receiverUpdateWithHttpInfo(id)
+    receiverUpdate(id, receiverPut) {
+      return this.receiverUpdateWithHttpInfo(id, receiverPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

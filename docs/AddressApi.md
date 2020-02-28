@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="addressCreate"></a>
 # **addressCreate**
-> Address addressCreate()
+> Address addressCreate(addressPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.AddressApi();
-apiInstance.addressCreate().then((data) => {
+
+const addressPost = new SeminarCatalogApi.Address(); // Address | 
+
+apiInstance.addressCreate(addressPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.addressCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addressPost** | [**Address**](Address.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="addressUpdate"></a>
 # **addressUpdate**
-> Address addressUpdate(id)
+> Address addressUpdate(id, addressPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.AddressApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.addressUpdate(id).then((data) => {
+const addressPut = new SeminarCatalogApi.Address(); // Address | 
+
+apiInstance.addressUpdate(id, addressPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.addressUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **addressPut** | [**Address**](Address.md)|  | 
 
 ### Return type
 

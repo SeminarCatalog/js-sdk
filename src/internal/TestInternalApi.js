@@ -40,10 +40,16 @@ export class TestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Test} testPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Test} and HTTP response
      */
-    testCreateWithHttpInfo() {
-      let postBody = null;
+    testCreateWithHttpInfo(testPost) {
+      let postBody = testPost;
+
+      // verify the required parameter 'testPost' is set
+      if (testPost === undefined || testPost === null) {
+        throw new Error("Missing the required parameter 'testPost' when calling testCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class TestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Test} testPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Test}
      */
-    testCreate() {
-      return this.testCreateWithHttpInfo()
+    testCreate(testPost) {
+      return this.testCreateWithHttpInfo(testPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class TestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Test} testPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Test} and HTTP response
      */
-    testUpdateWithHttpInfo(id) {
-      let postBody = null;
+    testUpdateWithHttpInfo(id, testPut) {
+      let postBody = testPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling testUpdate");
+      }
+
+      // verify the required parameter 'testPut' is set
+      if (testPut === undefined || testPut === null) {
+        throw new Error("Missing the required parameter 'testPut' when calling testUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class TestInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Test} testPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Test}
      */
-    testUpdate(id) {
-      return this.testUpdateWithHttpInfo(id)
+    testUpdate(id, testPut) {
+      return this.testUpdateWithHttpInfo(id, testPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

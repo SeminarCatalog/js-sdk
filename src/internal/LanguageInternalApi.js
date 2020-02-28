@@ -40,10 +40,16 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Language} languagePost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Language} and HTTP response
      */
-    languageCreateWithHttpInfo() {
-      let postBody = null;
+    languageCreateWithHttpInfo(languagePost) {
+      let postBody = languagePost;
+
+      // verify the required parameter 'languagePost' is set
+      if (languagePost === undefined || languagePost === null) {
+        throw new Error("Missing the required parameter 'languagePost' when calling languageCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Language} languagePost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Language}
      */
-    languageCreate() {
-      return this.languageCreateWithHttpInfo()
+    languageCreate(languagePost) {
+      return this.languageCreateWithHttpInfo(languagePost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Language} languagePut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Language} and HTTP response
      */
-    languageUpdateWithHttpInfo(id) {
-      let postBody = null;
+    languageUpdateWithHttpInfo(id, languagePut) {
+      let postBody = languagePut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling languageUpdate");
+      }
+
+      // verify the required parameter 'languagePut' is set
+      if (languagePut === undefined || languagePut === null) {
+        throw new Error("Missing the required parameter 'languagePut' when calling languageUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class LanguageInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Language} languagePut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Language}
      */
-    languageUpdate(id) {
-      return this.languageUpdateWithHttpInfo(id)
+    languageUpdate(id, languagePut) {
+      return this.languageUpdateWithHttpInfo(id, languagePut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

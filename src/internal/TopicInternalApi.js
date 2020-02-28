@@ -40,10 +40,16 @@ export class TopicInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Topic} topicPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Topic} and HTTP response
      */
-    topicCreateWithHttpInfo() {
-      let postBody = null;
+    topicCreateWithHttpInfo(topicPost) {
+      let postBody = topicPost;
+
+      // verify the required parameter 'topicPost' is set
+      if (topicPost === undefined || topicPost === null) {
+        throw new Error("Missing the required parameter 'topicPost' when calling topicCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class TopicInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Topic} topicPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Topic}
      */
-    topicCreate() {
-      return this.topicCreateWithHttpInfo()
+    topicCreate(topicPost) {
+      return this.topicCreateWithHttpInfo(topicPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class TopicInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Topic} topicPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Topic} and HTTP response
      */
-    topicUpdateWithHttpInfo(id) {
-      let postBody = null;
+    topicUpdateWithHttpInfo(id, topicPut) {
+      let postBody = topicPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling topicUpdate");
+      }
+
+      // verify the required parameter 'topicPut' is set
+      if (topicPut === undefined || topicPut === null) {
+        throw new Error("Missing the required parameter 'topicPut' when calling topicUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class TopicInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Topic} topicPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Topic}
      */
-    topicUpdate(id) {
-      return this.topicUpdateWithHttpInfo(id)
+    topicUpdate(id, topicPut) {
+      return this.topicUpdateWithHttpInfo(id, topicPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

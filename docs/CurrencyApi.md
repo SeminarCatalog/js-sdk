@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="currencyCreate"></a>
 # **currencyCreate**
-> Currency currencyCreate()
+> Currency currencyCreate(currencyPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CurrencyApi();
-apiInstance.currencyCreate().then((data) => {
+
+const currencyPost = new SeminarCatalogApi.Currency(); // Currency | 
+
+apiInstance.currencyCreate(currencyPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.currencyCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **currencyPost** | [**Currency**](Currency.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="currencyUpdate"></a>
 # **currencyUpdate**
-> Currency currencyUpdate(id)
+> Currency currencyUpdate(id, currencyPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CurrencyApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.currencyUpdate(id).then((data) => {
+const currencyPut = new SeminarCatalogApi.Currency(); // Currency | 
+
+apiInstance.currencyUpdate(id, currencyPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.currencyUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **currencyPut** | [**Currency**](Currency.md)|  | 
 
 ### Return type
 

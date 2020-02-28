@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="contactpersonCreate"></a>
 # **contactpersonCreate**
-> ContactPerson contactpersonCreate()
+> ContactPerson contactpersonCreate(contactPersonPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ContactPersonApi();
-apiInstance.contactpersonCreate().then((data) => {
+
+const contactPersonPost = new SeminarCatalogApi.ContactPerson(); // ContactPerson | 
+
+apiInstance.contactpersonCreate(contactPersonPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.contactpersonCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contactPersonPost** | [**ContactPerson**](ContactPerson.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="contactpersonUpdate"></a>
 # **contactpersonUpdate**
-> ContactPerson contactpersonUpdate(id)
+> ContactPerson contactpersonUpdate(id, contactPersonPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ContactPersonApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.contactpersonUpdate(id).then((data) => {
+const contactPersonPut = new SeminarCatalogApi.ContactPerson(); // ContactPerson | 
+
+apiInstance.contactpersonUpdate(id, contactPersonPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.contactpersonUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **contactPersonPut** | [**ContactPerson**](ContactPerson.md)|  | 
 
 ### Return type
 

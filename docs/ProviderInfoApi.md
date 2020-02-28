@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="providerinfoCreate"></a>
 # **providerinfoCreate**
-> ProviderInfo providerinfoCreate()
+> ProviderInfo providerinfoCreate(providerInfoPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ProviderInfoApi();
-apiInstance.providerinfoCreate().then((data) => {
+
+const providerInfoPost = new SeminarCatalogApi.ProviderInfo(); // ProviderInfo | 
+
+apiInstance.providerinfoCreate(providerInfoPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.providerinfoCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **providerInfoPost** | [**ProviderInfo**](ProviderInfo.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="providerinfoUpdate"></a>
 # **providerinfoUpdate**
-> ProviderInfo providerinfoUpdate(id)
+> ProviderInfo providerinfoUpdate(id, providerInfoPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ProviderInfoApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.providerinfoUpdate(id).then((data) => {
+const providerInfoPut = new SeminarCatalogApi.ProviderInfo(); // ProviderInfo | 
+
+apiInstance.providerinfoUpdate(id, providerInfoPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.providerinfoUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **providerInfoPut** | [**ProviderInfo**](ProviderInfo.md)|  | 
 
 ### Return type
 

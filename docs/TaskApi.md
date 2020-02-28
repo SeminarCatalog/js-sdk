@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="taskCreate"></a>
 # **taskCreate**
-> Task taskCreate()
+> Task taskCreate(taskPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.TaskApi();
-apiInstance.taskCreate().then((data) => {
+
+const taskPost = new SeminarCatalogApi.Task(); // Task | 
+
+apiInstance.taskCreate(taskPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.taskCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **taskPost** | [**Task**](Task.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="taskUpdate"></a>
 # **taskUpdate**
-> Task taskUpdate(id)
+> Task taskUpdate(id, taskPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.TaskApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.taskUpdate(id).then((data) => {
+const taskPut = new SeminarCatalogApi.Task(); // Task | 
+
+apiInstance.taskUpdate(id, taskPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.taskUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **taskPut** | [**Task**](Task.md)|  | 
 
 ### Return type
 

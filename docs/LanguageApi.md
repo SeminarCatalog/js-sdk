@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="languageCreate"></a>
 # **languageCreate**
-> Language languageCreate()
+> Language languageCreate(languagePost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.LanguageApi();
-apiInstance.languageCreate().then((data) => {
+
+const languagePost = new SeminarCatalogApi.Language(); // Language | 
+
+apiInstance.languageCreate(languagePost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.languageCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **languagePost** | [**Language**](Language.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="languageUpdate"></a>
 # **languageUpdate**
-> Language languageUpdate(id)
+> Language languageUpdate(id, languagePut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.LanguageApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.languageUpdate(id).then((data) => {
+const languagePut = new SeminarCatalogApi.Language(); // Language | 
+
+apiInstance.languageUpdate(id, languagePut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.languageUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **languagePut** | [**Language**](Language.md)|  | 
 
 ### Return type
 

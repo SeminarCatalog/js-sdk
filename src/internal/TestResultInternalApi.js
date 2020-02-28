@@ -40,10 +40,16 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/TestResult} testResultPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
-    testresultCreateWithHttpInfo() {
-      let postBody = null;
+    testresultCreateWithHttpInfo(testResultPost) {
+      let postBody = testResultPost;
+
+      // verify the required parameter 'testResultPost' is set
+      if (testResultPost === undefined || testResultPost === null) {
+        throw new Error("Missing the required parameter 'testResultPost' when calling testresultCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/TestResult} testResultPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
-    testresultCreate() {
-      return this.testresultCreateWithHttpInfo()
+    testresultCreate(testResultPost) {
+      return this.testresultCreateWithHttpInfo(testResultPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/TestResult} testResultPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
-    testresultUpdateWithHttpInfo(id) {
-      let postBody = null;
+    testresultUpdateWithHttpInfo(id, testResultPut) {
+      let postBody = testResultPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling testresultUpdate");
+      }
+
+      // verify the required parameter 'testResultPut' is set
+      if (testResultPut === undefined || testResultPut === null) {
+        throw new Error("Missing the required parameter 'testResultPut' when calling testresultUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class TestResultInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/TestResult} testResultPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
-    testresultUpdate(id) {
-      return this.testresultUpdateWithHttpInfo(id)
+    testresultUpdate(id, testResultPut) {
+      return this.testresultUpdateWithHttpInfo(id, testResultPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

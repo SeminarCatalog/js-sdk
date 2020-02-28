@@ -40,10 +40,16 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/UserGroup} userGroupPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroup} and HTTP response
      */
-    usergroupCreateWithHttpInfo() {
-      let postBody = null;
+    usergroupCreateWithHttpInfo(userGroupPost) {
+      let postBody = userGroupPost;
+
+      // verify the required parameter 'userGroupPost' is set
+      if (userGroupPost === undefined || userGroupPost === null) {
+        throw new Error("Missing the required parameter 'userGroupPost' when calling usergroupCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/UserGroup} userGroupPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroup}
      */
-    usergroupCreate() {
-      return this.usergroupCreateWithHttpInfo()
+    usergroupCreate(userGroupPost) {
+      return this.usergroupCreateWithHttpInfo(userGroupPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/UserGroup} userGroupPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserGroup} and HTTP response
      */
-    usergroupUpdateWithHttpInfo(id) {
-      let postBody = null;
+    usergroupUpdateWithHttpInfo(id, userGroupPut) {
+      let postBody = userGroupPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling usergroupUpdate");
+      }
+
+      // verify the required parameter 'userGroupPut' is set
+      if (userGroupPut === undefined || userGroupPut === null) {
+        throw new Error("Missing the required parameter 'userGroupPut' when calling usergroupUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class UserGroupInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/UserGroup} userGroupPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserGroup}
      */
-    usergroupUpdate(id) {
-      return this.usergroupUpdateWithHttpInfo(id)
+    usergroupUpdate(id, userGroupPut) {
+      return this.usergroupUpdateWithHttpInfo(id, userGroupPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

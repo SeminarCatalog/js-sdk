@@ -40,10 +40,16 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/SubscriptionConfiguration} subscriptionConfigurationPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionConfiguration} and HTTP response
      */
-    subscriptionconfigurationCreateWithHttpInfo() {
-      let postBody = null;
+    subscriptionconfigurationCreateWithHttpInfo(subscriptionConfigurationPost) {
+      let postBody = subscriptionConfigurationPost;
+
+      // verify the required parameter 'subscriptionConfigurationPost' is set
+      if (subscriptionConfigurationPost === undefined || subscriptionConfigurationPost === null) {
+        throw new Error("Missing the required parameter 'subscriptionConfigurationPost' when calling subscriptionconfigurationCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/SubscriptionConfiguration} subscriptionConfigurationPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionConfiguration}
      */
-    subscriptionconfigurationCreate() {
-      return this.subscriptionconfigurationCreateWithHttpInfo()
+    subscriptionconfigurationCreate(subscriptionConfigurationPost) {
+      return this.subscriptionconfigurationCreateWithHttpInfo(subscriptionConfigurationPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/SubscriptionConfiguration} subscriptionConfigurationPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionConfiguration} and HTTP response
      */
-    subscriptionconfigurationUpdateWithHttpInfo(id) {
-      let postBody = null;
+    subscriptionconfigurationUpdateWithHttpInfo(id, subscriptionConfigurationPut) {
+      let postBody = subscriptionConfigurationPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling subscriptionconfigurationUpdate");
+      }
+
+      // verify the required parameter 'subscriptionConfigurationPut' is set
+      if (subscriptionConfigurationPut === undefined || subscriptionConfigurationPut === null) {
+        throw new Error("Missing the required parameter 'subscriptionConfigurationPut' when calling subscriptionconfigurationUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class SubscriptionConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/SubscriptionConfiguration} subscriptionConfigurationPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionConfiguration}
      */
-    subscriptionconfigurationUpdate(id) {
-      return this.subscriptionconfigurationUpdateWithHttpInfo(id)
+    subscriptionconfigurationUpdate(id, subscriptionConfigurationPut) {
+      return this.subscriptionconfigurationUpdateWithHttpInfo(id, subscriptionConfigurationPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

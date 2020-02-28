@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="rolediscountCreate"></a>
 # **rolediscountCreate**
-> RoleDiscount rolediscountCreate()
+> RoleDiscount rolediscountCreate(roleDiscountPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.RoleDiscountApi();
-apiInstance.rolediscountCreate().then((data) => {
+
+const roleDiscountPost = new SeminarCatalogApi.RoleDiscount(); // RoleDiscount | 
+
+apiInstance.rolediscountCreate(roleDiscountPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.rolediscountCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleDiscountPost** | [**RoleDiscount**](RoleDiscount.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="rolediscountUpdate"></a>
 # **rolediscountUpdate**
-> RoleDiscount rolediscountUpdate(id)
+> RoleDiscount rolediscountUpdate(id, roleDiscountPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.RoleDiscountApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.rolediscountUpdate(id).then((data) => {
+const roleDiscountPut = new SeminarCatalogApi.RoleDiscount(); // RoleDiscount | 
+
+apiInstance.rolediscountUpdate(id, roleDiscountPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.rolediscountUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **roleDiscountPut** | [**RoleDiscount**](RoleDiscount.md)|  | 
 
 ### Return type
 

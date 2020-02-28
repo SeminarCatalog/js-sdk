@@ -40,10 +40,16 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Vat} vatPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Vat} and HTTP response
      */
-    vatCreateWithHttpInfo() {
-      let postBody = null;
+    vatCreateWithHttpInfo(vatPost) {
+      let postBody = vatPost;
+
+      // verify the required parameter 'vatPost' is set
+      if (vatPost === undefined || vatPost === null) {
+        throw new Error("Missing the required parameter 'vatPost' when calling vatCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Vat} vatPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Vat}
      */
-    vatCreate() {
-      return this.vatCreateWithHttpInfo()
+    vatCreate(vatPost) {
+      return this.vatCreateWithHttpInfo(vatPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Vat} vatPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Vat} and HTTP response
      */
-    vatUpdateWithHttpInfo(id) {
-      let postBody = null;
+    vatUpdateWithHttpInfo(id, vatPut) {
+      let postBody = vatPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling vatUpdate");
+      }
+
+      // verify the required parameter 'vatPut' is set
+      if (vatPut === undefined || vatPut === null) {
+        throw new Error("Missing the required parameter 'vatPut' when calling vatUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class VatInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Vat} vatPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Vat}
      */
-    vatUpdate(id) {
-      return this.vatUpdateWithHttpInfo(id)
+    vatUpdate(id, vatPut) {
+      return this.vatUpdateWithHttpInfo(id, vatPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

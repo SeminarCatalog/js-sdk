@@ -40,10 +40,16 @@ export class ProviderInfoInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/ProviderInfo} providerInfoPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProviderInfo} and HTTP response
      */
-    providerinfoCreateWithHttpInfo() {
-      let postBody = null;
+    providerinfoCreateWithHttpInfo(providerInfoPost) {
+      let postBody = providerInfoPost;
+
+      // verify the required parameter 'providerInfoPost' is set
+      if (providerInfoPost === undefined || providerInfoPost === null) {
+        throw new Error("Missing the required parameter 'providerInfoPost' when calling providerinfoCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class ProviderInfoInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/ProviderInfo} providerInfoPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProviderInfo}
      */
-    providerinfoCreate() {
-      return this.providerinfoCreateWithHttpInfo()
+    providerinfoCreate(providerInfoPost) {
+      return this.providerinfoCreateWithHttpInfo(providerInfoPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class ProviderInfoInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/ProviderInfo} providerInfoPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProviderInfo} and HTTP response
      */
-    providerinfoUpdateWithHttpInfo(id) {
-      let postBody = null;
+    providerinfoUpdateWithHttpInfo(id, providerInfoPut) {
+      let postBody = providerInfoPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling providerinfoUpdate");
+      }
+
+      // verify the required parameter 'providerInfoPut' is set
+      if (providerInfoPut === undefined || providerInfoPut === null) {
+        throw new Error("Missing the required parameter 'providerInfoPut' when calling providerinfoUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class ProviderInfoInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/ProviderInfo} providerInfoPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProviderInfo}
      */
-    providerinfoUpdate(id) {
-      return this.providerinfoUpdateWithHttpInfo(id)
+    providerinfoUpdate(id, providerInfoPut) {
+      return this.providerinfoUpdateWithHttpInfo(id, providerInfoPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

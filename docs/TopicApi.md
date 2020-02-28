@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="topicCreate"></a>
 # **topicCreate**
-> Topic topicCreate()
+> Topic topicCreate(topicPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.TopicApi();
-apiInstance.topicCreate().then((data) => {
+
+const topicPost = new SeminarCatalogApi.Topic(); // Topic | 
+
+apiInstance.topicCreate(topicPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.topicCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **topicPost** | [**Topic**](Topic.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="topicUpdate"></a>
 # **topicUpdate**
-> Topic topicUpdate(id)
+> Topic topicUpdate(id, topicPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.TopicApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.topicUpdate(id).then((data) => {
+const topicPut = new SeminarCatalogApi.Topic(); // Topic | 
+
+apiInstance.topicUpdate(id, topicPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.topicUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **topicPut** | [**Topic**](Topic.md)|  | 
 
 ### Return type
 

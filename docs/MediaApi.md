@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="mediaCreate"></a>
 # **mediaCreate**
-> Media mediaCreate()
+> Media mediaCreate(mediaPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.MediaApi();
-apiInstance.mediaCreate().then((data) => {
+
+const mediaPost = new SeminarCatalogApi.Media(); // Media | 
+
+apiInstance.mediaCreate(mediaPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.mediaCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mediaPost** | [**Media**](Media.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="mediaUpdate"></a>
 # **mediaUpdate**
-> Media mediaUpdate(id)
+> Media mediaUpdate(id, mediaPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.MediaApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.mediaUpdate(id).then((data) => {
+const mediaPut = new SeminarCatalogApi.Media(); // Media | 
+
+apiInstance.mediaUpdate(id, mediaPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.mediaUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **mediaPut** | [**Media**](Media.md)|  | 
 
 ### Return type
 

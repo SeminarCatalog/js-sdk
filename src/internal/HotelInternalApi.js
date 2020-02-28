@@ -40,10 +40,16 @@ export class HotelInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Hotel} hotelPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Hotel} and HTTP response
      */
-    hotelCreateWithHttpInfo() {
-      let postBody = null;
+    hotelCreateWithHttpInfo(hotelPost) {
+      let postBody = hotelPost;
+
+      // verify the required parameter 'hotelPost' is set
+      if (hotelPost === undefined || hotelPost === null) {
+        throw new Error("Missing the required parameter 'hotelPost' when calling hotelCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class HotelInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Hotel} hotelPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Hotel}
      */
-    hotelCreate() {
-      return this.hotelCreateWithHttpInfo()
+    hotelCreate(hotelPost) {
+      return this.hotelCreateWithHttpInfo(hotelPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class HotelInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Hotel} hotelPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Hotel} and HTTP response
      */
-    hotelUpdateWithHttpInfo(id) {
-      let postBody = null;
+    hotelUpdateWithHttpInfo(id, hotelPut) {
+      let postBody = hotelPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling hotelUpdate");
+      }
+
+      // verify the required parameter 'hotelPut' is set
+      if (hotelPut === undefined || hotelPut === null) {
+        throw new Error("Missing the required parameter 'hotelPut' when calling hotelUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class HotelInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Hotel} hotelPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Hotel}
      */
-    hotelUpdate(id) {
-      return this.hotelUpdateWithHttpInfo(id)
+    hotelUpdate(id, hotelPut) {
+      return this.hotelUpdateWithHttpInfo(id, hotelPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

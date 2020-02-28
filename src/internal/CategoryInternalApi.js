@@ -40,10 +40,16 @@ export class CategoryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Category} categoryPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Category} and HTTP response
      */
-    categoryCreateWithHttpInfo() {
-      let postBody = null;
+    categoryCreateWithHttpInfo(categoryPost) {
+      let postBody = categoryPost;
+
+      // verify the required parameter 'categoryPost' is set
+      if (categoryPost === undefined || categoryPost === null) {
+        throw new Error("Missing the required parameter 'categoryPost' when calling categoryCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class CategoryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Category} categoryPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Category}
      */
-    categoryCreate() {
-      return this.categoryCreateWithHttpInfo()
+    categoryCreate(categoryPost) {
+      return this.categoryCreateWithHttpInfo(categoryPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class CategoryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Category} categoryPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Category} and HTTP response
      */
-    categoryUpdateWithHttpInfo(id) {
-      let postBody = null;
+    categoryUpdateWithHttpInfo(id, categoryPut) {
+      let postBody = categoryPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling categoryUpdate");
+      }
+
+      // verify the required parameter 'categoryPut' is set
+      if (categoryPut === undefined || categoryPut === null) {
+        throw new Error("Missing the required parameter 'categoryPut' when calling categoryUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class CategoryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Category} categoryPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Category}
      */
-    categoryUpdate(id) {
-      return this.categoryUpdateWithHttpInfo(id)
+    categoryUpdate(id, categoryPut) {
+      return this.categoryUpdateWithHttpInfo(id, categoryPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

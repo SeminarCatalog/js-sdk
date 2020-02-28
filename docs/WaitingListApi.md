@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="waitinglistCreate"></a>
 # **waitinglistCreate**
-> WaitingList waitinglistCreate()
+> WaitingList waitinglistCreate(waitingListPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.WaitingListApi();
-apiInstance.waitinglistCreate().then((data) => {
+
+const waitingListPost = new SeminarCatalogApi.WaitingList(); // WaitingList | 
+
+apiInstance.waitinglistCreate(waitingListPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.waitinglistCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **waitingListPost** | [**WaitingList**](WaitingList.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="waitinglistUpdate"></a>
 # **waitinglistUpdate**
-> WaitingList waitinglistUpdate(id)
+> WaitingList waitinglistUpdate(id, waitingListPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.WaitingListApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.waitinglistUpdate(id).then((data) => {
+const waitingListPut = new SeminarCatalogApi.WaitingList(); // WaitingList | 
+
+apiInstance.waitinglistUpdate(id, waitingListPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.waitinglistUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **waitingListPut** | [**WaitingList**](WaitingList.md)|  | 
 
 ### Return type
 

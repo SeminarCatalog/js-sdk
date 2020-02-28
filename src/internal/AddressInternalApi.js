@@ -40,10 +40,16 @@ export class AddressInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Address} addressPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Address} and HTTP response
      */
-    addressCreateWithHttpInfo() {
-      let postBody = null;
+    addressCreateWithHttpInfo(addressPost) {
+      let postBody = addressPost;
+
+      // verify the required parameter 'addressPost' is set
+      if (addressPost === undefined || addressPost === null) {
+        throw new Error("Missing the required parameter 'addressPost' when calling addressCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class AddressInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Address} addressPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Address}
      */
-    addressCreate() {
-      return this.addressCreateWithHttpInfo()
+    addressCreate(addressPost) {
+      return this.addressCreateWithHttpInfo(addressPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class AddressInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Address} addressPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Address} and HTTP response
      */
-    addressUpdateWithHttpInfo(id) {
-      let postBody = null;
+    addressUpdateWithHttpInfo(id, addressPut) {
+      let postBody = addressPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling addressUpdate");
+      }
+
+      // verify the required parameter 'addressPut' is set
+      if (addressPut === undefined || addressPut === null) {
+        throw new Error("Missing the required parameter 'addressPut' when calling addressUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class AddressInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Address} addressPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Address}
      */
-    addressUpdate(id) {
-      return this.addressUpdateWithHttpInfo(id)
+    addressUpdate(id, addressPut) {
+      return this.addressUpdateWithHttpInfo(id, addressPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

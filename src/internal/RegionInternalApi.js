@@ -40,10 +40,16 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Region} regionPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Region} and HTTP response
      */
-    regionCreateWithHttpInfo() {
-      let postBody = null;
+    regionCreateWithHttpInfo(regionPost) {
+      let postBody = regionPost;
+
+      // verify the required parameter 'regionPost' is set
+      if (regionPost === undefined || regionPost === null) {
+        throw new Error("Missing the required parameter 'regionPost' when calling regionCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Region} regionPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Region}
      */
-    regionCreate() {
-      return this.regionCreateWithHttpInfo()
+    regionCreate(regionPost) {
+      return this.regionCreateWithHttpInfo(regionPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Region} regionPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Region} and HTTP response
      */
-    regionUpdateWithHttpInfo(id) {
-      let postBody = null;
+    regionUpdateWithHttpInfo(id, regionPut) {
+      let postBody = regionPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling regionUpdate");
+      }
+
+      // verify the required parameter 'regionPut' is set
+      if (regionPut === undefined || regionPut === null) {
+        throw new Error("Missing the required parameter 'regionPut' when calling regionUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class RegionInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Region} regionPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Region}
      */
-    regionUpdate(id) {
-      return this.regionUpdateWithHttpInfo(id)
+    regionUpdate(id, regionPut) {
+      return this.regionUpdateWithHttpInfo(id, regionPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -40,10 +40,16 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Partner} partnerPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Partner} and HTTP response
      */
-    partnerCreateWithHttpInfo() {
-      let postBody = null;
+    partnerCreateWithHttpInfo(partnerPost) {
+      let postBody = partnerPost;
+
+      // verify the required parameter 'partnerPost' is set
+      if (partnerPost === undefined || partnerPost === null) {
+        throw new Error("Missing the required parameter 'partnerPost' when calling partnerCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Partner} partnerPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Partner}
      */
-    partnerCreate() {
-      return this.partnerCreateWithHttpInfo()
+    partnerCreate(partnerPost) {
+      return this.partnerCreateWithHttpInfo(partnerPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Partner} partnerPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Partner} and HTTP response
      */
-    partnerUpdateWithHttpInfo(id) {
-      let postBody = null;
+    partnerUpdateWithHttpInfo(id, partnerPut) {
+      let postBody = partnerPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling partnerUpdate");
+      }
+
+      // verify the required parameter 'partnerPut' is set
+      if (partnerPut === undefined || partnerPut === null) {
+        throw new Error("Missing the required parameter 'partnerPut' when calling partnerUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class PartnerInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Partner} partnerPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Partner}
      */
-    partnerUpdate(id) {
-      return this.partnerUpdateWithHttpInfo(id)
+    partnerUpdate(id, partnerPut) {
+      return this.partnerUpdateWithHttpInfo(id, partnerPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

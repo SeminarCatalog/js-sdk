@@ -40,10 +40,16 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Certificate} certificatePost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
-    certificateCreateWithHttpInfo() {
-      let postBody = null;
+    certificateCreateWithHttpInfo(certificatePost) {
+      let postBody = certificatePost;
+
+      // verify the required parameter 'certificatePost' is set
+      if (certificatePost === undefined || certificatePost === null) {
+        throw new Error("Missing the required parameter 'certificatePost' when calling certificateCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Certificate} certificatePost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
-    certificateCreate() {
-      return this.certificateCreateWithHttpInfo()
+    certificateCreate(certificatePost) {
+      return this.certificateCreateWithHttpInfo(certificatePost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Certificate} certificatePut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
-    certificateUpdateWithHttpInfo(id) {
-      let postBody = null;
+    certificateUpdateWithHttpInfo(id, certificatePut) {
+      let postBody = certificatePut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling certificateUpdate");
+      }
+
+      // verify the required parameter 'certificatePut' is set
+      if (certificatePut === undefined || certificatePut === null) {
+        throw new Error("Missing the required parameter 'certificatePut' when calling certificateUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class CertificateInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Certificate} certificatePut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
-    certificateUpdate(id) {
-      return this.certificateUpdateWithHttpInfo(id)
+    certificateUpdate(id, certificatePut) {
+      return this.certificateUpdateWithHttpInfo(id, certificatePut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

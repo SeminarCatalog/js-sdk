@@ -40,10 +40,16 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Media} mediaPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Media} and HTTP response
      */
-    mediaCreateWithHttpInfo() {
-      let postBody = null;
+    mediaCreateWithHttpInfo(mediaPost) {
+      let postBody = mediaPost;
+
+      // verify the required parameter 'mediaPost' is set
+      if (mediaPost === undefined || mediaPost === null) {
+        throw new Error("Missing the required parameter 'mediaPost' when calling mediaCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Media} mediaPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Media}
      */
-    mediaCreate() {
-      return this.mediaCreateWithHttpInfo()
+    mediaCreate(mediaPost) {
+      return this.mediaCreateWithHttpInfo(mediaPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Media} mediaPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Media} and HTTP response
      */
-    mediaUpdateWithHttpInfo(id) {
-      let postBody = null;
+    mediaUpdateWithHttpInfo(id, mediaPut) {
+      let postBody = mediaPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling mediaUpdate");
+      }
+
+      // verify the required parameter 'mediaPut' is set
+      if (mediaPut === undefined || mediaPut === null) {
+        throw new Error("Missing the required parameter 'mediaPut' when calling mediaUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class MediaInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Media} mediaPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Media}
      */
-    mediaUpdate(id) {
-      return this.mediaUpdateWithHttpInfo(id)
+    mediaUpdate(id, mediaPut) {
+      return this.mediaUpdateWithHttpInfo(id, mediaPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="educationhistoryitemCreate"></a>
 # **educationhistoryitemCreate**
-> EducationHistoryItem educationhistoryitemCreate()
+> EducationHistoryItem educationhistoryitemCreate(educationHistoryItemPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.EducationHistoryItemApi();
-apiInstance.educationhistoryitemCreate().then((data) => {
+
+const educationHistoryItemPost = new SeminarCatalogApi.EducationHistoryItem(); // EducationHistoryItem | 
+
+apiInstance.educationhistoryitemCreate(educationHistoryItemPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.educationhistoryitemCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **educationHistoryItemPost** | [**EducationHistoryItem**](EducationHistoryItem.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="educationhistoryitemUpdate"></a>
 # **educationhistoryitemUpdate**
-> EducationHistoryItem educationhistoryitemUpdate(id)
+> EducationHistoryItem educationhistoryitemUpdate(id, educationHistoryItemPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.EducationHistoryItemApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.educationhistoryitemUpdate(id).then((data) => {
+const educationHistoryItemPut = new SeminarCatalogApi.EducationHistoryItem(); // EducationHistoryItem | 
+
+apiInstance.educationhistoryitemUpdate(id, educationHistoryItemPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.educationhistoryitemUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **educationHistoryItemPut** | [**EducationHistoryItem**](EducationHistoryItem.md)|  | 
 
 ### Return type
 

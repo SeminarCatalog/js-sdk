@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="partnerCreate"></a>
 # **partnerCreate**
-> Partner partnerCreate()
+> Partner partnerCreate(partnerPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.PartnerApi();
-apiInstance.partnerCreate().then((data) => {
+
+const partnerPost = new SeminarCatalogApi.Partner(); // Partner | 
+
+apiInstance.partnerCreate(partnerPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.partnerCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partnerPost** | [**Partner**](Partner.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="partnerUpdate"></a>
 # **partnerUpdate**
-> Partner partnerUpdate(id)
+> Partner partnerUpdate(id, partnerPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.PartnerApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.partnerUpdate(id).then((data) => {
+const partnerPut = new SeminarCatalogApi.Partner(); // Partner | 
+
+apiInstance.partnerUpdate(id, partnerPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.partnerUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **partnerPut** | [**Partner**](Partner.md)|  | 
 
 ### Return type
 

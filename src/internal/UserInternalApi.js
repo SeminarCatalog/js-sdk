@@ -40,10 +40,16 @@ export class UserInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/User} userPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
-    userCreateWithHttpInfo() {
-      let postBody = null;
+    userCreateWithHttpInfo(userPost) {
+      let postBody = userPost;
+
+      // verify the required parameter 'userPost' is set
+      if (userPost === undefined || userPost === null) {
+        throw new Error("Missing the required parameter 'userPost' when calling userCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class UserInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/User} userPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
-    userCreate() {
-      return this.userCreateWithHttpInfo()
+    userCreate(userPost) {
+      return this.userCreateWithHttpInfo(userPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class UserInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/User} userPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
-    userUpdateWithHttpInfo(id) {
-      let postBody = null;
+    userUpdateWithHttpInfo(id, userPut) {
+      let postBody = userPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling userUpdate");
+      }
+
+      // verify the required parameter 'userPut' is set
+      if (userPut === undefined || userPut === null) {
+        throw new Error("Missing the required parameter 'userPut' when calling userUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class UserInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/User} userPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
-    userUpdate(id) {
-      return this.userUpdateWithHttpInfo(id)
+    userUpdate(id, userPut) {
+      return this.userUpdateWithHttpInfo(id, userPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

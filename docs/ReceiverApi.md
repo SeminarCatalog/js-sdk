@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="receiverCreate"></a>
 # **receiverCreate**
-> Receiver receiverCreate()
+> Receiver receiverCreate(receiverPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ReceiverApi();
-apiInstance.receiverCreate().then((data) => {
+
+const receiverPost = new SeminarCatalogApi.Receiver(); // Receiver | 
+
+apiInstance.receiverCreate(receiverPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.receiverCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **receiverPost** | [**Receiver**](Receiver.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="receiverUpdate"></a>
 # **receiverUpdate**
-> Receiver receiverUpdate(id)
+> Receiver receiverUpdate(id, receiverPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ReceiverApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.receiverUpdate(id).then((data) => {
+const receiverPut = new SeminarCatalogApi.Receiver(); // Receiver | 
+
+apiInstance.receiverUpdate(id, receiverPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.receiverUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **receiverPut** | [**Receiver**](Receiver.md)|  | 
 
 ### Return type
 

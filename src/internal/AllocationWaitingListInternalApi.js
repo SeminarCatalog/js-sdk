@@ -40,10 +40,16 @@ export class AllocationWaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/AllocationWaitingList} allocationWaitingListPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AllocationWaitingList} and HTTP response
      */
-    allocationwaitinglistCreateWithHttpInfo() {
-      let postBody = null;
+    allocationwaitinglistCreateWithHttpInfo(allocationWaitingListPost) {
+      let postBody = allocationWaitingListPost;
+
+      // verify the required parameter 'allocationWaitingListPost' is set
+      if (allocationWaitingListPost === undefined || allocationWaitingListPost === null) {
+        throw new Error("Missing the required parameter 'allocationWaitingListPost' when calling allocationwaitinglistCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class AllocationWaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/AllocationWaitingList} allocationWaitingListPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AllocationWaitingList}
      */
-    allocationwaitinglistCreate() {
-      return this.allocationwaitinglistCreateWithHttpInfo()
+    allocationwaitinglistCreate(allocationWaitingListPost) {
+      return this.allocationwaitinglistCreateWithHttpInfo(allocationWaitingListPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class AllocationWaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/AllocationWaitingList} allocationWaitingListPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AllocationWaitingList} and HTTP response
      */
-    allocationwaitinglistUpdateWithHttpInfo(id) {
-      let postBody = null;
+    allocationwaitinglistUpdateWithHttpInfo(id, allocationWaitingListPut) {
+      let postBody = allocationWaitingListPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling allocationwaitinglistUpdate");
+      }
+
+      // verify the required parameter 'allocationWaitingListPut' is set
+      if (allocationWaitingListPut === undefined || allocationWaitingListPut === null) {
+        throw new Error("Missing the required parameter 'allocationWaitingListPut' when calling allocationwaitinglistUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class AllocationWaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/AllocationWaitingList} allocationWaitingListPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AllocationWaitingList}
      */
-    allocationwaitinglistUpdate(id) {
-      return this.allocationwaitinglistUpdateWithHttpInfo(id)
+    allocationwaitinglistUpdate(id, allocationWaitingListPut) {
+      return this.allocationwaitinglistUpdateWithHttpInfo(id, allocationWaitingListPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

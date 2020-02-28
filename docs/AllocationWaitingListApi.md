@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="allocationwaitinglistCreate"></a>
 # **allocationwaitinglistCreate**
-> AllocationWaitingList allocationwaitinglistCreate()
+> AllocationWaitingList allocationwaitinglistCreate(allocationWaitingListPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.AllocationWaitingListApi();
-apiInstance.allocationwaitinglistCreate().then((data) => {
+
+const allocationWaitingListPost = new SeminarCatalogApi.AllocationWaitingList(); // AllocationWaitingList | 
+
+apiInstance.allocationwaitinglistCreate(allocationWaitingListPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.allocationwaitinglistCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **allocationWaitingListPost** | [**AllocationWaitingList**](AllocationWaitingList.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="allocationwaitinglistUpdate"></a>
 # **allocationwaitinglistUpdate**
-> AllocationWaitingList allocationwaitinglistUpdate(id)
+> AllocationWaitingList allocationwaitinglistUpdate(id, allocationWaitingListPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.AllocationWaitingListApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.allocationwaitinglistUpdate(id).then((data) => {
+const allocationWaitingListPut = new SeminarCatalogApi.AllocationWaitingList(); // AllocationWaitingList | 
+
+apiInstance.allocationwaitinglistUpdate(id, allocationWaitingListPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.allocationwaitinglistUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **allocationWaitingListPut** | [**AllocationWaitingList**](AllocationWaitingList.md)|  | 
 
 ### Return type
 

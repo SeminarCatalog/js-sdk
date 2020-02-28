@@ -40,10 +40,16 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/RoleDiscount} roleDiscountPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
-    rolediscountCreateWithHttpInfo() {
-      let postBody = null;
+    rolediscountCreateWithHttpInfo(roleDiscountPost) {
+      let postBody = roleDiscountPost;
+
+      // verify the required parameter 'roleDiscountPost' is set
+      if (roleDiscountPost === undefined || roleDiscountPost === null) {
+        throw new Error("Missing the required parameter 'roleDiscountPost' when calling rolediscountCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/RoleDiscount} roleDiscountPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
-    rolediscountCreate() {
-      return this.rolediscountCreateWithHttpInfo()
+    rolediscountCreate(roleDiscountPost) {
+      return this.rolediscountCreateWithHttpInfo(roleDiscountPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/RoleDiscount} roleDiscountPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
-    rolediscountUpdateWithHttpInfo(id) {
-      let postBody = null;
+    rolediscountUpdateWithHttpInfo(id, roleDiscountPut) {
+      let postBody = roleDiscountPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling rolediscountUpdate");
+      }
+
+      // verify the required parameter 'roleDiscountPut' is set
+      if (roleDiscountPut === undefined || roleDiscountPut === null) {
+        throw new Error("Missing the required parameter 'roleDiscountPut' when calling rolediscountUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class RoleDiscountInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/RoleDiscount} roleDiscountPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
-    rolediscountUpdate(id) {
-      return this.rolediscountUpdateWithHttpInfo(id)
+    rolediscountUpdate(id, roleDiscountPut) {
+      return this.rolediscountUpdateWithHttpInfo(id, roleDiscountPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="orderCreate"></a>
 # **orderCreate**
-> Order orderCreate()
+> Order orderCreate(orderPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.OrderApi();
-apiInstance.orderCreate().then((data) => {
+
+const orderPost = new SeminarCatalogApi.Order(); // Order | 
+
+apiInstance.orderCreate(orderPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.orderCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderPost** | [**Order**](Order.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="orderUpdate"></a>
 # **orderUpdate**
-> Order orderUpdate(id)
+> Order orderUpdate(id, orderPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.OrderApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.orderUpdate(id).then((data) => {
+const orderPut = new SeminarCatalogApi.Order(); // Order | 
+
+apiInstance.orderUpdate(id, orderPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.orderUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **orderPut** | [**Order**](Order.md)|  | 
 
 ### Return type
 

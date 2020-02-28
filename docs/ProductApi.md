@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="productCreate"></a>
 # **productCreate**
-> Product productCreate()
+> Product productCreate(productPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ProductApi();
-apiInstance.productCreate().then((data) => {
+
+const productPost = new SeminarCatalogApi.Product(); // Product | 
+
+apiInstance.productCreate(productPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.productCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productPost** | [**Product**](Product.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="productUpdate"></a>
 # **productUpdate**
-> Product productUpdate(id)
+> Product productUpdate(id, productPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ProductApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.productUpdate(id).then((data) => {
+const productPut = new SeminarCatalogApi.Product(); // Product | 
+
+apiInstance.productUpdate(id, productPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.productUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **productPut** | [**Product**](Product.md)|  | 
 
 ### Return type
 

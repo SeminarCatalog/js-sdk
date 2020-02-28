@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="countryCreate"></a>
 # **countryCreate**
-> Country countryCreate()
+> Country countryCreate(countryPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CountryApi();
-apiInstance.countryCreate().then((data) => {
+
+const countryPost = new SeminarCatalogApi.Country(); // Country | 
+
+apiInstance.countryCreate(countryPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.countryCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **countryPost** | [**Country**](Country.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="countryUpdate"></a>
 # **countryUpdate**
-> Country countryUpdate(id)
+> Country countryUpdate(id, countryPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.CountryApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.countryUpdate(id).then((data) => {
+const countryPut = new SeminarCatalogApi.Country(); // Country | 
+
+apiInstance.countryUpdate(id, countryPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.countryUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **countryPut** | [**Country**](Country.md)|  | 
 
 ### Return type
 

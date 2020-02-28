@@ -40,10 +40,16 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/WaitingList} waitingListPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WaitingList} and HTTP response
      */
-    waitinglistCreateWithHttpInfo() {
-      let postBody = null;
+    waitinglistCreateWithHttpInfo(waitingListPost) {
+      let postBody = waitingListPost;
+
+      // verify the required parameter 'waitingListPost' is set
+      if (waitingListPost === undefined || waitingListPost === null) {
+        throw new Error("Missing the required parameter 'waitingListPost' when calling waitinglistCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/WaitingList} waitingListPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WaitingList}
      */
-    waitinglistCreate() {
-      return this.waitinglistCreateWithHttpInfo()
+    waitinglistCreate(waitingListPost) {
+      return this.waitinglistCreateWithHttpInfo(waitingListPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/WaitingList} waitingListPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WaitingList} and HTTP response
      */
-    waitinglistUpdateWithHttpInfo(id) {
-      let postBody = null;
+    waitinglistUpdateWithHttpInfo(id, waitingListPut) {
+      let postBody = waitingListPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling waitinglistUpdate");
+      }
+
+      // verify the required parameter 'waitingListPut' is set
+      if (waitingListPut === undefined || waitingListPut === null) {
+        throw new Error("Missing the required parameter 'waitingListPut' when calling waitinglistUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class WaitingListInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/WaitingList} waitingListPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WaitingList}
      */
-    waitinglistUpdate(id) {
-      return this.waitinglistUpdateWithHttpInfo(id)
+    waitinglistUpdate(id, waitingListPut) {
+      return this.waitinglistUpdateWithHttpInfo(id, waitingListPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

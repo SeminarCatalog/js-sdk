@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="productvariantCreate"></a>
 # **productvariantCreate**
-> ProductVariant productvariantCreate()
+> ProductVariant productvariantCreate(productVariantPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ProductVariantApi();
-apiInstance.productvariantCreate().then((data) => {
+
+const productVariantPost = new SeminarCatalogApi.ProductVariant(); // ProductVariant | 
+
+apiInstance.productvariantCreate(productVariantPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.productvariantCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productVariantPost** | [**ProductVariant**](ProductVariant.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="productvariantUpdate"></a>
 # **productvariantUpdate**
-> ProductVariant productvariantUpdate(id)
+> ProductVariant productvariantUpdate(id, productVariantPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ProductVariantApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.productvariantUpdate(id).then((data) => {
+const productVariantPut = new SeminarCatalogApi.ProductVariant(); // ProductVariant | 
+
+apiInstance.productvariantUpdate(id, productVariantPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.productvariantUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **productVariantPut** | [**ProductVariant**](ProductVariant.md)|  | 
 
 ### Return type
 

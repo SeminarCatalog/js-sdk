@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="bookinginterestCreate"></a>
 # **bookinginterestCreate**
-> BookingInterest bookinginterestCreate()
+> BookingInterest bookinginterestCreate(bookingInterestPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.BookingInterestApi();
-apiInstance.bookinginterestCreate().then((data) => {
+
+const bookingInterestPost = new SeminarCatalogApi.BookingInterest(); // BookingInterest | 
+
+apiInstance.bookinginterestCreate(bookingInterestPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.bookinginterestCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bookingInterestPost** | [**BookingInterest**](BookingInterest.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="bookinginterestUpdate"></a>
 # **bookinginterestUpdate**
-> BookingInterest bookinginterestUpdate(id)
+> BookingInterest bookinginterestUpdate(id, bookingInterestPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.BookingInterestApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.bookinginterestUpdate(id).then((data) => {
+const bookingInterestPut = new SeminarCatalogApi.BookingInterest(); // BookingInterest | 
+
+apiInstance.bookinginterestUpdate(id, bookingInterestPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.bookinginterestUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **bookingInterestPut** | [**BookingInterest**](BookingInterest.md)|  | 
 
 ### Return type
 

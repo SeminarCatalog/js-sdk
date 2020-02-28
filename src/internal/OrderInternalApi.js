@@ -40,10 +40,16 @@ export class OrderInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Order} orderPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Order} and HTTP response
      */
-    orderCreateWithHttpInfo() {
-      let postBody = null;
+    orderCreateWithHttpInfo(orderPost) {
+      let postBody = orderPost;
+
+      // verify the required parameter 'orderPost' is set
+      if (orderPost === undefined || orderPost === null) {
+        throw new Error("Missing the required parameter 'orderPost' when calling orderCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class OrderInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Order} orderPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Order}
      */
-    orderCreate() {
-      return this.orderCreateWithHttpInfo()
+    orderCreate(orderPost) {
+      return this.orderCreateWithHttpInfo(orderPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class OrderInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Order} orderPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Order} and HTTP response
      */
-    orderUpdateWithHttpInfo(id) {
-      let postBody = null;
+    orderUpdateWithHttpInfo(id, orderPut) {
+      let postBody = orderPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling orderUpdate");
+      }
+
+      // verify the required parameter 'orderPut' is set
+      if (orderPut === undefined || orderPut === null) {
+        throw new Error("Missing the required parameter 'orderPut' when calling orderUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class OrderInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Order} orderPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Order}
      */
-    orderUpdate(id) {
-      return this.orderUpdateWithHttpInfo(id)
+    orderUpdate(id, orderPut) {
+      return this.orderUpdateWithHttpInfo(id, orderPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

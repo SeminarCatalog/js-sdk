@@ -40,10 +40,16 @@ export class TaskInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Task} taskPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Task} and HTTP response
      */
-    taskCreateWithHttpInfo() {
-      let postBody = null;
+    taskCreateWithHttpInfo(taskPost) {
+      let postBody = taskPost;
+
+      // verify the required parameter 'taskPost' is set
+      if (taskPost === undefined || taskPost === null) {
+        throw new Error("Missing the required parameter 'taskPost' when calling taskCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class TaskInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Task} taskPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Task}
      */
-    taskCreate() {
-      return this.taskCreateWithHttpInfo()
+    taskCreate(taskPost) {
+      return this.taskCreateWithHttpInfo(taskPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class TaskInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Task} taskPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Task} and HTTP response
      */
-    taskUpdateWithHttpInfo(id) {
-      let postBody = null;
+    taskUpdateWithHttpInfo(id, taskPut) {
+      let postBody = taskPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling taskUpdate");
+      }
+
+      // verify the required parameter 'taskPut' is set
+      if (taskPut === undefined || taskPut === null) {
+        throw new Error("Missing the required parameter 'taskPut' when calling taskUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class TaskInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Task} taskPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Task}
      */
-    taskUpdate(id) {
-      return this.taskUpdateWithHttpInfo(id)
+    taskUpdate(id, taskPut) {
+      return this.taskUpdateWithHttpInfo(id, taskPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

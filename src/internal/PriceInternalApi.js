@@ -40,10 +40,16 @@ export class PriceInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Price} pricePost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Price} and HTTP response
      */
-    priceCreateWithHttpInfo() {
-      let postBody = null;
+    priceCreateWithHttpInfo(pricePost) {
+      let postBody = pricePost;
+
+      // verify the required parameter 'pricePost' is set
+      if (pricePost === undefined || pricePost === null) {
+        throw new Error("Missing the required parameter 'pricePost' when calling priceCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class PriceInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Price} pricePost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Price}
      */
-    priceCreate() {
-      return this.priceCreateWithHttpInfo()
+    priceCreate(pricePost) {
+      return this.priceCreateWithHttpInfo(pricePost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class PriceInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Price} pricePut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Price} and HTTP response
      */
-    priceUpdateWithHttpInfo(id) {
-      let postBody = null;
+    priceUpdateWithHttpInfo(id, pricePut) {
+      let postBody = pricePut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling priceUpdate");
+      }
+
+      // verify the required parameter 'pricePut' is set
+      if (pricePut === undefined || pricePut === null) {
+        throw new Error("Missing the required parameter 'pricePut' when calling priceUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class PriceInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Price} pricePut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Price}
      */
-    priceUpdate(id) {
-      return this.priceUpdateWithHttpInfo(id)
+    priceUpdate(id, pricePut) {
+      return this.priceUpdateWithHttpInfo(id, pricePut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

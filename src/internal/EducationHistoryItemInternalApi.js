@@ -40,10 +40,16 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/EducationHistoryItem} educationHistoryItemPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
-    educationhistoryitemCreateWithHttpInfo() {
-      let postBody = null;
+    educationhistoryitemCreateWithHttpInfo(educationHistoryItemPost) {
+      let postBody = educationHistoryItemPost;
+
+      // verify the required parameter 'educationHistoryItemPost' is set
+      if (educationHistoryItemPost === undefined || educationHistoryItemPost === null) {
+        throw new Error("Missing the required parameter 'educationHistoryItemPost' when calling educationhistoryitemCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/EducationHistoryItem} educationHistoryItemPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
-    educationhistoryitemCreate() {
-      return this.educationhistoryitemCreateWithHttpInfo()
+    educationhistoryitemCreate(educationHistoryItemPost) {
+      return this.educationhistoryitemCreateWithHttpInfo(educationHistoryItemPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/EducationHistoryItem} educationHistoryItemPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
-    educationhistoryitemUpdateWithHttpInfo(id) {
-      let postBody = null;
+    educationhistoryitemUpdateWithHttpInfo(id, educationHistoryItemPut) {
+      let postBody = educationHistoryItemPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling educationhistoryitemUpdate");
+      }
+
+      // verify the required parameter 'educationHistoryItemPut' is set
+      if (educationHistoryItemPut === undefined || educationHistoryItemPut === null) {
+        throw new Error("Missing the required parameter 'educationHistoryItemPut' when calling educationhistoryitemUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class EducationHistoryItemInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/EducationHistoryItem} educationHistoryItemPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
-    educationhistoryitemUpdate(id) {
-      return this.educationhistoryitemUpdateWithHttpInfo(id)
+    educationhistoryitemUpdate(id, educationHistoryItemPut) {
+      return this.educationhistoryitemUpdateWithHttpInfo(id, educationHistoryItemPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

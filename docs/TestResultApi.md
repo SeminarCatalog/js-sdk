@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="testresultCreate"></a>
 # **testresultCreate**
-> TestResult testresultCreate()
+> TestResult testresultCreate(testResultPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.TestResultApi();
-apiInstance.testresultCreate().then((data) => {
+
+const testResultPost = new SeminarCatalogApi.TestResult(); // TestResult | 
+
+apiInstance.testresultCreate(testResultPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.testresultCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **testResultPost** | [**TestResult**](TestResult.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="testresultUpdate"></a>
 # **testresultUpdate**
-> TestResult testresultUpdate(id)
+> TestResult testresultUpdate(id, testResultPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.TestResultApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.testresultUpdate(id).then((data) => {
+const testResultPut = new SeminarCatalogApi.TestResult(); // TestResult | 
+
+apiInstance.testresultUpdate(id, testResultPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.testresultUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **testResultPut** | [**TestResult**](TestResult.md)|  | 
 
 ### Return type
 

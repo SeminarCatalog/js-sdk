@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="usergroupCreate"></a>
 # **usergroupCreate**
-> UserGroup usergroupCreate()
+> UserGroup usergroupCreate(userGroupPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.UserGroupApi();
-apiInstance.usergroupCreate().then((data) => {
+
+const userGroupPost = new SeminarCatalogApi.UserGroup(); // UserGroup | 
+
+apiInstance.usergroupCreate(userGroupPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.usergroupCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGroupPost** | [**UserGroup**](UserGroup.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="usergroupUpdate"></a>
 # **usergroupUpdate**
-> UserGroup usergroupUpdate(id)
+> UserGroup usergroupUpdate(id, userGroupPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.UserGroupApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.usergroupUpdate(id).then((data) => {
+const userGroupPut = new SeminarCatalogApi.UserGroup(); // UserGroup | 
+
+apiInstance.usergroupUpdate(id, userGroupPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.usergroupUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **userGroupPut** | [**UserGroup**](UserGroup.md)|  | 
 
 ### Return type
 

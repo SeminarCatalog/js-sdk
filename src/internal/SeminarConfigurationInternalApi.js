@@ -40,10 +40,16 @@ export class SeminarConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/SeminarConfiguration} seminarConfigurationPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SeminarConfiguration} and HTTP response
      */
-    seminarconfigurationCreateWithHttpInfo() {
-      let postBody = null;
+    seminarconfigurationCreateWithHttpInfo(seminarConfigurationPost) {
+      let postBody = seminarConfigurationPost;
+
+      // verify the required parameter 'seminarConfigurationPost' is set
+      if (seminarConfigurationPost === undefined || seminarConfigurationPost === null) {
+        throw new Error("Missing the required parameter 'seminarConfigurationPost' when calling seminarconfigurationCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class SeminarConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/SeminarConfiguration} seminarConfigurationPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SeminarConfiguration}
      */
-    seminarconfigurationCreate() {
-      return this.seminarconfigurationCreateWithHttpInfo()
+    seminarconfigurationCreate(seminarConfigurationPost) {
+      return this.seminarconfigurationCreateWithHttpInfo(seminarConfigurationPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class SeminarConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/SeminarConfiguration} seminarConfigurationPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SeminarConfiguration} and HTTP response
      */
-    seminarconfigurationUpdateWithHttpInfo(id) {
-      let postBody = null;
+    seminarconfigurationUpdateWithHttpInfo(id, seminarConfigurationPut) {
+      let postBody = seminarConfigurationPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling seminarconfigurationUpdate");
+      }
+
+      // verify the required parameter 'seminarConfigurationPut' is set
+      if (seminarConfigurationPut === undefined || seminarConfigurationPut === null) {
+        throw new Error("Missing the required parameter 'seminarConfigurationPut' when calling seminarconfigurationUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class SeminarConfigurationInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/SeminarConfiguration} seminarConfigurationPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SeminarConfiguration}
      */
-    seminarconfigurationUpdate(id) {
-      return this.seminarconfigurationUpdateWithHttpInfo(id)
+    seminarconfigurationUpdate(id, seminarConfigurationPut) {
+      return this.seminarconfigurationUpdateWithHttpInfo(id, seminarConfigurationPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

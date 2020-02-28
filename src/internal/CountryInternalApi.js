@@ -40,10 +40,16 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Country} countryPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Country} and HTTP response
      */
-    countryCreateWithHttpInfo() {
-      let postBody = null;
+    countryCreateWithHttpInfo(countryPost) {
+      let postBody = countryPost;
+
+      // verify the required parameter 'countryPost' is set
+      if (countryPost === undefined || countryPost === null) {
+        throw new Error("Missing the required parameter 'countryPost' when calling countryCreate");
+      }
 
 
       let pathParams = {
@@ -69,10 +75,11 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
+     * @param {module:model/Country} countryPost 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Country}
      */
-    countryCreate() {
-      return this.countryCreateWithHttpInfo()
+    countryCreate(countryPost) {
+      return this.countryCreateWithHttpInfo(countryPost)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -220,15 +227,21 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Country} countryPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Country} and HTTP response
      */
-    countryUpdateWithHttpInfo(id) {
-      let postBody = null;
+    countryUpdateWithHttpInfo(id, countryPut) {
+      let postBody = countryPut;
 
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling countryUpdate");
+      }
+
+      // verify the required parameter 'countryPut' is set
+      if (countryPut === undefined || countryPut === null) {
+        throw new Error("Missing the required parameter 'countryPut' when calling countryUpdate");
       }
 
 
@@ -256,11 +269,12 @@ export class CountryInternalApi {
 
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
-     * @param {Number} id Numeric identifier for this resource
+     * @param {Number} id The resource identifier
+     * @param {module:model/Country} countryPut 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Country}
      */
-    countryUpdate(id) {
-      return this.countryUpdateWithHttpInfo(id)
+    countryUpdate(id, countryPut) {
+      return this.countryUpdateWithHttpInfo(id, countryPut)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

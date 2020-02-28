@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="organizerCreate"></a>
 # **organizerCreate**
-> Organizer organizerCreate()
+> Organizer organizerCreate(organizerPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.OrganizerApi();
-apiInstance.organizerCreate().then((data) => {
+
+const organizerPost = new SeminarCatalogApi.Organizer(); // Organizer | 
+
+apiInstance.organizerCreate(organizerPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.organizerCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizerPost** | [**Organizer**](Organizer.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="organizerUpdate"></a>
 # **organizerUpdate**
-> Organizer organizerUpdate(id)
+> Organizer organizerUpdate(id, organizerPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.OrganizerApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.organizerUpdate(id).then((data) => {
+const organizerPut = new SeminarCatalogApi.Organizer(); // Organizer | 
+
+apiInstance.organizerUpdate(id, organizerPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.organizerUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **organizerPut** | [**Organizer**](Organizer.md)|  | 
 
 ### Return type
 

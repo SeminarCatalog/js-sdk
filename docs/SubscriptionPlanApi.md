@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="subscriptionplanCreate"></a>
 # **subscriptionplanCreate**
-> SubscriptionPlan subscriptionplanCreate()
+> SubscriptionPlan subscriptionplanCreate(subscriptionPlanPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SubscriptionPlanApi();
-apiInstance.subscriptionplanCreate().then((data) => {
+
+const subscriptionPlanPost = new SeminarCatalogApi.SubscriptionPlan(); // SubscriptionPlan | 
+
+apiInstance.subscriptionplanCreate(subscriptionPlanPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.subscriptionplanCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscriptionPlanPost** | [**SubscriptionPlan**](SubscriptionPlan.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="subscriptionplanUpdate"></a>
 # **subscriptionplanUpdate**
-> SubscriptionPlan subscriptionplanUpdate(id)
+> SubscriptionPlan subscriptionplanUpdate(id, subscriptionPlanPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.SubscriptionPlanApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.subscriptionplanUpdate(id).then((data) => {
+const subscriptionPlanPut = new SeminarCatalogApi.SubscriptionPlan(); // SubscriptionPlan | 
+
+apiInstance.subscriptionplanUpdate(id, subscriptionPlanPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.subscriptionplanUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **subscriptionPlanPut** | [**SubscriptionPlan**](SubscriptionPlan.md)|  | 
 
 ### Return type
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="participationCreate"></a>
 # **participationCreate**
-> Participation participationCreate()
+> Participation participationCreate(participationPost)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 
@@ -22,7 +22,10 @@ SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
 import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ParticipationApi();
-apiInstance.participationCreate().then((data) => {
+
+const participationPost = new SeminarCatalogApi.Participation(); // Participation | 
+
+apiInstance.participationCreate(participationPost).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -31,7 +34,10 @@ apiInstance.participationCreate().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **participationPost** | [**Participation**](Participation.md)|  | 
 
 ### Return type
 
@@ -165,7 +171,7 @@ No authorization required
 
 <a name="participationUpdate"></a>
 # **participationUpdate**
-> Participation participationUpdate(id)
+> Participation participationUpdate(id, participationPut)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -175,9 +181,11 @@ import {SeminarCatalogApi} from 'seminar_catalog_api';
 
 const apiInstance = new SeminarCatalogApi.ParticipationApi();
 
-const id = 56; // Number | Numeric identifier for this resource
+const id = 56; // Number | The resource identifier
 
-apiInstance.participationUpdate(id).then((data) => {
+const participationPut = new SeminarCatalogApi.Participation(); // Participation | 
+
+apiInstance.participationUpdate(id, participationPut).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -189,7 +197,8 @@ apiInstance.participationUpdate(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| Numeric identifier for this resource | 
+ **id** | **Number**| The resource identifier | 
+ **participationPut** | [**Participation**](Participation.md)|  | 
 
 ### Return type
 
