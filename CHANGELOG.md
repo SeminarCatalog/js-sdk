@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+### Bugfixes
+
+* Fix put and post operations body params 
+
 ## 1.2.0
 
 ### Features

@@ -1,6 +1,6 @@
 {
   "name": "@seminarcatalog/sdk",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "This project is the official Javascript API client implementation for the SeminarCatalog developed by the Databay AG.",
   "keywords": ["SeminarCatalog","SDK","Javascript","SeminarManager","Courses","E-Learning","ILIAS"],
   "license": "MIT",
@@ -29,7 +29,8 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "test": "mocha --compilers js:babel-core/register --recursive"
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "prepare": "npm run build"
   },
   "browser": {
     "fs": false
