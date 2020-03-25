@@ -89,9 +89,10 @@ export class OrderInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Order} and HTTP response
      */
-    orderDeleteWithHttpInfo(id) {
+    orderDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class OrderInternalApi {
         throw new Error("Missing the required parameter 'id' when calling orderDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling orderDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class OrderInternalApi {
       let returnType = Order;
 
       return this.apiClient.callApi(
-        '/api/order/{id}', 'DELETE',
+        '/api/order/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class OrderInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Order}
      */
-    orderDelete(id) {
-      return this.orderDeleteWithHttpInfo(id)
+    orderDelete(id, lng) {
+      return this.orderDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class OrderInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Order} and HTTP response
      */
-    orderGetWithHttpInfo(id) {
+    orderGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class OrderInternalApi {
         throw new Error("Missing the required parameter 'id' when calling orderGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling orderGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class OrderInternalApi {
       let returnType = Order;
 
       return this.apiClient.callApi(
-        '/api/order/{id}', 'GET',
+        '/api/order/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class OrderInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Order}
      */
-    orderGet(id) {
-      return this.orderGetWithHttpInfo(id)
+    orderGet(id, lng) {
+      return this.orderGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

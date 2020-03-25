@@ -89,9 +89,10 @@ export class SeminarConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SeminarConfiguration} and HTTP response
      */
-    seminarconfigurationDeleteWithHttpInfo(id) {
+    seminarconfigurationDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class SeminarConfigurationInternalApi {
         throw new Error("Missing the required parameter 'id' when calling seminarconfigurationDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling seminarconfigurationDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class SeminarConfigurationInternalApi {
       let returnType = SeminarConfiguration;
 
       return this.apiClient.callApi(
-        '/api/seminarconfiguration/{id}', 'DELETE',
+        '/api/seminarconfiguration/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class SeminarConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SeminarConfiguration}
      */
-    seminarconfigurationDelete(id) {
-      return this.seminarconfigurationDeleteWithHttpInfo(id)
+    seminarconfigurationDelete(id, lng) {
+      return this.seminarconfigurationDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class SeminarConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SeminarConfiguration} and HTTP response
      */
-    seminarconfigurationGetWithHttpInfo(id) {
+    seminarconfigurationGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class SeminarConfigurationInternalApi {
         throw new Error("Missing the required parameter 'id' when calling seminarconfigurationGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling seminarconfigurationGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class SeminarConfigurationInternalApi {
       let returnType = SeminarConfiguration;
 
       return this.apiClient.callApi(
-        '/api/seminarconfiguration/{id}', 'GET',
+        '/api/seminarconfiguration/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class SeminarConfigurationInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SeminarConfiguration}
      */
-    seminarconfigurationGet(id) {
-      return this.seminarconfigurationGetWithHttpInfo(id)
+    seminarconfigurationGet(id, lng) {
+      return this.seminarconfigurationGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

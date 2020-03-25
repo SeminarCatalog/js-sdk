@@ -89,9 +89,10 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
-    certificateDeleteWithHttpInfo(id) {
+    certificateDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class CertificateInternalApi {
         throw new Error("Missing the required parameter 'id' when calling certificateDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling certificateDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class CertificateInternalApi {
       let returnType = Certificate;
 
       return this.apiClient.callApi(
-        '/api/certificate/{id}', 'DELETE',
+        '/api/certificate/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
-    certificateDelete(id) {
-      return this.certificateDeleteWithHttpInfo(id)
+    certificateDelete(id, lng) {
+      return this.certificateDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Certificate} and HTTP response
      */
-    certificateGetWithHttpInfo(id) {
+    certificateGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class CertificateInternalApi {
         throw new Error("Missing the required parameter 'id' when calling certificateGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling certificateGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class CertificateInternalApi {
       let returnType = Certificate;
 
       return this.apiClient.callApi(
-        '/api/certificate/{id}', 'GET',
+        '/api/certificate/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class CertificateInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Certificate}
      */
-    certificateGet(id) {
-      return this.certificateGetWithHttpInfo(id)
+    certificateGet(id, lng) {
+      return this.certificateGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

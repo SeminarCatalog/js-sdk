@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**trainerCreate**](TrainerApi.md#trainerCreate) | **POST** /api/trainer | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**trainerDelete**](TrainerApi.md#trainerDelete) | **DELETE** /api/trainer/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**trainerGet**](TrainerApi.md#trainerGet) | **GET** /api/trainer/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**trainerDelete**](TrainerApi.md#trainerDelete) | **DELETE** /api/trainer/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**trainerGet**](TrainerApi.md#trainerGet) | **GET** /api/trainer/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**trainerList**](TrainerApi.md#trainerList) | **GET** /api/trainer | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**trainerUpdate**](TrainerApi.md#trainerUpdate) | **PUT** /api/trainer/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="trainerDelete"></a>
 # **trainerDelete**
-> Trainer trainerDelete(id)
+> Trainer trainerDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.TrainerApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.trainerDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.trainerDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.trainerDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="trainerGet"></a>
 # **trainerGet**
-> Trainer trainerGet(id)
+> Trainer trainerGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.TrainerApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.trainerGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.trainerGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.trainerGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

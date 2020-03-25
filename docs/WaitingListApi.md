@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**waitinglistCreate**](WaitingListApi.md#waitinglistCreate) | **POST** /api/waitinglist | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**waitinglistDelete**](WaitingListApi.md#waitinglistDelete) | **DELETE** /api/waitinglist/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**waitinglistGet**](WaitingListApi.md#waitinglistGet) | **GET** /api/waitinglist/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**waitinglistDelete**](WaitingListApi.md#waitinglistDelete) | **DELETE** /api/waitinglist/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**waitinglistGet**](WaitingListApi.md#waitinglistGet) | **GET** /api/waitinglist/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**waitinglistList**](WaitingListApi.md#waitinglistList) | **GET** /api/waitinglist | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**waitinglistUpdate**](WaitingListApi.md#waitinglistUpdate) | **PUT** /api/waitinglist/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="waitinglistDelete"></a>
 # **waitinglistDelete**
-> WaitingList waitinglistDelete(id)
+> WaitingList waitinglistDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.WaitingListApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.waitinglistDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.waitinglistDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.waitinglistDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="waitinglistGet"></a>
 # **waitinglistGet**
-> WaitingList waitinglistGet(id)
+> WaitingList waitinglistGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.WaitingListApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.waitinglistGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.waitinglistGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.waitinglistGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

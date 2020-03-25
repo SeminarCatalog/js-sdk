@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**bookinginterestCreate**](BookingInterestApi.md#bookinginterestCreate) | **POST** /api/bookinginterest | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**bookinginterestDelete**](BookingInterestApi.md#bookinginterestDelete) | **DELETE** /api/bookinginterest/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**bookinginterestGet**](BookingInterestApi.md#bookinginterestGet) | **GET** /api/bookinginterest/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**bookinginterestDelete**](BookingInterestApi.md#bookinginterestDelete) | **DELETE** /api/bookinginterest/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**bookinginterestGet**](BookingInterestApi.md#bookinginterestGet) | **GET** /api/bookinginterest/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**bookinginterestList**](BookingInterestApi.md#bookinginterestList) | **GET** /api/bookinginterest | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**bookinginterestUpdate**](BookingInterestApi.md#bookinginterestUpdate) | **PUT** /api/bookinginterest/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="bookinginterestDelete"></a>
 # **bookinginterestDelete**
-> BookingInterest bookinginterestDelete(id)
+> BookingInterest bookinginterestDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.BookingInterestApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.bookinginterestDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.bookinginterestDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.bookinginterestDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="bookinginterestGet"></a>
 # **bookinginterestGet**
-> BookingInterest bookinginterestGet(id)
+> BookingInterest bookinginterestGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.BookingInterestApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.bookinginterestGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.bookinginterestGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.bookinginterestGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

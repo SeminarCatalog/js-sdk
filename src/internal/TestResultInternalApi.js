@@ -89,9 +89,10 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
-    testresultDeleteWithHttpInfo(id) {
+    testresultDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class TestResultInternalApi {
         throw new Error("Missing the required parameter 'id' when calling testresultDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling testresultDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class TestResultInternalApi {
       let returnType = TestResult;
 
       return this.apiClient.callApi(
-        '/api/testresult/{id}', 'DELETE',
+        '/api/testresult/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
-    testresultDelete(id) {
-      return this.testresultDeleteWithHttpInfo(id)
+    testresultDelete(id, lng) {
+      return this.testresultDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResult} and HTTP response
      */
-    testresultGetWithHttpInfo(id) {
+    testresultGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class TestResultInternalApi {
         throw new Error("Missing the required parameter 'id' when calling testresultGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling testresultGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class TestResultInternalApi {
       let returnType = TestResult;
 
       return this.apiClient.callApi(
-        '/api/testresult/{id}', 'GET',
+        '/api/testresult/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class TestResultInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResult}
      */
-    testresultGet(id) {
-      return this.testresultGetWithHttpInfo(id)
+    testresultGet(id, lng) {
+      return this.testresultGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

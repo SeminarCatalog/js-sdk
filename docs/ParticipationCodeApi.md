@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**participationcodeCreate**](ParticipationCodeApi.md#participationcodeCreate) | **POST** /api/participationcode | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**participationcodeDelete**](ParticipationCodeApi.md#participationcodeDelete) | **DELETE** /api/participationcode/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**participationcodeGet**](ParticipationCodeApi.md#participationcodeGet) | **GET** /api/participationcode/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**participationcodeDelete**](ParticipationCodeApi.md#participationcodeDelete) | **DELETE** /api/participationcode/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**participationcodeGet**](ParticipationCodeApi.md#participationcodeGet) | **GET** /api/participationcode/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**participationcodeList**](ParticipationCodeApi.md#participationcodeList) | **GET** /api/participationcode | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**participationcodeUpdate**](ParticipationCodeApi.md#participationcodeUpdate) | **PUT** /api/participationcode/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="participationcodeDelete"></a>
 # **participationcodeDelete**
-> ParticipationCode participationcodeDelete(id)
+> ParticipationCode participationcodeDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.ParticipationCodeApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.participationcodeDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.participationcodeDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.participationcodeDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="participationcodeGet"></a>
 # **participationcodeGet**
-> ParticipationCode participationcodeGet(id)
+> ParticipationCode participationcodeGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.ParticipationCodeApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.participationcodeGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.participationcodeGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.participationcodeGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

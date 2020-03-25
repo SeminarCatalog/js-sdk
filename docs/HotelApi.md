@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**hotelCreate**](HotelApi.md#hotelCreate) | **POST** /api/hotel | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**hotelDelete**](HotelApi.md#hotelDelete) | **DELETE** /api/hotel/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**hotelGet**](HotelApi.md#hotelGet) | **GET** /api/hotel/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**hotelDelete**](HotelApi.md#hotelDelete) | **DELETE** /api/hotel/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**hotelGet**](HotelApi.md#hotelGet) | **GET** /api/hotel/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**hotelList**](HotelApi.md#hotelList) | **GET** /api/hotel | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**hotelUpdate**](HotelApi.md#hotelUpdate) | **PUT** /api/hotel/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="hotelDelete"></a>
 # **hotelDelete**
-> Hotel hotelDelete(id)
+> Hotel hotelDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.HotelApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.hotelDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.hotelDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.hotelDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="hotelGet"></a>
 # **hotelGet**
-> Hotel hotelGet(id)
+> Hotel hotelGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.HotelApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.hotelGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.hotelGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.hotelGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

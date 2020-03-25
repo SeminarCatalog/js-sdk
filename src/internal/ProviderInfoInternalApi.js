@@ -89,9 +89,10 @@ export class ProviderInfoInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProviderInfo} and HTTP response
      */
-    providerinfoDeleteWithHttpInfo(id) {
+    providerinfoDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class ProviderInfoInternalApi {
         throw new Error("Missing the required parameter 'id' when calling providerinfoDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling providerinfoDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class ProviderInfoInternalApi {
       let returnType = ProviderInfo;
 
       return this.apiClient.callApi(
-        '/api/providerinfo/{id}', 'DELETE',
+        '/api/providerinfo/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class ProviderInfoInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProviderInfo}
      */
-    providerinfoDelete(id) {
-      return this.providerinfoDeleteWithHttpInfo(id)
+    providerinfoDelete(id, lng) {
+      return this.providerinfoDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class ProviderInfoInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProviderInfo} and HTTP response
      */
-    providerinfoGetWithHttpInfo(id) {
+    providerinfoGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class ProviderInfoInternalApi {
         throw new Error("Missing the required parameter 'id' when calling providerinfoGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling providerinfoGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class ProviderInfoInternalApi {
       let returnType = ProviderInfo;
 
       return this.apiClient.callApi(
-        '/api/providerinfo/{id}', 'GET',
+        '/api/providerinfo/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class ProviderInfoInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProviderInfo}
      */
-    providerinfoGet(id) {
-      return this.providerinfoGetWithHttpInfo(id)
+    providerinfoGet(id, lng) {
+      return this.providerinfoGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

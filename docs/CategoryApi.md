@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**categoryCreate**](CategoryApi.md#categoryCreate) | **POST** /api/category | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**categoryDelete**](CategoryApi.md#categoryDelete) | **DELETE** /api/category/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**categoryGet**](CategoryApi.md#categoryGet) | **GET** /api/category/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**categoryDelete**](CategoryApi.md#categoryDelete) | **DELETE** /api/category/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**categoryGet**](CategoryApi.md#categoryGet) | **GET** /api/category/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**categoryList**](CategoryApi.md#categoryList) | **GET** /api/category | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**categoryUpdate**](CategoryApi.md#categoryUpdate) | **PUT** /api/category/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="categoryDelete"></a>
 # **categoryDelete**
-> Category categoryDelete(id)
+> Category categoryDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.CategoryApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.categoryDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.categoryDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.categoryDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="categoryGet"></a>
 # **categoryGet**
-> Category categoryGet(id)
+> Category categoryGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.CategoryApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.categoryGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.categoryGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.categoryGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

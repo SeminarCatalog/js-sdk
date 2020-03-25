@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**restaurantCreate**](RestaurantApi.md#restaurantCreate) | **POST** /api/restaurant | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**restaurantDelete**](RestaurantApi.md#restaurantDelete) | **DELETE** /api/restaurant/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**restaurantGet**](RestaurantApi.md#restaurantGet) | **GET** /api/restaurant/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**restaurantDelete**](RestaurantApi.md#restaurantDelete) | **DELETE** /api/restaurant/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**restaurantGet**](RestaurantApi.md#restaurantGet) | **GET** /api/restaurant/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**restaurantList**](RestaurantApi.md#restaurantList) | **GET** /api/restaurant | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**restaurantUpdate**](RestaurantApi.md#restaurantUpdate) | **PUT** /api/restaurant/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="restaurantDelete"></a>
 # **restaurantDelete**
-> Restaurant restaurantDelete(id)
+> Restaurant restaurantDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.RestaurantApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.restaurantDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.restaurantDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.restaurantDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="restaurantGet"></a>
 # **restaurantGet**
-> Restaurant restaurantGet(id)
+> Restaurant restaurantGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.RestaurantApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.restaurantGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.restaurantGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.restaurantGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

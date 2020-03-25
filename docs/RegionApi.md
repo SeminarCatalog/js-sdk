@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**regionCreate**](RegionApi.md#regionCreate) | **POST** /api/region | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**regionDelete**](RegionApi.md#regionDelete) | **DELETE** /api/region/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**regionGet**](RegionApi.md#regionGet) | **GET** /api/region/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**regionDelete**](RegionApi.md#regionDelete) | **DELETE** /api/region/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**regionGet**](RegionApi.md#regionGet) | **GET** /api/region/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**regionList**](RegionApi.md#regionList) | **GET** /api/region | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**regionUpdate**](RegionApi.md#regionUpdate) | **PUT** /api/region/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="regionDelete"></a>
 # **regionDelete**
-> Region regionDelete(id)
+> Region regionDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.RegionApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.regionDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.regionDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.regionDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="regionGet"></a>
 # **regionGet**
-> Region regionGet(id)
+> Region regionGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.RegionApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.regionGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.regionGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.regionGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

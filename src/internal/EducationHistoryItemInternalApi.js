@@ -89,9 +89,10 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
-    educationhistoryitemDeleteWithHttpInfo(id) {
+    educationhistoryitemDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class EducationHistoryItemInternalApi {
         throw new Error("Missing the required parameter 'id' when calling educationhistoryitemDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling educationhistoryitemDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class EducationHistoryItemInternalApi {
       let returnType = EducationHistoryItem;
 
       return this.apiClient.callApi(
-        '/api/educationhistoryitem/{id}', 'DELETE',
+        '/api/educationhistoryitem/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
-    educationhistoryitemDelete(id) {
-      return this.educationhistoryitemDeleteWithHttpInfo(id)
+    educationhistoryitemDelete(id, lng) {
+      return this.educationhistoryitemDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EducationHistoryItem} and HTTP response
      */
-    educationhistoryitemGetWithHttpInfo(id) {
+    educationhistoryitemGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class EducationHistoryItemInternalApi {
         throw new Error("Missing the required parameter 'id' when calling educationhistoryitemGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling educationhistoryitemGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class EducationHistoryItemInternalApi {
       let returnType = EducationHistoryItem;
 
       return this.apiClient.callApi(
-        '/api/educationhistoryitem/{id}', 'GET',
+        '/api/educationhistoryitem/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class EducationHistoryItemInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EducationHistoryItem}
      */
-    educationhistoryitemGet(id) {
-      return this.educationhistoryitemGetWithHttpInfo(id)
+    educationhistoryitemGet(id, lng) {
+      return this.educationhistoryitemGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**subscriptionconfigurationCreate**](SubscriptionConfigurationApi.md#subscriptionconfigurationCreate) | **POST** /api/subscriptionconfiguration | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**subscriptionconfigurationDelete**](SubscriptionConfigurationApi.md#subscriptionconfigurationDelete) | **DELETE** /api/subscriptionconfiguration/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**subscriptionconfigurationGet**](SubscriptionConfigurationApi.md#subscriptionconfigurationGet) | **GET** /api/subscriptionconfiguration/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**subscriptionconfigurationDelete**](SubscriptionConfigurationApi.md#subscriptionconfigurationDelete) | **DELETE** /api/subscriptionconfiguration/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**subscriptionconfigurationGet**](SubscriptionConfigurationApi.md#subscriptionconfigurationGet) | **GET** /api/subscriptionconfiguration/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**subscriptionconfigurationList**](SubscriptionConfigurationApi.md#subscriptionconfigurationList) | **GET** /api/subscriptionconfiguration | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**subscriptionconfigurationUpdate**](SubscriptionConfigurationApi.md#subscriptionconfigurationUpdate) | **PUT** /api/subscriptionconfiguration/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="subscriptionconfigurationDelete"></a>
 # **subscriptionconfigurationDelete**
-> SubscriptionConfiguration subscriptionconfigurationDelete(id)
+> SubscriptionConfiguration subscriptionconfigurationDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.SubscriptionConfigurationApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.subscriptionconfigurationDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.subscriptionconfigurationDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.subscriptionconfigurationDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="subscriptionconfigurationGet"></a>
 # **subscriptionconfigurationGet**
-> SubscriptionConfiguration subscriptionconfigurationGet(id)
+> SubscriptionConfiguration subscriptionconfigurationGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.SubscriptionConfigurationApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.subscriptionconfigurationGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.subscriptionconfigurationGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.subscriptionconfigurationGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

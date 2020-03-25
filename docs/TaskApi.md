@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**taskCreate**](TaskApi.md#taskCreate) | **POST** /api/task | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**taskDelete**](TaskApi.md#taskDelete) | **DELETE** /api/task/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**taskGet**](TaskApi.md#taskGet) | **GET** /api/task/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**taskDelete**](TaskApi.md#taskDelete) | **DELETE** /api/task/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**taskGet**](TaskApi.md#taskGet) | **GET** /api/task/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**taskList**](TaskApi.md#taskList) | **GET** /api/task | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**taskUpdate**](TaskApi.md#taskUpdate) | **PUT** /api/task/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="taskDelete"></a>
 # **taskDelete**
-> Task taskDelete(id)
+> Task taskDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.TaskApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.taskDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.taskDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.taskDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="taskGet"></a>
 # **taskGet**
-> Task taskGet(id)
+> Task taskGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.TaskApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.taskGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.taskGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.taskGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

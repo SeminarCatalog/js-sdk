@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**couponcodeCreate**](CouponCodeApi.md#couponcodeCreate) | **POST** /api/couponcode | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**couponcodeDelete**](CouponCodeApi.md#couponcodeDelete) | **DELETE** /api/couponcode/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**couponcodeGet**](CouponCodeApi.md#couponcodeGet) | **GET** /api/couponcode/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**couponcodeDelete**](CouponCodeApi.md#couponcodeDelete) | **DELETE** /api/couponcode/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**couponcodeGet**](CouponCodeApi.md#couponcodeGet) | **GET** /api/couponcode/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**couponcodeList**](CouponCodeApi.md#couponcodeList) | **GET** /api/couponcode | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**couponcodeUpdate**](CouponCodeApi.md#couponcodeUpdate) | **PUT** /api/couponcode/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="couponcodeDelete"></a>
 # **couponcodeDelete**
-> CouponCode couponcodeDelete(id)
+> CouponCode couponcodeDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.CouponCodeApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.couponcodeDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.couponcodeDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.couponcodeDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="couponcodeGet"></a>
 # **couponcodeGet**
-> CouponCode couponcodeGet(id)
+> CouponCode couponcodeGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.CouponCodeApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.couponcodeGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.couponcodeGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.couponcodeGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

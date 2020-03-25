@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**eventCreate**](EventApi.md#eventCreate) | **POST** /api/event | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**eventDelete**](EventApi.md#eventDelete) | **DELETE** /api/event/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**eventGet**](EventApi.md#eventGet) | **GET** /api/event/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**eventDelete**](EventApi.md#eventDelete) | **DELETE** /api/event/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**eventGet**](EventApi.md#eventGet) | **GET** /api/event/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**eventList**](EventApi.md#eventList) | **GET** /api/event | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**eventUpdate**](EventApi.md#eventUpdate) | **PUT** /api/event/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="eventDelete"></a>
 # **eventDelete**
-> Event eventDelete(id)
+> Event eventDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.EventApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.eventDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.eventDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.eventDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="eventGet"></a>
 # **eventGet**
-> Event eventGet(id)
+> Event eventGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.EventApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.eventGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.eventGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.eventGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

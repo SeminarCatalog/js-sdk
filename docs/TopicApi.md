@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**topicCreate**](TopicApi.md#topicCreate) | **POST** /api/topic | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**topicDelete**](TopicApi.md#topicDelete) | **DELETE** /api/topic/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**topicGet**](TopicApi.md#topicGet) | **GET** /api/topic/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**topicDelete**](TopicApi.md#topicDelete) | **DELETE** /api/topic/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**topicGet**](TopicApi.md#topicGet) | **GET** /api/topic/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**topicList**](TopicApi.md#topicList) | **GET** /api/topic | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**topicUpdate**](TopicApi.md#topicUpdate) | **PUT** /api/topic/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="topicDelete"></a>
 # **topicDelete**
-> Topic topicDelete(id)
+> Topic topicDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.TopicApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.topicDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.topicDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.topicDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="topicGet"></a>
 # **topicGet**
-> Topic topicGet(id)
+> Topic topicGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.TopicApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.topicGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.topicGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.topicGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

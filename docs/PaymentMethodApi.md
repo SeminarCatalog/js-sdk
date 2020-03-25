@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**paymentmethodCreate**](PaymentMethodApi.md#paymentmethodCreate) | **POST** /api/paymentmethod | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**paymentmethodDelete**](PaymentMethodApi.md#paymentmethodDelete) | **DELETE** /api/paymentmethod/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**paymentmethodGet**](PaymentMethodApi.md#paymentmethodGet) | **GET** /api/paymentmethod/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**paymentmethodDelete**](PaymentMethodApi.md#paymentmethodDelete) | **DELETE** /api/paymentmethod/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**paymentmethodGet**](PaymentMethodApi.md#paymentmethodGet) | **GET** /api/paymentmethod/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**paymentmethodList**](PaymentMethodApi.md#paymentmethodList) | **GET** /api/paymentmethod | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**paymentmethodUpdate**](PaymentMethodApi.md#paymentmethodUpdate) | **PUT** /api/paymentmethod/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="paymentmethodDelete"></a>
 # **paymentmethodDelete**
-> PaymentMethod paymentmethodDelete(id)
+> PaymentMethod paymentmethodDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.PaymentMethodApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.paymentmethodDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.paymentmethodDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.paymentmethodDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="paymentmethodGet"></a>
 # **paymentmethodGet**
-> PaymentMethod paymentmethodGet(id)
+> PaymentMethod paymentmethodGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.PaymentMethodApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.paymentmethodGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.paymentmethodGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.paymentmethodGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

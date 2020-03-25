@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**contactpersonCreate**](ContactPersonApi.md#contactpersonCreate) | **POST** /api/contactperson | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**contactpersonDelete**](ContactPersonApi.md#contactpersonDelete) | **DELETE** /api/contactperson/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**contactpersonGet**](ContactPersonApi.md#contactpersonGet) | **GET** /api/contactperson/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**contactpersonDelete**](ContactPersonApi.md#contactpersonDelete) | **DELETE** /api/contactperson/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**contactpersonGet**](ContactPersonApi.md#contactpersonGet) | **GET** /api/contactperson/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**contactpersonList**](ContactPersonApi.md#contactpersonList) | **GET** /api/contactperson | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**contactpersonUpdate**](ContactPersonApi.md#contactpersonUpdate) | **PUT** /api/contactperson/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="contactpersonDelete"></a>
 # **contactpersonDelete**
-> ContactPerson contactpersonDelete(id)
+> ContactPerson contactpersonDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.ContactPersonApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.contactpersonDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.contactpersonDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.contactpersonDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="contactpersonGet"></a>
 # **contactpersonGet**
-> ContactPerson contactpersonGet(id)
+> ContactPerson contactpersonGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.ContactPersonApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.contactpersonGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.contactpersonGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.contactpersonGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

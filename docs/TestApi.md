@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**testCreate**](TestApi.md#testCreate) | **POST** /api/test | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**testDelete**](TestApi.md#testDelete) | **DELETE** /api/test/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**testGet**](TestApi.md#testGet) | **GET** /api/test/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**testDelete**](TestApi.md#testDelete) | **DELETE** /api/test/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**testGet**](TestApi.md#testGet) | **GET** /api/test/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**testList**](TestApi.md#testList) | **GET** /api/test | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**testUpdate**](TestApi.md#testUpdate) | **PUT** /api/test/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="testDelete"></a>
 # **testDelete**
-> Test testDelete(id)
+> Test testDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.TestApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.testDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.testDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.testDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="testGet"></a>
 # **testGet**
-> Test testGet(id)
+> Test testGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.TestApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.testGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.testGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.testGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

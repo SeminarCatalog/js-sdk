@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addressCreate**](AddressApi.md#addressCreate) | **POST** /api/address | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**addressDelete**](AddressApi.md#addressDelete) | **DELETE** /api/address/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**addressGet**](AddressApi.md#addressGet) | **GET** /api/address/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**addressDelete**](AddressApi.md#addressDelete) | **DELETE** /api/address/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**addressGet**](AddressApi.md#addressGet) | **GET** /api/address/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**addressList**](AddressApi.md#addressList) | **GET** /api/address | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**addressUpdate**](AddressApi.md#addressUpdate) | **PUT** /api/address/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="addressDelete"></a>
 # **addressDelete**
-> Address addressDelete(id)
+> Address addressDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.AddressApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.addressDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.addressDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.addressDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="addressGet"></a>
 # **addressGet**
-> Address addressGet(id)
+> Address addressGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.AddressApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.addressGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.addressGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.addressGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

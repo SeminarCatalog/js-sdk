@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**certificateCreate**](CertificateApi.md#certificateCreate) | **POST** /api/certificate | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**certificateDelete**](CertificateApi.md#certificateDelete) | **DELETE** /api/certificate/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**certificateGet**](CertificateApi.md#certificateGet) | **GET** /api/certificate/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**certificateDelete**](CertificateApi.md#certificateDelete) | **DELETE** /api/certificate/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**certificateGet**](CertificateApi.md#certificateGet) | **GET** /api/certificate/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**certificateList**](CertificateApi.md#certificateList) | **GET** /api/certificate | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**certificateUpdate**](CertificateApi.md#certificateUpdate) | **PUT** /api/certificate/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="certificateDelete"></a>
 # **certificateDelete**
-> Certificate certificateDelete(id)
+> Certificate certificateDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.CertificateApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.certificateDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.certificateDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.certificateDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="certificateGet"></a>
 # **certificateGet**
-> Certificate certificateGet(id)
+> Certificate certificateGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.CertificateApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.certificateGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.certificateGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.certificateGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

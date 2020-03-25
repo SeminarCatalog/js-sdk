@@ -89,9 +89,10 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
-    rolediscountDeleteWithHttpInfo(id) {
+    rolediscountDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class RoleDiscountInternalApi {
         throw new Error("Missing the required parameter 'id' when calling rolediscountDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling rolediscountDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class RoleDiscountInternalApi {
       let returnType = RoleDiscount;
 
       return this.apiClient.callApi(
-        '/api/rolediscount/{id}', 'DELETE',
+        '/api/rolediscount/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
-    rolediscountDelete(id) {
-      return this.rolediscountDeleteWithHttpInfo(id)
+    rolediscountDelete(id, lng) {
+      return this.rolediscountDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleDiscount} and HTTP response
      */
-    rolediscountGetWithHttpInfo(id) {
+    rolediscountGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class RoleDiscountInternalApi {
         throw new Error("Missing the required parameter 'id' when calling rolediscountGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling rolediscountGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class RoleDiscountInternalApi {
       let returnType = RoleDiscount;
 
       return this.apiClient.callApi(
-        '/api/rolediscount/{id}', 'GET',
+        '/api/rolediscount/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class RoleDiscountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleDiscount}
      */
-    rolediscountGet(id) {
-      return this.rolediscountGetWithHttpInfo(id)
+    rolediscountGet(id, lng) {
+      return this.rolediscountGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

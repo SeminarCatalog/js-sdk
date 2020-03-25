@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**revenueaccountCreate**](RevenueAccountApi.md#revenueaccountCreate) | **POST** /api/revenueaccount | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**revenueaccountDelete**](RevenueAccountApi.md#revenueaccountDelete) | **DELETE** /api/revenueaccount/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**revenueaccountGet**](RevenueAccountApi.md#revenueaccountGet) | **GET** /api/revenueaccount/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**revenueaccountDelete**](RevenueAccountApi.md#revenueaccountDelete) | **DELETE** /api/revenueaccount/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**revenueaccountGet**](RevenueAccountApi.md#revenueaccountGet) | **GET** /api/revenueaccount/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**revenueaccountList**](RevenueAccountApi.md#revenueaccountList) | **GET** /api/revenueaccount | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**revenueaccountUpdate**](RevenueAccountApi.md#revenueaccountUpdate) | **PUT** /api/revenueaccount/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="revenueaccountDelete"></a>
 # **revenueaccountDelete**
-> RevenueAccount revenueaccountDelete(id)
+> RevenueAccount revenueaccountDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.RevenueAccountApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.revenueaccountDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.revenueaccountDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.revenueaccountDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="revenueaccountGet"></a>
 # **revenueaccountGet**
-> RevenueAccount revenueaccountGet(id)
+> RevenueAccount revenueaccountGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.RevenueAccountApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.revenueaccountGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.revenueaccountGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.revenueaccountGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

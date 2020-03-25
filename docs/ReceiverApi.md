@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**receiverCreate**](ReceiverApi.md#receiverCreate) | **POST** /api/receiver | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**receiverDelete**](ReceiverApi.md#receiverDelete) | **DELETE** /api/receiver/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**receiverGet**](ReceiverApi.md#receiverGet) | **GET** /api/receiver/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**receiverDelete**](ReceiverApi.md#receiverDelete) | **DELETE** /api/receiver/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**receiverGet**](ReceiverApi.md#receiverGet) | **GET** /api/receiver/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**receiverList**](ReceiverApi.md#receiverList) | **GET** /api/receiver | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**receiverUpdate**](ReceiverApi.md#receiverUpdate) | **PUT** /api/receiver/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="receiverDelete"></a>
 # **receiverDelete**
-> Receiver receiverDelete(id)
+> Receiver receiverDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.ReceiverApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.receiverDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.receiverDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.receiverDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="receiverGet"></a>
 # **receiverGet**
-> Receiver receiverGet(id)
+> Receiver receiverGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.ReceiverApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.receiverGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.receiverGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.receiverGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

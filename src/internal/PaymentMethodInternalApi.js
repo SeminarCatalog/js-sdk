@@ -89,9 +89,10 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
-    paymentmethodDeleteWithHttpInfo(id) {
+    paymentmethodDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class PaymentMethodInternalApi {
         throw new Error("Missing the required parameter 'id' when calling paymentmethodDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling paymentmethodDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class PaymentMethodInternalApi {
       let returnType = PaymentMethod;
 
       return this.apiClient.callApi(
-        '/api/paymentmethod/{id}', 'DELETE',
+        '/api/paymentmethod/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
-    paymentmethodDelete(id) {
-      return this.paymentmethodDeleteWithHttpInfo(id)
+    paymentmethodDelete(id, lng) {
+      return this.paymentmethodDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentMethod} and HTTP response
      */
-    paymentmethodGetWithHttpInfo(id) {
+    paymentmethodGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class PaymentMethodInternalApi {
         throw new Error("Missing the required parameter 'id' when calling paymentmethodGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling paymentmethodGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class PaymentMethodInternalApi {
       let returnType = PaymentMethod;
 
       return this.apiClient.callApi(
-        '/api/paymentmethod/{id}', 'GET',
+        '/api/paymentmethod/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class PaymentMethodInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentMethod}
      */
-    paymentmethodGet(id) {
-      return this.paymentmethodGetWithHttpInfo(id)
+    paymentmethodGet(id, lng) {
+      return this.paymentmethodGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**currencyCreate**](CurrencyApi.md#currencyCreate) | **POST** /api/currency | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**currencyDelete**](CurrencyApi.md#currencyDelete) | **DELETE** /api/currency/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**currencyGet**](CurrencyApi.md#currencyGet) | **GET** /api/currency/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**currencyDelete**](CurrencyApi.md#currencyDelete) | **DELETE** /api/currency/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**currencyGet**](CurrencyApi.md#currencyGet) | **GET** /api/currency/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**currencyList**](CurrencyApi.md#currencyList) | **GET** /api/currency | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**currencyUpdate**](CurrencyApi.md#currencyUpdate) | **PUT** /api/currency/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="currencyDelete"></a>
 # **currencyDelete**
-> Currency currencyDelete(id)
+> Currency currencyDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.CurrencyApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.currencyDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.currencyDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.currencyDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="currencyGet"></a>
 # **currencyGet**
-> Currency currencyGet(id)
+> Currency currencyGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.CurrencyApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.currencyGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.currencyGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.currencyGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

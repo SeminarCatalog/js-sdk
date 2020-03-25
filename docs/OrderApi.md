@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**orderCreate**](OrderApi.md#orderCreate) | **POST** /api/order | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**orderDelete**](OrderApi.md#orderDelete) | **DELETE** /api/order/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**orderGet**](OrderApi.md#orderGet) | **GET** /api/order/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**orderDelete**](OrderApi.md#orderDelete) | **DELETE** /api/order/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**orderGet**](OrderApi.md#orderGet) | **GET** /api/order/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**orderList**](OrderApi.md#orderList) | **GET** /api/order | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**orderUpdate**](OrderApi.md#orderUpdate) | **PUT** /api/order/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="orderDelete"></a>
 # **orderDelete**
-> Order orderDelete(id)
+> Order orderDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.OrderApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.orderDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.orderDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.orderDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="orderGet"></a>
 # **orderGet**
-> Order orderGet(id)
+> Order orderGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.OrderApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.orderGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.orderGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.orderGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

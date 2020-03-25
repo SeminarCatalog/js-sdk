@@ -89,9 +89,10 @@ export class ParticipationCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParticipationCode} and HTTP response
      */
-    participationcodeDeleteWithHttpInfo(id) {
+    participationcodeDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class ParticipationCodeInternalApi {
         throw new Error("Missing the required parameter 'id' when calling participationcodeDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling participationcodeDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class ParticipationCodeInternalApi {
       let returnType = ParticipationCode;
 
       return this.apiClient.callApi(
-        '/api/participationcode/{id}', 'DELETE',
+        '/api/participationcode/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class ParticipationCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParticipationCode}
      */
-    participationcodeDelete(id) {
-      return this.participationcodeDeleteWithHttpInfo(id)
+    participationcodeDelete(id, lng) {
+      return this.participationcodeDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class ParticipationCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParticipationCode} and HTTP response
      */
-    participationcodeGetWithHttpInfo(id) {
+    participationcodeGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class ParticipationCodeInternalApi {
         throw new Error("Missing the required parameter 'id' when calling participationcodeGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling participationcodeGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class ParticipationCodeInternalApi {
       let returnType = ParticipationCode;
 
       return this.apiClient.callApi(
-        '/api/participationcode/{id}', 'GET',
+        '/api/participationcode/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class ParticipationCodeInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParticipationCode}
      */
-    participationcodeGet(id) {
-      return this.participationcodeGetWithHttpInfo(id)
+    participationcodeGet(id, lng) {
+      return this.participationcodeGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

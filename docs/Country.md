@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **code** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **localName** | **String** |  | [optional] 
-**englishName** | **Number** |  | [optional] 
+**englishName** | **String** |  | [optional] 
 **isEuMember** | **String** |  | [optional] 
 **termsAndConditions** | **String** |  | [optional] 
 **privacyPolicy** | **String** |  | [optional] 

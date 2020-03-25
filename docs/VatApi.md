@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**vatCreate**](VatApi.md#vatCreate) | **POST** /api/vat | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**vatDelete**](VatApi.md#vatDelete) | **DELETE** /api/vat/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**vatGet**](VatApi.md#vatGet) | **GET** /api/vat/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**vatDelete**](VatApi.md#vatDelete) | **DELETE** /api/vat/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**vatGet**](VatApi.md#vatGet) | **GET** /api/vat/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**vatList**](VatApi.md#vatList) | **GET** /api/vat | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**vatUpdate**](VatApi.md#vatUpdate) | **PUT** /api/vat/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="vatDelete"></a>
 # **vatDelete**
-> Vat vatDelete(id)
+> Vat vatDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.VatApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.vatDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.vatDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.vatDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="vatGet"></a>
 # **vatGet**
-> Vat vatGet(id)
+> Vat vatGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.VatApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.vatGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.vatGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.vatGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

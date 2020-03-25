@@ -48,7 +48,7 @@ export class Country {
       if (data.hasOwnProperty('localName'))
         obj.localName = ApiClient.convertToType(data['localName'], 'String');
       if (data.hasOwnProperty('englishName'))
-        obj.englishName = ApiClient.convertToType(data['englishName'], 'Number');
+        obj.englishName = ApiClient.convertToType(data['englishName'], 'String');
       if (data.hasOwnProperty('isEuMember'))
         obj.isEuMember = ApiClient.convertToType(data['isEuMember'], 'String');
       if (data.hasOwnProperty('termsAndConditions'))
@@ -105,7 +105,7 @@ Country.prototype.name = undefined;
 Country.prototype.localName = undefined;
 
 /**
- * @member {Number} englishName
+ * @member {String} englishName
  */
 Country.prototype.englishName = undefined;
 

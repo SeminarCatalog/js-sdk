@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**locationCreate**](LocationApi.md#locationCreate) | **POST** /api/location | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**locationDelete**](LocationApi.md#locationDelete) | **DELETE** /api/location/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**locationGet**](LocationApi.md#locationGet) | **GET** /api/location/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**locationDelete**](LocationApi.md#locationDelete) | **DELETE** /api/location/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**locationGet**](LocationApi.md#locationGet) | **GET** /api/location/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**locationList**](LocationApi.md#locationList) | **GET** /api/location | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**locationUpdate**](LocationApi.md#locationUpdate) | **PUT** /api/location/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="locationDelete"></a>
 # **locationDelete**
-> Location locationDelete(id)
+> Location locationDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.LocationApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.locationDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.locationDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.locationDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="locationGet"></a>
 # **locationGet**
-> Location locationGet(id)
+> Location locationGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.LocationApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.locationGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.locationGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.locationGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**languageCreate**](LanguageApi.md#languageCreate) | **POST** /api/language | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**languageDelete**](LanguageApi.md#languageDelete) | **DELETE** /api/language/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**languageGet**](LanguageApi.md#languageGet) | **GET** /api/language/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**languageDelete**](LanguageApi.md#languageDelete) | **DELETE** /api/language/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**languageGet**](LanguageApi.md#languageGet) | **GET** /api/language/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**languageList**](LanguageApi.md#languageList) | **GET** /api/language | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**languageUpdate**](LanguageApi.md#languageUpdate) | **PUT** /api/language/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="languageDelete"></a>
 # **languageDelete**
-> Language languageDelete(id)
+> Language languageDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.LanguageApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.languageDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.languageDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.languageDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="languageGet"></a>
 # **languageGet**
-> Language languageGet(id)
+> Language languageGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.LanguageApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.languageGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.languageGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.languageGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

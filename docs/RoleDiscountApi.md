@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**rolediscountCreate**](RoleDiscountApi.md#rolediscountCreate) | **POST** /api/rolediscount | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**rolediscountDelete**](RoleDiscountApi.md#rolediscountDelete) | **DELETE** /api/rolediscount/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**rolediscountGet**](RoleDiscountApi.md#rolediscountGet) | **GET** /api/rolediscount/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**rolediscountDelete**](RoleDiscountApi.md#rolediscountDelete) | **DELETE** /api/rolediscount/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**rolediscountGet**](RoleDiscountApi.md#rolediscountGet) | **GET** /api/rolediscount/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**rolediscountList**](RoleDiscountApi.md#rolediscountList) | **GET** /api/rolediscount | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**rolediscountUpdate**](RoleDiscountApi.md#rolediscountUpdate) | **PUT** /api/rolediscount/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="rolediscountDelete"></a>
 # **rolediscountDelete**
-> RoleDiscount rolediscountDelete(id)
+> RoleDiscount rolediscountDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.RoleDiscountApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.rolediscountDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.rolediscountDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.rolediscountDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="rolediscountGet"></a>
 # **rolediscountGet**
-> RoleDiscount rolediscountGet(id)
+> RoleDiscount rolediscountGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.RoleDiscountApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.rolediscountGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.rolediscountGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.rolediscountGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

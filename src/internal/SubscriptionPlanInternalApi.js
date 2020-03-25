@@ -89,9 +89,10 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
-    subscriptionplanDeleteWithHttpInfo(id) {
+    subscriptionplanDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class SubscriptionPlanInternalApi {
         throw new Error("Missing the required parameter 'id' when calling subscriptionplanDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling subscriptionplanDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class SubscriptionPlanInternalApi {
       let returnType = SubscriptionPlan;
 
       return this.apiClient.callApi(
-        '/api/subscriptionplan/{id}', 'DELETE',
+        '/api/subscriptionplan/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
-    subscriptionplanDelete(id) {
-      return this.subscriptionplanDeleteWithHttpInfo(id)
+    subscriptionplanDelete(id, lng) {
+      return this.subscriptionplanDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SubscriptionPlan} and HTTP response
      */
-    subscriptionplanGetWithHttpInfo(id) {
+    subscriptionplanGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class SubscriptionPlanInternalApi {
         throw new Error("Missing the required parameter 'id' when calling subscriptionplanGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling subscriptionplanGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class SubscriptionPlanInternalApi {
       let returnType = SubscriptionPlan;
 
       return this.apiClient.callApi(
-        '/api/subscriptionplan/{id}', 'GET',
+        '/api/subscriptionplan/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class SubscriptionPlanInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SubscriptionPlan}
      */
-    subscriptionplanGet(id) {
-      return this.subscriptionplanGetWithHttpInfo(id)
+    subscriptionplanGet(id, lng) {
+      return this.subscriptionplanGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

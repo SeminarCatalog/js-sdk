@@ -89,9 +89,10 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
-    revenueaccountDeleteWithHttpInfo(id) {
+    revenueaccountDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class RevenueAccountInternalApi {
         throw new Error("Missing the required parameter 'id' when calling revenueaccountDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling revenueaccountDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class RevenueAccountInternalApi {
       let returnType = RevenueAccount;
 
       return this.apiClient.callApi(
-        '/api/revenueaccount/{id}', 'DELETE',
+        '/api/revenueaccount/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
-    revenueaccountDelete(id) {
-      return this.revenueaccountDeleteWithHttpInfo(id)
+    revenueaccountDelete(id, lng) {
+      return this.revenueaccountDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RevenueAccount} and HTTP response
      */
-    revenueaccountGetWithHttpInfo(id) {
+    revenueaccountGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class RevenueAccountInternalApi {
         throw new Error("Missing the required parameter 'id' when calling revenueaccountGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling revenueaccountGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class RevenueAccountInternalApi {
       let returnType = RevenueAccount;
 
       return this.apiClient.callApi(
-        '/api/revenueaccount/{id}', 'GET',
+        '/api/revenueaccount/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class RevenueAccountInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RevenueAccount}
      */
-    revenueaccountGet(id) {
-      return this.revenueaccountGetWithHttpInfo(id)
+    revenueaccountGet(id, lng) {
+      return this.revenueaccountGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

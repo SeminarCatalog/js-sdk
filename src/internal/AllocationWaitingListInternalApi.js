@@ -89,9 +89,10 @@ export class AllocationWaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AllocationWaitingList} and HTTP response
      */
-    allocationwaitinglistDeleteWithHttpInfo(id) {
+    allocationwaitinglistDeleteWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -99,9 +100,15 @@ export class AllocationWaitingListInternalApi {
         throw new Error("Missing the required parameter 'id' when calling allocationwaitinglistDelete");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling allocationwaitinglistDelete");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -116,7 +123,7 @@ export class AllocationWaitingListInternalApi {
       let returnType = AllocationWaitingList;
 
       return this.apiClient.callApi(
-        '/api/allocationwaitinglist/{id}', 'DELETE',
+        '/api/allocationwaitinglist/{id}/{lng}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -125,10 +132,11 @@ export class AllocationWaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AllocationWaitingList}
      */
-    allocationwaitinglistDelete(id) {
-      return this.allocationwaitinglistDeleteWithHttpInfo(id)
+    allocationwaitinglistDelete(id, lng) {
+      return this.allocationwaitinglistDeleteWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -138,9 +146,10 @@ export class AllocationWaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AllocationWaitingList} and HTTP response
      */
-    allocationwaitinglistGetWithHttpInfo(id) {
+    allocationwaitinglistGetWithHttpInfo(id, lng) {
       let postBody = null;
 
       // verify the required parameter 'id' is set
@@ -148,9 +157,15 @@ export class AllocationWaitingListInternalApi {
         throw new Error("Missing the required parameter 'id' when calling allocationwaitinglistGet");
       }
 
+      // verify the required parameter 'lng' is set
+      if (lng === undefined || lng === null) {
+        throw new Error("Missing the required parameter 'lng' when calling allocationwaitinglistGet");
+      }
+
 
       let pathParams = {
-        'id': id
+        'id': id,
+        'lng': lng
       };
       let queryParams = {
       };
@@ -165,7 +180,7 @@ export class AllocationWaitingListInternalApi {
       let returnType = AllocationWaitingList;
 
       return this.apiClient.callApi(
-        '/api/allocationwaitinglist/{id}', 'GET',
+        '/api/allocationwaitinglist/{id}/{lng}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -174,10 +189,11 @@ export class AllocationWaitingListInternalApi {
     /**
      * SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
      * @param {Number} id Numeric identifier for this resource
+     * @param {Number} lng Numeric identifier for this resource
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AllocationWaitingList}
      */
-    allocationwaitinglistGet(id) {
-      return this.allocationwaitinglistGetWithHttpInfo(id)
+    allocationwaitinglistGet(id, lng) {
+      return this.allocationwaitinglistGetWithHttpInfo(id, lng)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

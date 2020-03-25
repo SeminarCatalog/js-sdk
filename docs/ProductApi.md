@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**productCreate**](ProductApi.md#productCreate) | **POST** /api/product | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**productDelete**](ProductApi.md#productDelete) | **DELETE** /api/product/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**productGet**](ProductApi.md#productGet) | **GET** /api/product/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**productDelete**](ProductApi.md#productDelete) | **DELETE** /api/product/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**productGet**](ProductApi.md#productGet) | **GET** /api/product/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**productList**](ProductApi.md#productList) | **GET** /api/product | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**productUpdate**](ProductApi.md#productUpdate) | **PUT** /api/product/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="productDelete"></a>
 # **productDelete**
-> Product productDelete(id)
+> Product productDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.ProductApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.productDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.productDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.productDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="productGet"></a>
 # **productGet**
-> Product productGet(id)
+> Product productGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.ProductApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.productGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.productGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.productGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 

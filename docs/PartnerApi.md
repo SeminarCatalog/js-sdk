@@ -5,8 +5,8 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**partnerCreate**](PartnerApi.md#partnerCreate) | **POST** /api/partner | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::create
-[**partnerDelete**](PartnerApi.md#partnerDelete) | **DELETE** /api/partner/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
-[**partnerGet**](PartnerApi.md#partnerGet) | **GET** /api/partner/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
+[**partnerDelete**](PartnerApi.md#partnerDelete) | **DELETE** /api/partner/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
+[**partnerGet**](PartnerApi.md#partnerGet) | **GET** /api/partner/{id}/{lng} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 [**partnerList**](PartnerApi.md#partnerList) | **GET** /api/partner | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::list
 [**partnerUpdate**](PartnerApi.md#partnerUpdate) | **PUT** /api/partner/{id} | SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::update
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="partnerDelete"></a>
 # **partnerDelete**
-> Partner partnerDelete(id)
+> Partner partnerDelete(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::delete
 
@@ -66,7 +66,9 @@ const apiInstance = new SeminarCatalogApi.PartnerApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.partnerDelete(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.partnerDelete(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -79,6 +81,7 @@ apiInstance.partnerDelete(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
@@ -95,7 +98,7 @@ No authorization required
 
 <a name="partnerGet"></a>
 # **partnerGet**
-> Partner partnerGet(id)
+> Partner partnerGet(id, lng)
 
 SeminarCatalog\\Rest\\Resources\\Controller\\ResourceController::get
 
@@ -107,7 +110,9 @@ const apiInstance = new SeminarCatalogApi.PartnerApi();
 
 const id = 56; // Number | Numeric identifier for this resource
 
-apiInstance.partnerGet(id).then((data) => {
+const lng = 56; // Number | Numeric identifier for this resource
+
+apiInstance.partnerGet(id, lng).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,6 +125,7 @@ apiInstance.partnerGet(id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Numeric identifier for this resource | 
+ **lng** | **Number**| Numeric identifier for this resource | 
 
 ### Return type
 
