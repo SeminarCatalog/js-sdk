@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.0
+
+### Bugfixes
+
+* Fix deserialization of `Country` resource.
+
+### Features
+
+* Add parameter `lng` with default `1` to all GET Item and DELETE Item operations
+
 ## 1.2.1
 
 ### Bugfixes
